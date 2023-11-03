@@ -121,7 +121,6 @@ if [ $? -ne 0 ]; then
     exit 9
 fi
 
-git add .
 # Update the commit message
 echo $DESCRIPTON_4096_SUGGESTION > "commit-message.txt"
 git commit -F "commit-message.txt"
