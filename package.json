@@ -12,7 +12,7 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
     "watch:webpack": "webpack --watch",
-    "monitor": "chokidar 'src/**/*' -c 'bash -c ./commit-msg' &"
+    "monitor": "chokidar 'src/**/*' -c 'bash -c ./commit-msg'"
   },
   "keywords": [],
   "author": {

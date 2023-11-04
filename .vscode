@@ -7,12 +7,31 @@
       "command": "npm",
       "args": [
         "run",
-        "monitor"
+        "monitor",
+        "&"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "problemMatcher": []
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "new"
+      }
+    },
+    {
+      "label": "open-another-terminal",
+      "type": "shell",
+      "command": "echo",
+      "args": [
+        "Opening another terminal"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "panel": "new"
+      },
+      "dependsOn": ["monitor"]
     }
   ]
 }
