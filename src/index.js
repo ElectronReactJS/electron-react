@@ -107,7 +107,7 @@ setBgImage();
 
 root.render(
     <>
-        <h1>
+        <h1 style={{ color: 'white' }}>
             <center>Bem vindo</center>
         </h1>
         <EmailField />
