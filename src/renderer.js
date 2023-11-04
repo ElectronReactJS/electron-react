@@ -15,4 +15,4 @@ const root = createRoot(container);
 
 setBgImage();
 
-root.render(<h1>This message is being logged by "renderer.js", included via webpack</h1>);
+root.render(<h1>Bem vindo</h1>);
