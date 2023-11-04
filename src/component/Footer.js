@@ -20,7 +20,7 @@ const footerStyle = {
     height: '20vh',  // Ajusta a altura do rodapé para 20% da altura da janela de visualização
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',  // Alinha os itens ao centro na direção transversal
+    alignItems: 'center',  
     padding: '10px',
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
 }
