@@ -22,6 +22,47 @@ const Footer = () => {
     );
 }
 
+const EmailField = () => {
+    const [email, setEmail] = useState('');
+    const [validation, setValidation] = useState(null);
+
+    const validateEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+    const handleBlur = () => {
+        setValidation(validateEmail(email));
+    }
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            setValidation(validateEmail(email));
+        }
+    }
+
+    return (
+        <div style={emailFieldStyle}>
+            <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onBlur={handleBlur}
+                onKeyPress={handleKeyPress}
+                placeholder="Enter your email"
+                style={inputStyle}
+            />
+            {validation !== null && (
+                <img
+                    src={validation ? successIcon : errorIcon}
+                    alt={validation ? 'Success' : 'Error'}
+                    style={iconStyle}
+                />
+            )}
+        </div>
+    );
+}
+
 const footerStyle = {
     position: 'fixed',
     bottom: 0,
