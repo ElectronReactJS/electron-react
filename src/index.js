@@ -110,6 +110,7 @@ root.render(
         <h1>
             <center>Bem vindo</center>
         </h1>
+        <EmailField />
         <Footer />
     </>
 );
