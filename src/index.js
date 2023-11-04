@@ -27,7 +27,7 @@ const footerStyle = {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '10px',
-    backgroundColor: 'rgba(255, 255, 255, 0.6)',  // fundo branco semi-transparente
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',  // fundo branco semi-transparente
 }
 
 const logoStyle = {
