@@ -31,15 +31,15 @@ const EmailField = () => {
         return regex.test(email);
     }
 
-    const handleBlur = () => {
-        setValidation(validateEmail(email));
-    }
-
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             setValidation(validateEmail(email));
         }
     }
+
+    const handleBlur = () => {
+        setValidationImage(validateEmail(email) ? successImage : errorImage);
+    };
 
     return (
         <div style={emailFieldStyle}>
