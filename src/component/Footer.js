@@ -22,7 +22,7 @@ const footerStyle = {
     justifyContent: 'space-between',
     alignItems: 'center',  
     padding: '10px',
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
 }
 
 const logoStyle = {
