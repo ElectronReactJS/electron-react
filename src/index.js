@@ -16,8 +16,8 @@ const setBgImage = () => {
 const Footer = () => {
     return (
         <footer style={footerStyle}>
-            <img src={logoMDS} alt="Logo MDS" style={logoStyle} />
-            <img src={logoFADEX} alt="Logo FADEX" style={logoStyle} />
+            <img src={logoLeft} alt="Logo MDS" style={logoStyle} />
+            <img src={logoRight} alt="Logo FADEX" style={logoStyle} />
         </footer>
     );
 }
