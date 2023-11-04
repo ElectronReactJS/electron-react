@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import backgroundImage from './assets/background.jpg';
 import logoMDS from './assets/logoMDS.png';
 import logoFADEX from './assets/logoFADEX.jpg';
-import successIcon from './assets/success.svg';
-import errorIcon from './assets/error.svg';
+import EmailField from './component/EmailField.jsx';
+
 
 const setBgImage = () => {
     const bgImage = `url(${backgroundImage})`;
