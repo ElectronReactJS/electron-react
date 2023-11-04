@@ -74,6 +74,17 @@ const emailFieldStyle = {
     width: '300px',
 }
 
+const inputStyle = {
+    width: '100%',
+    padding: '10px',
+    fontSize: '16px',
+}
+
+const iconStyle = {
+    width: '20px',
+    marginLeft: '10px',
+}
+
 const footerStyle = {
     position: 'fixed',
     bottom: 0,
