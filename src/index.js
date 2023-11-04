@@ -24,18 +24,12 @@ const Footer = () => {
 
 const EmailField = () => {
     const [email, setEmail] = useState('');
-    const [validation, setValidation] = useState(null);
+    const [validationImage, setValidationImage] = useState(null);
 
     const validateEmail = (email) => {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return regex.test(email);
-    }
-
-    const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            setValidation(validateEmail(email));
-        }
-    }
+    };
 
     const handleBlur = () => {
         setValidationImage(validateEmail(email) ? successImage : errorImage);
@@ -48,20 +42,13 @@ const EmailField = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onBlur={handleBlur}
-                onKeyPress={handleKeyPress}
-                placeholder="Enter your email"
+                onKeyPress={(e) => e.key === 'Enter' && handleBlur()}
                 style={inputStyle}
             />
-            {validation !== null && (
-                <img
-                    src={validation ? successIcon : errorIcon}
-                    alt={validation ? 'Success' : 'Error'}
-                    style={iconStyle}
-                />
-            )}
+            {validationImage && <img src={validationImage} alt="Validation status" style={imageStyle} />}
         </div>
     );
-}
+};
 
 const emailFieldStyle = {
     display: 'flex',
