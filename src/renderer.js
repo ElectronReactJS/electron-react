@@ -15,4 +15,7 @@ const root = createRoot(container);
 
 setBgImage();
 
-root.render(<h1>Bem vindo</h1>);
+root.render(
+    <h1>
+        <center>Bem vindo</center>
+    </h1>);
