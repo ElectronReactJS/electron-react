@@ -23,7 +23,7 @@ const Footer = () => {
 const footerStyle = {
     position: 'fixed',
     bottom: 0,
-    width: '80%',
+    width: '95%',
     display: 'flex',
     justifyContent: 'space-between',
     padding: '10px',
