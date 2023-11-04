@@ -29,11 +29,11 @@ const footerStyle = {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '10px',
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',  // fundo branco semi-transparente
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',  
 }
 
 const logoStyle = {
-    width: '100px',  // ou qualquer outro tamanho que desejar
+    width: '100px',  
 }
 
 const container = document.createElement('div');
