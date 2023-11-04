@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import successImage from './assets/success.svg';
-import errorImage from './assets/error.svg';
+import successImage from '../assets/success.svg';
+import errorImage from '../assets/error.svg';
 
 const EmailField = () => {
     const [email, setEmail] = useState('');
