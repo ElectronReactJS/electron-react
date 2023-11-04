@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import backgroundImage from './assets/background.jpg';
 
-import logoMDS from './assets/logoMDS.png';
+import logoMDS from './assets/logoMDS.jpg';
 import logoFADEX from './assets/logoFADEX.png';
 
 const setBgImage = () => {
