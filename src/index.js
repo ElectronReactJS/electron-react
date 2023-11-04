@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import backgroundImage from './assets/background.jpg';
-import logoLeft from './assets/logoMDS.svg';
-import logoRight from './assets/logoFADEX.svg';
+import logoLeft from './assets/linux.svg';
+import logoRight from './assets/react.svg';
 import EmailField from './component/EmailField';
 
 
