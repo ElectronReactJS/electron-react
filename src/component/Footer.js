@@ -17,7 +17,7 @@ const footerStyle = {
     position: 'fixed',
     bottom: 0,
     width: '97%',
-    height: '20vh',  // Ajusta a altura do rodapé para 20% da altura da janela de visualização
+    height: '40vh',  
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',  
