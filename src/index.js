@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import backgroundImage from './assets/background.jpg';
-
 import logoMDS from './assets/logoMDS.png';
 import logoFADEX from './assets/logoFADEX.jpg';
 
@@ -15,8 +14,8 @@ const setBgImage = () => {
 const Footer = () => {
     return (
         <footer style={footerStyle}>
-            <img src={logo1} alt="Logo 1" style={logoStyle} />
-            <img src={logo2} alt="Logo 2" style={logoStyle} />
+            <img src={logoMDS} alt="Logo MDS" style={logoStyle} />
+            <img src={logoFADEX} alt="Logo FADEX" style={logoStyle} />
         </footer>
     );
 }
