@@ -1,69 +1,85 @@
-# Projeto Electron-React
+# Electron-React Boilerplate with Enhanced Configuration
 
-Este projeto é um esqueleto básico para uma aplicação Electron com React. Foi configurado com Webpack para compilação e empacotamento, e inclui uma configuração básica de Content Security Policy (CSP) para ajudar a proteger contra execução de código malicioso.
+Welcome to a comprehensive boilerplate to jump-start your Electron-React projects. This boilerplate comes bundled with a plethora of pre-configurations and examples to streamline your development process.
 
-## Estrutura do Projeto
+## Features
 
-A estrutura do projeto é a seguinte:
+- Structured Project Layout
+- Automated Commit Task using VS Code and Bash Script
+- Pre-configured Essential Plugins Installation
+- Pre-configured Project Files (`.env`, `.gitconfig`, `.editorConfig` and more)
+- Customizable Footer and Email Field UI
+- SVG Icon Integration for visual feedback
+- Enhanced Email Validation
 
-```plaintext
-- src/
-  - main_window/       # Código do processo principal do Electron
-  - renderer/          # Código do processo de renderização do Electron
-- .gitignore          # Arquivo Git Ignore
-- package.json        # Arquivo de metadados do projeto
-- README.md           # Este arquivo
-- webpack.config.js   # Configuração do Webpack
-```
+## Getting Started
 
-## Requisitos
+1. **Clone the repository:**
 
-- Node.js
-- npm ou Yarn
-
-## Como Executar
-
-1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/electron-react.git
+git clone https://github.com/Malnati/electron-react.git
 cd electron-react
 ```
 
-2. Instale as dependências:
+2. **Install dependencies:**
+
 ```bash
 npm install
 ```
-ou
-```bash
-yarn install
-```
 
-3. Execute o projeto em modo de desenvolvimento:
+3. **Start Development Server:**
+
 ```bash
 npm start
 ```
-ou
-```bash
-yarn start
-```
 
-4. Para empacotar o projeto para produção, execute:
-```bash
-npm run build
-```
-ou
-```bash
-yarn build
-```
+Explore the `src` directory to get acquainted with the structure and components. Customize the configurations and components to suit your project needs.
 
-## Contribuindo
+## Automation
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou criar um Pull Request.
+This boilerplate includes a VS Code task and a bash script for automating the commit process. Check the `tasks.json` and the corresponding bash script to understand the automation in place and adjust as needed.
 
-## Licença
+## Configuration Files
 
-MIT
+Explore the pre-configured files like `.env`, `.gitconfig`, and `.editorConfig` to understand the baseline configurations in place. Customize these configurations to match your project requirements and coding standards.
+
+## Contributing
+
+Feel free to contribute to this boilerplate by creating a Pull Request.
 
 ---
 
-Este README fornece uma visão geral básica do projeto e instruções sobre como executar e empacotar o projeto para produção. Certifique-se de personalizar os URLs do repositório e outros detalhes específicos do projeto conforme necessário.
+With this description and README, developers visiting your repository will have a good understanding of what the boilerplate offers, how to get started with it, and how it aims to accelerate the development process in Electron-React projects.
+
+# Electron-React Boilerplate with Enhanced Configuration
+
+## Description:
+
+This repository houses a robust boilerplate for kick-starting Electron-React projects with a rich set of pre-configurations aimed at streamlining the setup process, ensuring a standardized coding environment, and automating common tasks right from the get-go. 
+
+## Key Features:
+
+1. **Structured Project Layout:** 
+   - Well-organized directory structure to manage components, assets, and other related files efficiently.
+
+2. **Automated Commit Task:**
+   - Leverage VS Code tasks alongside bash scripts to automate the commit process, ensuring consistency and time-saving.
+
+3. **Plugin Installation:**
+   - Automated setup for essential plugins to enhance development efficiency and code quality.
+
+4. **Pre-configured Files:**
+   - Provision of pre-configured files like `.env`, `.gitconfig`, `.editorConfig`, among others, to standardize the development environment and coding styles.
+
+5. **Customizable Footer and Email Field UI:**
+   - A customizable Footer component that houses an Email Field with validation feedback, demonstrating how components can be structured and styled.
+
+6. **SVG Icon Integration:**
+   - Demonstrates the integration and styling of SVG icons within React components for visual feedback.
+
+7. **Enhanced Email Validation:**
+   - Implementation of simple email validation with visual feedback to enhance user interaction.
+
+> By providing a rich set of pre-configurations and examples, this boilerplate aims to significantly reduce the setup time, allowing developers to jump straight into building their Electron-React applications.
+
+---

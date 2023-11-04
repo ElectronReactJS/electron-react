@@ -15,7 +15,7 @@ Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 ## Getting Started
 
 - Fork the repository on GitHub.
-- Clone your fork locally (`git clone https://github.com/Malnati/AnyHooks.git`).
+- Clone your fork locally (`git clone https://github.com/Malnati/electron-react.git`).
 - Create a new branch (`git checkout -b new-feature`).
 
 ## How to Contribute
