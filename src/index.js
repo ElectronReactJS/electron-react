@@ -54,12 +54,10 @@ const emailFieldStyle = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    margin: 'auto',
     width: '300px',
-}
+    padding: '10px',
+};
 
 const inputStyle = {
     width: '100%',
