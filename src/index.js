@@ -2,6 +2,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import backgroundImage from './assets/background.jpg';
 
+import logoMDS from './assets/logoMDS.png';
+import logoFADEX from './assets/logoFADEX.png';
+
 const setBgImage = () => {
     const bgImage = `url(${backgroundImage})`;
     document.body.style.backgroundImage = bgImage;
