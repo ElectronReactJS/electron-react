@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import backgroundImage from './assets/background.jpg';
-import logoMDS from './assets/logoMDS.png';
-import logoFADEX from './assets/logoFADEX.jpg';
+import logoLeft from './assets/logoMDS.png';
+import logoRight from './assets/logoFADEX.jpg';
 import EmailField from './component/EmailField';
 
 
