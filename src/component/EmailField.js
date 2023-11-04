@@ -37,6 +37,10 @@ const emailFieldStyle = {
     margin: 'auto',
     width: '300px',
     padding: '10px',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
 };
 
 const inputStyle = {
