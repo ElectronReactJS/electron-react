@@ -58,3 +58,5 @@ Contributions are welcome. Please create a Pull Request to propose and discuss c
 ---
 
 By using this boilerplate, you gain access to a curated collection of configurations and examples that can reduce setup time, allowing you to focus on building your Electron-React application.
+
+-- Author: Ricardo Malnati

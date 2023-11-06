@@ -81,3 +81,5 @@ Proper management and documentation of configuration files are pivotal in mainta
 ---
 
 These guidelines provide a structured approach to managing configuration files in the Electron-React Boilerplate Project, ensuring a consistent and streamlined setup process for all contributors.
+
+-- Author: Ricardo Malnati

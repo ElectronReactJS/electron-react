@@ -37,3 +37,5 @@ By adhering to the guidelines outlined in this Code Conduct, contributors play a
 - [DEPENDENCY.md](DEPENDENCY.md)
 - [ERROR.md](ERROR.md)
 - [VARIABLE.md](VARIABLE.md)
+
+-- Author: Ricardo Malnati

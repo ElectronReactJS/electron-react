@@ -42,3 +42,5 @@ The enhanced requirements for error messages in this project [ERROR](ERROR.md).
 Please adhere to the coding style defined in the project. Consistency is key.
 
 Thank you for contributing!
+
+-- Author: Ricardo Malnati
