@@ -1,5 +1,7 @@
 # Electron-React Boilerplate with Enhanced Configuration
 
+[![OpenAI Translate](https://github.com/ElectronReactJS/electron-react/actions/workflows/translate.yml/badge.svg?branch=main)](https://github.com/ElectronReactJS/electron-react/actions/workflows/translate.yml)
+
 Welcome to a comprehensive boilerplate to jump-start your Electron-React projects. This boilerplate comes bundled with a plethora of pre-configurations and examples to streamline your development process.
 
 ## Features
