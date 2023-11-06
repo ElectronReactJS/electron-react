@@ -50,6 +50,8 @@ Pre-configured files like `.env`, `.gitconfig`, and `.editorConfig` are provided
 
 This feature introduces a Magic Link authentication method, enhancing security and user experience. Detailed documentation is available in [FEATURE.md](FEATURE.md).
 
+![electron-react-magic-link.png](electron-react-magic-link.png)
+
 ## Contributing
 
 Contributions are welcome. Please create a Pull Request to propose and discuss changes.
