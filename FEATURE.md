@@ -35,4 +35,4 @@ For a visual understanding of the feature, refer to the `electron-react-magic-li
 
 For any issues or questions regarding the implementation of this feature, please open an issue in the repository, and our team will assist you promptly.
 
--- Author: Ricardo Malnati
+  - Author: Ricardo Malnati

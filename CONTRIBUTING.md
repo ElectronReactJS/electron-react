@@ -43,4 +43,4 @@ Please adhere to the coding style defined in the project. Consistency is key.
 
 Thank you for contributing!
 
--- Author: Ricardo Malnati
+  - Author: Ricardo Malnati

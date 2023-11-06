@@ -38,4 +38,4 @@ By adhering to the guidelines outlined in this Code Conduct, contributors play a
 - [ERROR.md](ERROR.md)
 - [VARIABLE.md](VARIABLE.md)
 
--- Author: Ricardo Malnati
+  - Author: Ricardo Malnati
