@@ -22,7 +22,7 @@ The feature is implemented in an Electron application, ensuring a seamless deskt
 
 ## File Structure
 
-!(electron-react-magic-link.png)[electron-react-magic-link.png] 
+![electron-react-magic-link.png](electron-react-magic-link.png)
     A visual representation of the Magic Link Login workflow.
 
 ## Getting Started
