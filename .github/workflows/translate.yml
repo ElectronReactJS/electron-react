@@ -43,5 +43,5 @@ jobs:
       - name: List and process changed markdown files
         run: |
           for file in $(git diff --name-only HEAD~1 HEAD | grep '\.md$'); do
-            .github/workflows/translate.bash ${{ secrets.ELECTRONREACTJS_OPENAI_KEY }} $file
+            .github/workflows/translate.bash ${{ secrets.TRANSLATION }} $file
           done  
