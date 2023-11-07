@@ -12,7 +12,8 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
     "monitor": "chokidar 'src/**/*' -c 'bash -c ./commit-msg'",
-    "watch:webpack": "webpack --watch --mode=development"
+    "watch:webpack": "webpack --watch --mode=production",
+    "clear-webpack-cache": "rm -rf node_modules/.cache/webpack"
   },
   "keywords": [],
   "author": {
