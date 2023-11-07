@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import successImage from '../assets/success.svg';
 import errorImage from '../assets/error.svg';
-import atImage from '../assets/envelope-solid.svg'; // Assuming you have an @ image for the initial state
+import atImage from '../assets/envelope-solid.svg'; 
 
 const EmailField = () => {
     const [email, setEmail] = useState('');
@@ -50,7 +50,7 @@ const emailFieldStyle = {
     margin: 'auto',
     width: '300px',
     padding: '10px',
-    position: 'relative', // Changed from 'absolute' to 'relative'
+    position: 'absolute', // Changed from 'absolute' to 'relative'
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
