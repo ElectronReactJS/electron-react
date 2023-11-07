@@ -50,7 +50,7 @@ const emailFieldStyle = {
     margin: 'auto',
     width: '300px',
     padding: '10px',
-    position: 'absolute', // Changed from 'absolute' to 'relative'
+    position: 'absolute', 
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
