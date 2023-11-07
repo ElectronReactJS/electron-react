@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import successImage from '../assets/success.svg';
 import errorImage from '../assets/error.svg';
-import atImage from '../src/assets/envelope-solid.svg'; // Assuming you have an @ image for the initial state
+import atImage from '../assets/envelope-solid.svg'; // Assuming you have an @ image for the initial state
 
 const EmailField = () => {
     const [email, setEmail] = useState('');
