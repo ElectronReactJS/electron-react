@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import backgroundImage from './assets/background.jpg';
 import EmailField from './component/EmailField';
 import Footer from './component/Footer';
+import backgroundImage from './assets/background.jpg';
 
 const setBgImage = () => {
     const bgImage = `url(${backgroundImage})`;
@@ -11,14 +11,12 @@ const setBgImage = () => {
     document.body.style.backgroundAttachment = 'fixed';
 }
 
-const container = document.createElement('div');
-document.body.appendChild(container);
-const root = createRoot(container);
-
 setBgImage();
 
-root.render(
-        <Footer>
-            <EmailField />
-        </Footer>
+const container = document.getElementById('app');
+const app = createRoot(container);
+app.render(
+  <Footer>
+    <EmailField />
+  </Footer>
 );

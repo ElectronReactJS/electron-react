@@ -2,29 +2,30 @@
   "name": "electron-react",
   "productName": "electron-react",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Electron application",
   "main": ".webpack/main",
   "scripts": {
-    "start": "run-p electron-forge:start watch:*",
+    "start": "electron-forge start --enable-logging",
     "electron-forge:start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "monitor": "chokidar 'src/**/*' -c 'bash -c ./commit-msg'",
-    "watch:webpack": "webpack --watch --mode=production",
-    "clear-webpack-cache": "rm -rf node_modules/.cache/webpack"
+    "monitor": "chokidar 'src/**/*' -c 'bash -c ./commit-msg'"
   },
   "keywords": [],
   "author": {
-    "name": "Malnati",
-    "email": "ricardomalnati@gmail.com"
+    "name": "Ricardo Malnati",
+    "email": "airflow.relay.03@icloud.com"
   },
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.23.0",
     "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
+    "@babel/plugin-transform-react-jsx": "^7.22.15",
+    "@babel/plugin-transform-runtime": "^7.23.2",
     "@babel/preset-react": "^7.22.15",
+    "@babel/register": "^7.22.15",
     "@electron-forge/cli": "^6.4.2",
     "@electron-forge/maker-deb": "^6.4.2",
     "@electron-forge/maker-rpm": "^6.4.2",
@@ -32,24 +33,17 @@
     "@electron-forge/maker-zip": "^6.4.2",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
     "@electron-forge/plugin-webpack": "^6.4.2",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "babel-loader": "^9.1.3",
-    "babel-register": "^6.26.0",
-    "chokidar-cli": "^3.0.0",
-    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
-    "electron": "^27.0.3",
-    "file-loader": "^6.2.0",
-    "jsxobj": "^1.1.0",
+    "electron": "27.0.3",
     "node-loader": "^2.0.0",
-    "npm-run-all": "^4.1.5",
-    "style-loader": "^3.3.3",
-    "webpack-cli": "^5.1.4"
+    "style-loader": "^3.3.3"
   },
   "dependencies": {
-    "@babel/register": "^7.22.15",
+    "@babel/runtime": "^7.23.2",
     "electron-squirrel-startup": "^1.0.0",
+    "file-loader": "^6.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

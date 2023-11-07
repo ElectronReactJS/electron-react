@@ -8,7 +8,6 @@ const Footer = (props) => {
     );
 }
 
-
 const footerStyle = {
     position: 'fixed',
     bottom: 0,
