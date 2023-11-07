@@ -1,13 +1,9 @@
 import React from 'react';
-import logoLeft from '../assets/linux.svg';
-import logoRight from '../assets/react.svg';
 
 const Footer = (props) => {
     return (
         <footer style={footerStyle}>
-            <img src={logoLeft} alt="Logo Left" style={logoStyle} />
             {props.children}
-            <img src={logoRight} alt="Logo Right" style={logoStyle} />
         </footer>
     );
 }
