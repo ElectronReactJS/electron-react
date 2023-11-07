@@ -1,5 +1,4 @@
 const { app, BrowserWindow } = require('electron');
-const path = require('path');
 
 if (require('electron-squirrel-startup')) {
   app.quit();
