@@ -68,7 +68,7 @@ const imageStyle = {
     top: '50%', // Center vertically
     transform: 'translateY(-50%)', // Center vertically
     width: '20px',
-    padding: '3px',
+    padding: '4px',
 };
 
 export default EmailField;
