@@ -18,9 +18,7 @@ const root = createRoot(container);
 setBgImage();
 
 root.render(
-    <>
         <Footer>
             <EmailField />
         </Footer>
-    </>
 );
