@@ -18,9 +18,7 @@ const root = createRoot(container);
 setBgImage();
 
 root.render(
-    <React.Fragment>
         <Footer>
             <EmailField />
         </Footer>
-    </React.Fragment>
 );
