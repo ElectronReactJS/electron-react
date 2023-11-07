@@ -37,6 +37,7 @@ const EmailField = () => {
                 onBlur={handleBlur}
                 onKeyPress={(e) => e.key === 'Enter' && handleBlur()}
                 style={inputStyle}
+                placeholder='youremail@domaon.com.br'
             />
             <img src={validationImage} alt="Validation status" style={imageStyle} />
         </div>
