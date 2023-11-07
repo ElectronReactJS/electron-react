@@ -20,9 +20,6 @@ setBgImage();
 root.render(
     <>
         <Footer>
-            <h1 style={{ color: 'white' }}>
-                <center>Bem vindo</center>
-            </h1>
             <EmailField />
         </Footer>
     </>
