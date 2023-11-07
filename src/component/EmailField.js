@@ -69,6 +69,7 @@ const imageStyle = {
     transform: 'translateY(-50%)', // Center vertically
     width: '20px',
     padding: '4px',
+    fill: 'gray',
 };
 
 export default EmailField;
