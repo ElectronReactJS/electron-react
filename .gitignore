@@ -105,3 +105,5 @@ dist  # If using Nuxt.js for static site generation
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.github/.DS_Store
+.DS_Store
