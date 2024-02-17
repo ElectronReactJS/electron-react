@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Navigator from '../component/Navigator';
 import MainFrame from '../component/MainFrame';
-import Header from '../component/Header';
+import MainHeader from '../component/MainHeader';
 import { useTheme } from '@mui/material/styles';
 import TimelineFeed from '../component/TimelineFeed';
 
@@ -16,7 +16,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://githug.com/Malnati">
-        Title
+        Main Page
       </Link>{' '}
       {new Date().getFullYear()}.
     </Typography>
@@ -59,10 +59,12 @@ export default function Mainboard() {
           />
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-          <Header onDrawerToggle={handleDrawerToggle} />
+          <MainHeader onDrawerToggle={handleDrawerToggle} />
           <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
             <MainFrame>
-                <TimelineFeed></TimelineFeed>
+                <Typography color="inherit" variant="h5" component="h1">
+                    MainFrame content
+                </Typography>
             </MainFrame>
           </Box>
           <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
