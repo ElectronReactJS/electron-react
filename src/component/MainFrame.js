@@ -27,7 +27,7 @@ export default function Content(props) {
             <Grid item xs>
               <TextField
                 fullWidth
-                placeholder="Procure por nome ou por CPF"
+                placeholder="Search"
                 InputProps={{
                   disableUnderline: true,
                   sx: { fontSize: 'default' },
@@ -36,7 +36,7 @@ export default function Content(props) {
               />
             </Grid>
             <Grid item>
-              <Tooltip title="Restaurar">
+              <Tooltip title="Restart">
                 <IconButton>
                   <RefreshIcon color="inherit" sx={{ display: 'block' }} />
                 </IconButton>

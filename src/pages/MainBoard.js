@@ -6,10 +6,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Navigator from '../component/Navigator';
-import Content from '../component/Content';
+import MainFrame from '../component/MainFrame';
 import Header from '../component/Header';
-import DataGridAnual from '../component/DataGridAnual';
 import { useTheme } from '@mui/material/styles';
+import TimelineFeed from '../component/TimelineFeed';
 
 function Copyright() {
   return (
@@ -61,9 +61,9 @@ export default function Mainboard() {
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
           <Header onDrawerToggle={handleDrawerToggle} />
           <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
-            <Content>
-                <DataGridAnual></DataGridAnual>
-            </Content>
+            <MainFrame>
+                <TimelineFeed></TimelineFeed>
+            </MainFrame>
           </Box>
           <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
             <Copyright />
