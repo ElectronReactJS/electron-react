@@ -5,7 +5,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import backgroundImage from './images/brazil-flag-4517×2992.png';
-import Login from './pages/Login';
+import LoginPage from './pages/LoginPage';
 import AdminPage from './pages/AdminPage';
 import WorkspacePage from './pages/WorkspacePage';
 import { ThemeProvider } from '@mui/material/styles';
@@ -29,7 +29,7 @@ const Router = ({ theme }) => {
         <ThemeProvider theme={theme}>
             <MemoryRouter initialEntries={['/login']}>
                 <Routes>
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/login" element={<LoginPage />} />
                     <Route path="/workspace" element={<WorkspacePage />} />
                     <Route path="/AdminPage" element={<AdminPage />} />
                 </Routes>
