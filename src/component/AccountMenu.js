@@ -13,6 +13,8 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
@@ -92,11 +94,17 @@ export default function AccountMenu(props) {
                 </MenuItem>
                 <Divider />
                 {props.children}
+                <MenuItem onClick={goToWorkspace}>
+                    <ListItemIcon>
+                        <HomeRepairServiceIcon fontSize="small" />
+                    </ListItemIcon>
+                    Workspace
+                </MenuItem>
                 <MenuItem onClick={goToAdmin}>
                     <ListItemIcon>
                         <SpaceDashboardIcon fontSize="small" />
                     </ListItemIcon>
-                    Settings
+                    Admin
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                     <ListItemIcon>
