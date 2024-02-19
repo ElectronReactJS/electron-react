@@ -79,7 +79,7 @@ function WorkspaceHeader(props) {
                     <Grid container alignItems="center" spacing={1}>
                         <Grid item xs>
                             <Typography color="inherit" variant="h5" component="h1">
-                                Title
+                                Workspace Header Title
                             </Typography>
                         </Grid>
                         <Grid item>
@@ -94,10 +94,10 @@ function WorkspaceHeader(props) {
             </AppBar>
             <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
                 <Tabs value={0} textColor="inherit">
-                    <Tab label="View 0" />
-                    <Tab label="View 1" />
-                    <Tab label="View 2" />
-                    <Tab label="View 3" />
+                    <Tab label="Workspace View 0" />
+                    <Tab label="Workspace View 1" />
+                    <Tab label="Workspace View 2" />
+                    <Tab label="Workspace View 3" />
                 </Tabs>
             </AppBar>
         </React.Fragment>

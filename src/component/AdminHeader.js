@@ -76,7 +76,7 @@ function AdminHeader(props) {
           <Grid container alignItems="center" spacing={1}>
             <Grid item xs>
               <Typography color="inherit" variant="h5" component="h1">
-                MainHeader Title
+                Admin Header Title
               </Typography>
             </Grid>
             <Grid item>
@@ -91,7 +91,7 @@ function AdminHeader(props) {
       </AppBar>
       <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
         <Tabs value={0} textColor="inherit">
-          <Tab label="Main View" />
+          <Tab label="Admin View" />
         </Tabs>
       </AppBar>
     </React.Fragment>
