@@ -87,18 +87,10 @@ export default function AccountMenu(props) {
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
                 <MenuItem onClick={goToWorkspace}>
-                    <Avatar /> Profile
-                </MenuItem>
-                <MenuItem onClick={goToWorkspace}>
-                    <Avatar /> My account
+                    <Avatar /> Account
                 </MenuItem>
                 <Divider />
-                <MenuItem onClick={handleClose}>
-                    <ListItemIcon>
-                        <PersonAdd fontSize="small" />
-                    </ListItemIcon>
-                    Add another account
-                </MenuItem>
+                {props.children}
                 <MenuItem onClick={goToAdmin}>
                     <ListItemIcon>
                         <Settings fontSize="small" />
