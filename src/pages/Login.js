@@ -23,7 +23,7 @@ const paperStyle = {
 const Login = (props) => {
     const navigate = useNavigate();
     useEffect(() => {
-        //console.log('Login component mounted successfully');
+        console.log('Login component mounted successfully');
     }, []);
 
     const { title } = props;
@@ -37,11 +37,11 @@ const Login = (props) => {
     };
 
     const handleValidPassword = () => {
-        navigate('/mainboard');
+        navigate('/workspace');
     };
 
     const handleInvalidPassword = () => {
-        navigate('/mainboard');
+        navigate('/workspace');
     };
 
     return (
