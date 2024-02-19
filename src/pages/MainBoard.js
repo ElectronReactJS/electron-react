@@ -9,19 +9,7 @@ import Navigator from '../component/Navigator';
 import MainFrame from '../component/MainFrame';
 import MainHeader from '../component/MainHeader';
 import { useTheme } from '@mui/material/styles';
-import TimelineFeed from '../component/TimelineFeed';
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://githug.com/Malnati">
-        Main Page
-      </Link>{' '}
-      {new Date().getFullYear()}.
-    </Typography>
-  );
-}
+import Copyright from '../component/Copyright';
   
 const drawerWidth = 256;
 
