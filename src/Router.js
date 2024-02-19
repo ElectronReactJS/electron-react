@@ -1,13 +1,13 @@
 
-// src/pages/Router.js
+// src/Router.js
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import backgroundImage from '../images/brazil-flag-4517×2992.png';
-import Login from './Login';
-import AdminPage from './AdminPage';
-import WorkspacePage from './WorkspacePage';
+import backgroundImage from './images/brazil-flag-4517×2992.png';
+import Login from './pages/Login';
+import AdminPage from './pages/AdminPage';
+import WorkspacePage from './pages/WorkspacePage';
 import { ThemeProvider } from '@mui/material/styles';
 
 const setBgImage = () => {

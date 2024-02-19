@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Router from './Router';
+import Router from '../Router';
 import theme from '../theme';
 
 const container = document.createElement('div');
