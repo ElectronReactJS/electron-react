@@ -4,7 +4,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import Navigator from '../component/Navigator';
 import MainFrame from '../component/MainFrame';
 import MainHeader from '../component/MainHeader';
