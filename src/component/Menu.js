@@ -8,11 +8,14 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Navigator from '../component/Navigator';
 
-const drawerWidth = 256;
-
-function Menu() {
+function Menu({ themeBreakpoints = { up: 'sm' }, drawerWidth, mobileOpen, handleDrawerToggle }) {
     const theme = useTheme();
-    const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
+    const isSmUp = useMediaQuery(theme.breakpoints.up(themeBreakpoints.up));
+
+    if (typeof handleDrawerToggle !== 'function') {
+        console.warn('Menu: Invalid handleDrawerToggle function provided.');
+        handleDrawerToggle = () => { };
+    }
 
     return (
         <Box
