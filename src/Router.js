@@ -31,7 +31,7 @@ const Router = ({ theme }) => {
                 <Routes>
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/workspace" element={<WorkspacePage />} />
-                    <Route path="/AdminPage" element={<AdminPage />} />
+                    <Route path="/adminPage" element={<AdminPage />} />
                 </Routes>
             </MemoryRouter>
         </ThemeProvider>

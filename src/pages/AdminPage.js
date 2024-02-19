@@ -3,21 +3,21 @@ import { useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import MainFrame from '../component/MainFrame';
-import MainHeader from '../component/MainHeader';
+import AdminContent from '../component/AdminContent';
+import AdminHeader from '../component/AdminHeader';
 import Copyright from '../component/Copyright';
 import Menu from '../component/Menu';
 
 const drawerWidth = 256;
 
-export default function Mainboard() {
+export default function AdminPage() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
     useEffect(() => {
-        console.log('Mainboard component mounted successfully');
+        console.log('AdminPage mounted successfully');
     }, []);
 
     return (
@@ -28,13 +28,13 @@ export default function Mainboard() {
                 handleDrawerToggle={handleDrawerToggle} 
                 drawerWidth={drawerWidth} />
             <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-                <MainHeader onDrawerToggle={handleDrawerToggle} />
+                <AdminHeader onDrawerToggle={handleDrawerToggle} />
                 <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
-                    <MainFrame>
+                    <AdminContent>
                         <Typography color="inherit" variant="h5" component="h1">
-                            MainFrame content
+                            Admin Page content
                         </Typography>
-                    </MainFrame>
+                    </AdminContent>
                 </Box>
                 <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
                     <Copyright />
