@@ -12,6 +12,7 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
+import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
@@ -93,7 +94,7 @@ export default function AccountMenu(props) {
                 {props.children}
                 <MenuItem onClick={goToAdmin}>
                     <ListItemIcon>
-                        <Settings fontSize="small" />
+                        <SpaceDashboardIcon fontSize="small" />
                     </ListItemIcon>
                     Settings
                 </MenuItem>
