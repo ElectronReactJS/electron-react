@@ -1,7 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
-import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
 import HelpIcon from '@mui/icons-material/Help';
 import IconButton from '@mui/material/IconButton';
@@ -13,10 +12,11 @@ import Tabs from '@mui/material/Tabs';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import AccountMenu from './AccountMenu';
 
 const lightColor = 'rgba(255, 255, 255, 0.7)';
 
-function MainHeader(props) {
+function AdminHeader(props) {
   const { onDrawerToggle } = props;
 
   return (
@@ -60,9 +60,7 @@ function MainHeader(props) {
               </Tooltip>
             </Grid>
             <Grid item>
-              <IconButton color="inherit" sx={{ p: 0.5 }}>
-                <Avatar src="/static/images/avatar/1.jpg" alt="My Avatar" />
-              </IconButton>
+              <AccountMenu />
             </Grid>
           </Grid>
         </Toolbar>
@@ -78,7 +76,7 @@ function MainHeader(props) {
           <Grid container alignItems="center" spacing={1}>
             <Grid item xs>
               <Typography color="inherit" variant="h5" component="h1">
-                MainHeader Title
+                Account Header Title
               </Typography>
             </Grid>
             <Grid item>
@@ -91,17 +89,12 @@ function MainHeader(props) {
           </Grid>
         </Toolbar>
       </AppBar>
-      <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
-        <Tabs value={0} textColor="inherit">
-          <Tab label="Main View" />
-        </Tabs>
-      </AppBar>
     </React.Fragment>
   );
 }
 
-MainHeader.propTypes = {
+AdminHeader.propTypes = {
   onDrawerToggle: PropTypes.func.isRequired,
 };
 
-export default MainHeader;
+export default AdminHeader;
