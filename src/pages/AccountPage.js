@@ -3,25 +3,23 @@ import { useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import AdminHeader from '../component/AdminHeader';
+import AccountHeader from '../component/AccountHeader';
 import Copyright from '../component/Copyright';
 import Menu from '../component/AdminNavigatorMenu';
 import TabsLayout from '../component/TabsLayout';
 import TabsContent from '../component/TabsContent';
 import Content from '../component/Content';
-import TimelineFeed from '../component/TimelineFeed';
-import ControlledAccordions from '../component/ControlledAccordions';
 
 const drawerWidth = 256;
 
-export default function AdminPage() {
+export default function AccountPage() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
     useEffect(() => {
-        console.log('AdminPage mounted successfully');
+        console.log('AccountPage mounted successfully');
     }, []);
 
     return (
@@ -32,16 +30,20 @@ export default function AdminPage() {
                 handleDrawerToggle={handleDrawerToggle} 
                 drawerWidth={drawerWidth} />
             <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-                <AdminHeader onDrawerToggle={handleDrawerToggle} />
+                <AccountHeader onDrawerToggle={handleDrawerToggle} />
                 <TabsLayout>
-                    <TabsContent label="Timeline">
+                    <TabsContent label="Tab 1">
                         <Content>
-                            <TimelineFeed />
+                        <Typography sx={{ my: 5, mx: 2 }} color="text.secondary" align="center">
+                            Conteúdo da Tab 1
+                        </Typography>
                         </Content>
                     </TabsContent>
-                    <TabsContent label="Document 3">
+                    <TabsContent label="Tab 2">
                         <Content>
-                            <ControlledAccordions />
+                        <Typography sx={{ my: 5, mx: 2 }} color="text.secondary" align="center">
+                            Conteúdo da Tab 2
+                        </Typography>
                         </Content>
                     </TabsContent>
                 </TabsLayout>

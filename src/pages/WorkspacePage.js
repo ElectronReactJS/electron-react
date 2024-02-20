@@ -5,10 +5,12 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import WorkspaceHeader from '../component/WorkspaceHeader';
-import WorkspaceContent from '../component/WorkspaceContent';
 import Copyright from '../component/Copyright';
+import TabsLayout from '../component/TabsLayout';
+import TabsContent from '../component/TabsContent';
+import Content from '../component/Content';
+import Typography from '@mui/material/Typography';
 
 export default function WorkspacePage() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -25,16 +27,23 @@ export default function WorkspacePage() {
             <CssBaseline />
             <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <WorkspaceHeader onDrawerToggle={handleDrawerToggle} />
-                <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
-                    <WorkspaceContent>
-                        <Typography color="inherit" variant="h5" component="h1">
-                            Workspace Page content
+                <TabsLayout>
+                    <TabsContent label="Tab 1">
+                        <Content>
+                        <Typography sx={{ my: 5, mx: 2 }} color="text.secondary" align="center">
+                            Conteúdo da Tab 1
                         </Typography>
-                    </WorkspaceContent>
-                </Box>
-                <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
-                    <Copyright />
-                </Box>
+                        </Content>
+                    </TabsContent>
+                    <TabsContent label="Tab 2">
+                        <Content>
+                        <Typography sx={{ my: 5, mx: 2 }} color="text.secondary" align="center">
+                            Conteúdo da Tab 2
+                        </Typography>
+                        </Content>
+                    </TabsContent>
+                </TabsLayout>
+                <Copyright link="Malnati" url="https://github.com/Malnati"/>
             </Box>
         </Box>
     );

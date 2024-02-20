@@ -1,14 +1,14 @@
 
 
-// src/component/Menu.js
+// src/component/AdminNavigatorMenu.js
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Navigator from '../component/Navigator';
+import AdminNavigator from './AdminNavigator';
 
-function Menu({ themeBreakpoints = { up: 'sm' }, drawerWidth, mobileOpen, handleDrawerToggle }) {
+function AdminNavigatorMenu({ themeBreakpoints = { up: 'sm' }, drawerWidth, mobileOpen, handleDrawerToggle }) {
     const theme = useTheme();
     const isSmUp = useMediaQuery(theme.breakpoints.up(themeBreakpoints.up));
 
@@ -22,7 +22,7 @@ function Menu({ themeBreakpoints = { up: 'sm' }, drawerWidth, mobileOpen, handle
             component="nav"
             sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }} >
             {isSmUp ? null : (
-                <Navigator
+                <AdminNavigator
                     PaperProps={{ style: { width: drawerWidth } }}
                     variant="temporary"
                     open={mobileOpen}
@@ -30,11 +30,11 @@ function Menu({ themeBreakpoints = { up: 'sm' }, drawerWidth, mobileOpen, handle
                 />
             )}
 
-            <Navigator
+            <AdminNavigator
                 PaperProps={{ style: { width: drawerWidth } }}
                 sx={{ display: { sm: 'block', xs: 'none' } }} />
         </Box>
     );
 }
 
-export default Menu;
+export default AdminNavigatorMenu;

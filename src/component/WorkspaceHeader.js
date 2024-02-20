@@ -7,8 +7,6 @@ import IconButton from '@mui/material/IconButton';
 import HelpIcon from '@mui/icons-material/Help';
 import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import PropTypes from 'prop-types';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -28,42 +26,42 @@ function WorkspaceHeader(props) {
                 <Toolbar>
                     <Grid container spacing={1} alignItems="center">
                         <Grid sx={{ display: { sm: 'none', xs: 'block' } }} item>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={onDrawerToggle}
-                            edge="start"
-                        >
-                            <MenuIcon />
-                        </IconButton>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                onClick={onDrawerToggle}
+                                edge="start"
+                            >
+                                <MenuIcon />
+                            </IconButton>
                         </Grid>
                         <Grid item xs />
                         <Grid item>
-                        <Link
-                            href="/"
-                            variant="body2"
-                            sx={{
-                            textDecoration: 'none',
-                            color: lightColor,
-                            '&:hover': {
-                                color: 'common.white',
-                            },
-                            }}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            Go to ...
-                        </Link>
+                            <Link
+                                href="/"
+                                variant="body2"
+                                sx={{
+                                    textDecoration: 'none',
+                                    color: lightColor,
+                                    '&:hover': {
+                                        color: 'common.white',
+                                    },
+                                }}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Go to ...
+                            </Link>
                         </Grid>
                         <Grid item>
-                        <Tooltip title="Alerts • No alerts">
-                            <IconButton color="inherit">
-                            <NotificationsIcon />
-                            </IconButton>
-                        </Tooltip>
+                            <Tooltip title="Alerts • No alerts">
+                                <IconButton color="inherit">
+                                    <NotificationsIcon />
+                                </IconButton>
+                            </Tooltip>
                         </Grid>
                         <Grid item>
-                        <AccountMenu />
+                            <AccountMenu />
                         </Grid>
                     </Grid>
                 </Toolbar>
@@ -91,14 +89,6 @@ function WorkspaceHeader(props) {
                         </Grid>
                     </Grid>
                 </Toolbar>
-            </AppBar>
-            <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
-                <Tabs value={0} textColor="inherit">
-                    <Tab label="Workspace View 0" />
-                    <Tab label="Workspace View 1" />
-                    <Tab label="Workspace View 2" />
-                    <Tab label="Workspace View 3" />
-                </Tabs>
             </AppBar>
         </React.Fragment>
     );

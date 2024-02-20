@@ -25,17 +25,10 @@ const categories = [
         { id: 'Preferences', icon: <PeopleOutlineIcon /> },
         { id: 'Security', icon: <PeopleIcon />, active: true },
         { id: 'Language', icon: <SettingsAccessibilityIcon /> },
+        { id: 'License', icon: <PinIcon /> },
         { id: 'Privacity', icon: <SupervisedUserCircleIcon /> },
     ],
-  },
-  {
-    id: 'Settings',
-    children: [
-        { id: 'Sizes', icon: <PinIcon /> },
-        { id: 'Colors', icon: <BackupIcon /> },
-        { id: 'Layers', icon: <SettingsIcon /> },
-    ],
-  },
+  }
 ];
 
 const item = {
@@ -53,20 +46,20 @@ const itemCategory = {
   px: 3,
 };
 
-export default function Navigator(props) {
+export default function AccountNavigator(props) {
   const { ...other } = props;
 
   return (
     <Drawer variant="permanent" {...other}>
       <List disablePadding>
         <ListItem sx={{ ...item, ...itemCategory, fontSize: 22, color: '#fff' }}>
-          Subtitle
+          Account
         </ListItem>
         <ListItem sx={{ ...item, ...itemCategory }}>
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
-          <ListItemText>Main</ListItemText>
+          <ListItemText>Tabs</ListItemText>
         </ListItem>
         {categories.map(({ id, children }) => (
           <Box key={id} sx={{ bgcolor: '#101F33' }}>

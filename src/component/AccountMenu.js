@@ -29,10 +29,15 @@ export default function AccountMenu(props) {
     };
     const handleClose = () => {
         setAnchorEl(null);
+        navigate('/login');
     };
 
     const goToAdmin = () => {
         navigate('/adminPage');
+    };
+
+    const goToAccount = () => {
+        navigate('/accountPage');
     };
 
     const goToWorkspace = () => {
@@ -58,8 +63,8 @@ export default function AccountMenu(props) {
                 anchorEl={anchorEl}
                 id="account-menu"
                 open={open}
-                onClose={handleClose}
-                onClick={handleClose}
+                //onClose={handleClose}
+                //onClick={handleClose}
                 PaperProps={{
                     elevation: 0,
                     sx: {
@@ -89,7 +94,7 @@ export default function AccountMenu(props) {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <MenuItem onClick={goToWorkspace}>
+                <MenuItem onClick={goToAccount}>
                     <Avatar /> Account
                 </MenuItem>
                 <Divider />
