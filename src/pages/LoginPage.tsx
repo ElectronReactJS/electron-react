@@ -21,7 +21,7 @@ interface LoginPageProps {
     return (
         <Box>
             <LoginPaper title={title}>
-                <TextField label="Username" help="Username" />
+                <TextField label="Username" />
                 <Password />
             </LoginPaper>
         </Box>
