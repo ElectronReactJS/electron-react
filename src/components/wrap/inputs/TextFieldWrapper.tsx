@@ -4,12 +4,12 @@ import TextField from '@mui/material/TextField';
 import { useTheme } from '@mui/material/styles';
 import { TextFieldWrapperTheme } from './TextFieldWrapper.Theme';
 
-const TextFieldWrapper: React.FC<any> = (props) => {
+const TextFieldWrapper: React.FC<any> = ({ success, error, ...otherProps }) => {
     const currentTheme = useTheme();
     const textFieldWrapperTheme = TextFieldWrapperTheme(currentTheme);
-  
+
     return (
-      <TextField {...props} variant="standard" />
+      <TextField {...otherProps} success={success} error={error} variant="standard" />
     );
   };
   
