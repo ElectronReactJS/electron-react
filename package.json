@@ -5,7 +5,7 @@
   "description": "My Electron React TypeScript application",
   "main": ".webpack/main",
   "scripts": {
-    "start": "npm run commit && electron-forge start",
+    "start": "npm run commit; electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
