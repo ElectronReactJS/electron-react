@@ -1,16 +1,17 @@
 {
-  "name": "electron-react",
-  "productName": "electron-react",
+  "name": "electron-react-ts",
+  "productName": "electron-react-ts",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "My Electron React TypeScript application",
   "main": ".webpack/main",
   "scripts": {
-    "start": "npm run clean && electron-forge start",
+    "start": "npm run commit && electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
-    "clean": "npm cache clean --force && rm -rf 'node_modules' '.webpack' && npm install -y"
+    "clean": "npm cache clean --force && rm -rf 'node_modules' '.webpack' && npm install -y",
+    "commit": "git add . && git commit -m \"path: auto commit by npm run commit\""
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.3.0",
@@ -50,7 +51,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.16",
     "@mui/lab": "^5.0.0-alpha.165",
-    "@mui/material": "^5.14.17",
+    "@mui/material": "^5.15.10",
     "@mui/system": "^5.14.17",
     "@mui/x-data-grid": "^6.18.1",
     "@types/react-router-dom": "^5.3.3",
