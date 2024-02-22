@@ -2,7 +2,7 @@
 // src/components/wrap/inputs/PasswordFieldWrapper.tsx
 import * as React from 'react';
 import IconButton from '@mui/material/IconButton';
-import OutlinedInput from '@mui/material/OutlinedInput';
+import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
@@ -19,25 +19,23 @@ export default function PasswordFieldWrapper() {
   };
 
   return (
-        <FormControl sx={{ m: 1, width: '100%' }} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password"
-          />
-        </FormControl>
+        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+        <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+        <Input
+        id="standard-adornment-password"
+        type={showPassword ? 'text' : 'password'}
+        endAdornment={
+            <InputAdornment position="end">
+            <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+            >
+                {showPassword ? <VisibilityOff /> : <Visibility />}
+            </IconButton>
+            </InputAdornment>
+        }
+        />
+    </FormControl>
   );
 }
