@@ -1,5 +1,6 @@
 import Box from '../components/wrap/layouts/BoxWrapper';
 import LoginPaper from '../components/custom/surfaces/LoginPaper';
+import TextField from '../components/wrap/inputs/TextFieldWrapper';
 
 interface LoginPageProps {
     title?: string; 
@@ -10,7 +11,7 @@ interface LoginPageProps {
     return (
         <Box>
             <LoginPaper title={title}>
-                
+                <TextField label="username"/>
             </LoginPaper>
         </Box>
     );
