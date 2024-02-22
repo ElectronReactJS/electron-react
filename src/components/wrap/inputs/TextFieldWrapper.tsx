@@ -1,16 +1,26 @@
 
-// src/components/wrap/inputs/TextFieldWrapped.tsx
-import TextField from '@mui/material/TextField';
-import { useTheme } from '@mui/material/styles';
-import { TextFieldWrapperTheme } from './TextFieldWrapper.Theme';
+// src/components/wrap/inputs/TextFieldWrapper.tsx
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormControl from '@mui/material/FormControl';
+import { FormHelperText } from '@mui/material';
 
-const TextFieldWrapper: React.FC<any> = ({ success, error, ...otherProps }) => {
-    const currentTheme = useTheme();
-    const textFieldWrapperTheme = TextFieldWrapperTheme(currentTheme);
+export default function TextFieldWrapper(props: any) {
 
-    return (
-      <TextField {...otherProps} success={success} error={error} variant="standard" />
-    );
-  };
-  
-  export default TextFieldWrapper;
+  return (
+        <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
+        <InputLabel htmlFor="standard-adornment-text">{props.help}</InputLabel>
+        <Input
+        id="standard-adornment-text"
+        endAdornment={
+            <InputAdornment position="end">
+                <IconButton />
+            </InputAdornment>
+        }
+        />
+        <FormHelperText id="standard-adornment-text-helper">{props.help}</FormHelperText>
+    </FormControl>
+  );
+}

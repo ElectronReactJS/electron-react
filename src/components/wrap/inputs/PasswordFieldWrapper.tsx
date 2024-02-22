@@ -19,7 +19,7 @@ export default function PasswordFieldWrapper() {
   };
 
   return (
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+        <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
         <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
         <Input
         id="standard-adornment-password"
