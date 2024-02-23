@@ -8,13 +8,14 @@ interface TypographyWrapperProps extends TypographyProps {
   children?: React.ReactNode;
 }
 
-const TypographyWrapper: React.FC<TypographyWrapperProps> = (props) => {
+const TypographyWrapper: React.FC<TypographyWrapperProps> = (props: TypographyWrapperProps) => {
   const currentTheme = useTheme();
   const typographyWrapperTheme = TypographyWrapperTheme(currentTheme);
+  const { children, ...otherProps } = props;
 
   return (
-    <Typography sx={{ ...typographyWrapperTheme, ...props.sx }} {...props}>
-        {props.children}
+    <Typography sx={{ ...typographyWrapperTheme, ...otherProps.sx }} {...props}>
+        {children}
     </Typography>
   );
 };
