@@ -9,7 +9,7 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-export default function PasswordFieldWrapper() {
+export default function PasswordFieldWrapper(props: any) {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -20,22 +20,20 @@ export default function PasswordFieldWrapper() {
 
   return (
         <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
-        <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
-        <Input
-        id="standard-adornment-password"
-        type={showPassword ? 'text' : 'password'}
-        endAdornment={
-            <InputAdornment position="end">
-            <IconButton
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
-            >
-                {showPassword ? <VisibilityOff /> : <Visibility />}
-            </IconButton>
-            </InputAdornment>
-        }
-        />
-    </FormControl>
+            <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+            <Input id="standard-adornment-password"
+                    type={showPassword ? 'text' : 'password'}
+                    endAdornment={
+                        <InputAdornment position="end">
+                            <IconButton
+                                aria-label="toggle password visibility"
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}>
+                                {showPassword ? <VisibilityOff /> : <Visibility />}
+                            </IconButton>
+                        </InputAdornment>
+                    } 
+                />
+        </FormControl>
   );
 }

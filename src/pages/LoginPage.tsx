@@ -1,5 +1,6 @@
 
 // src/pages/LoginPage.tsx
+import { useNavigate } from 'react-router-dom';
 import Box from '../components/wrap/layouts/BoxWrapper';
 import LoginPaper from '../components/custom/surfaces/LoginPaper';
 import TextField from '../components/wrap/inputs/TextFieldWrapper';
@@ -10,25 +11,22 @@ interface LoginPageProps {
     title?: string; 
   }
   
-  const LoginPage: React.FC<LoginPageProps> = () => { 
+  const LoginPage: React.FC<LoginPageProps> = (title: any) => { 
+    const navigate = useNavigate();
+    const label = title? title: "Company Name";
 
-    const title = "Company Name";
-
-    const handleTyping = (e) => {
-        const emailValue = e.target.value;
-        if (emailValue.length === 0) {
-            return false;
-        } return true;
-    }
+    const goToMain = () => {
+        navigate('/main');
+    };
 
     return (
         <Box>
-            <LoginPaper>
+            <LoginPaper title={label}>
                 <Box> 
                     <img src={loginImage} alt="Logo"/>
                 </Box>
-                <TextField label="Username" />
-                <Password />
+                <TextField label="Username or e-mail" placeholder="endereco@dominio.gov.br" />
+                <Password  onChange={goToMain}/>
             </LoginPaper>
         </Box>
     );

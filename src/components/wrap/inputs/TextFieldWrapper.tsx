@@ -10,15 +10,15 @@ export default function TextFieldWrapper(props: any) {
 
   return (
         <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
-        <InputLabel htmlFor="standard-adornment-text">{props.label}</InputLabel>
-        <Input
-        id="standard-adornment-text"
-        endAdornment={
-            <InputAdornment position="end">
-                <IconButton />
-            </InputAdornment>
-        }
-        />
-    </FormControl>
+            <InputLabel htmlFor="standard-adornment-text">{props.label}</InputLabel>
+            <Input id="standard-adornment-text"
+                    placeholder={props.placeholder}
+                    endAdornment={
+                        <InputAdornment position="end">
+                            <IconButton />
+                        </InputAdornment>
+                    }
+            />
+        </FormControl>
   );
 }
