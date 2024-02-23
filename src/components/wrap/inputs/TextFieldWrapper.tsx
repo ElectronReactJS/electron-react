@@ -6,13 +6,13 @@ import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 
-export default function TextFieldWrapper(props: any) {
+export default function TextFieldWrapper(placeholder: any, label: any) {
 
   return (
         <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
-            <InputLabel htmlFor="standard-adornment-text">{props.label}</InputLabel>
+            <InputLabel htmlFor="standard-adornment-text">{label}</InputLabel>
             <Input id="standard-adornment-text"
-                    placeholder={props.placeholder}
+                    placeholder={placeholder}
                     endAdornment={
                         <InputAdornment position="end">
                             <IconButton />

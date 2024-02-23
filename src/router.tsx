@@ -6,8 +6,8 @@ import theme from './theme';
 import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from '@mui/material/styles';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
 import MainPage from './pages/MainPage';
+import LoginPage from './pages/LoginPage';
 
 // Get the navigation element
 const navigationElement = document.getElementById('navigation');
