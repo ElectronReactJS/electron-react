@@ -9,7 +9,9 @@ interface LoginPageProps {
     title?: string; 
   }
   
-  const LoginPage: React.FC<LoginPageProps> = ({ title = "Login" }) => { 
+  const LoginPage: React.FC<LoginPageProps> = () => { 
+
+    const title = "Login";
 
     const handleTyping = (e) => {
         const emailValue = e.target.value;
@@ -21,6 +23,7 @@ interface LoginPageProps {
     return (
         <Box>
             <LoginPaper title={title}>
+                <Box> { "Test" } </Box>
                 <TextField label="Username" />
                 <Password />
             </LoginPaper>
