@@ -11,7 +11,7 @@ interface LoginPaperProps {
     children?: React.ReactNode;
 }
 
-const LoginPaper: React.FC<LoginPaperProps> = ({ title = "Login", children }) => { 
+const LoginPaper: React.FC<LoginPaperProps> = ({ title, children }) => { 
     const currentTheme = useTheme();
     const loginPaperStyles = LoginPaperTheme(currentTheme);
 

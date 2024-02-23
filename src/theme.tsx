@@ -105,7 +105,7 @@ const theme = createTheme(baseTheme, {
     // ... your other components
   },
   background: {
-    image: `url(${require('./images/background.png')})`,
+    image: `url(${require('./images/background-1920×1080.png')})`,
   },
 });
 

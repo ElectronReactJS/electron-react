@@ -4,6 +4,7 @@ import Box from '../components/wrap/layouts/BoxWrapper';
 import LoginPaper from '../components/custom/surfaces/LoginPaper';
 import TextField from '../components/wrap/inputs/TextFieldWrapper';
 import Password from '../components/wrap/inputs/PasswordFieldWrapper';
+import loginImage from '../images/logo128x128.png';
 
 interface LoginPageProps {
     title?: string; 
@@ -22,8 +23,10 @@ interface LoginPageProps {
 
     return (
         <Box>
-            <LoginPaper title={title}>
-                <Box> { "Test" } </Box>
+            <LoginPaper>
+                <Box> 
+                    <img src={loginImage} alt="Logo"/>
+                </Box>
                 <TextField label="Username" />
                 <Password />
             </LoginPaper>
