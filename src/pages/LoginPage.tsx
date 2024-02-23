@@ -9,7 +9,7 @@ interface LoginPageProps {
     title?: string; 
   }
   
-  const LoginPage: React.FC<LoginPageProps> = ({ title = "Wellcome" }) => { 
+  const LoginPage: React.FC<LoginPageProps> = ({ title = "Login" }) => { 
 
     const handleTyping = (e) => {
         const emailValue = e.target.value;
