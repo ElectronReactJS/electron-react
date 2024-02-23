@@ -19,7 +19,7 @@ interface MainPageProps {
     return (
         <Box>
             <Paper>
-                <Typography><>{title}</></Typography>
+                {title}
             </Paper>
         </Box>
     );
