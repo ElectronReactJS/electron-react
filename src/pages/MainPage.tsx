@@ -3,7 +3,6 @@
 import { useNavigate } from 'react-router-dom';
 import Box from '../components/wrap/layouts/BoxWrapper';
 import Paper from '../components/wrap/surfaces/PaperWrapper'; 
-import Typography from '../components/wrap/displays/TypographyWrapper';
 
 interface MainPageProps {
     title?: string; 

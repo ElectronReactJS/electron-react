@@ -4,11 +4,7 @@ import Paper, { PaperProps } from '@mui/material/Paper';
 import { useTheme } from '@mui/material/styles';
 import { PaperWrapperTheme } from './PaperWrapper.Theme';
 
-interface PaperWrapperProps extends PaperProps {
-  children: React.ReactNode;
-}
-
-const PaperWrapper: React.FC<PaperWrapperProps> = (props) => {
+const PaperWrapper: React.FC<any> = (props: any) => {
   const currentTheme = useTheme();
   const paperWrapperTheme = PaperWrapperTheme(currentTheme);
 
