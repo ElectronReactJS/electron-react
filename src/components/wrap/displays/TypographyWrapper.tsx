@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 import { TypographyWrapperTheme } from './TypographyWrapper.Theme';
 
 interface TypographyWrapperProps extends TypographyProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const TypographyWrapper: React.FC<TypographyWrapperProps> = (props) => {
