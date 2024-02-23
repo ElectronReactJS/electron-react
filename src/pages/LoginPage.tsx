@@ -12,7 +12,7 @@ interface LoginPageProps {
   
   const LoginPage: React.FC<LoginPageProps> = () => { 
 
-    const title = "Login";
+    const title = "Company Name";
 
     const handleTyping = (e) => {
         const emailValue = e.target.value;
