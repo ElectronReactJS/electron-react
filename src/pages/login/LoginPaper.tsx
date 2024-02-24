@@ -24,7 +24,7 @@ const LoginPaper: React.FC<LoginPaperProps> = ({ title, children }) => {
       <Typography color="inherit" variant="h5" component="h1">
         {title}
       </Typography>
-      {children}
+
     </Paper>
   );
 };
