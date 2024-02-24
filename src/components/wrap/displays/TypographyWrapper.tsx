@@ -1,5 +1,5 @@
 
 // src/components/wrap/displays/TypographyWrapper.tsx
-import TypographyWrapper from './TypographyExtended';
+import Module from '@mui/material/Typography';
 
-export default TypographyWrapper;
+export default Module;

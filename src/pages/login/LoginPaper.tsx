@@ -1,8 +1,8 @@
 
 // src/components/custom/surfaces/LoginPaper.tsx
 import React, { useEffect } from 'react';
-import Paper from '../../wrap/surfaces/PaperWrapper';
-import Typography from '../../wrap/displays/TypographyWrapper';
+import Paper from '../../components/wrap/surfaces/PaperWrapper';
+import Typography from '../../components/wrap/displays/TypographyWrapper';
 import { LoginPaperTheme } from './LoginPaper.Theme';
 import { useTheme } from '@mui/material/styles';
 

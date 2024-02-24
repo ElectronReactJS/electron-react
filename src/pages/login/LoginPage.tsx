@@ -1,10 +1,10 @@
 
 // src/pages/LoginPage.tsx
 import { useNavigate } from 'react-router-dom';
-import Box from '../components/wrap/layouts/BoxWrapper';
-import LoginPaper from '../components/custom/surfaces/LoginPaper';
-import TextField from '../components/wrap/inputs/TextFieldWrapper';
-import Password from '../components/wrap/inputs/PasswordFieldWrapper';
+import Box from '../../components/wrap/layouts/BoxWrapper';
+import LoginPaper from './LoginPaper';
+import TextField from '../../components/wrap/inputs/TextFieldWrapper';
+import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
 import loginImage from '../images/logo128x128.png';
 
 interface LoginPageProps {
