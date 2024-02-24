@@ -23,10 +23,12 @@ interface LoginPageProps {
         <Box>
             <LoginPaper title={label}>
                 <Box> 
-                    <img src={loginImage} alt="Logo"/>
+                    <Box> 
+                        <img src={loginImage} alt="Logo"/>
+                    </Box>
+                    <TextField label="Username or e-mail" placeholder="endereco@dominio.gov.br" />
+                    <Password  onChange={goToMain}/>
                 </Box>
-                <TextField label="Username or e-mail" placeholder="endereco@dominio.gov.br" />
-                <Password  onChange={goToMain}/>
             </LoginPaper>
         </Box>
     );
