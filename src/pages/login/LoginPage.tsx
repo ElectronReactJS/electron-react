@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import Box from '../../components/wrap/layouts/BoxWrapper';
 import Paper from '../../components/wrap/surfaces/PaperWrapper';
-import TextField from '../../components/wrap/inputs/TextFieldWrapper';
+// import TextField from '../../components/wrap/inputs/TextFieldWrapper';
 import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
 import Typography from '../../components/wrap/displays/TypographyWrapper';
 import { LoginPaperTheme } from './LoginPaper.Theme';
-// import loginImage from '../images/logo128x128.png';
+import loginImage from '../../images/logo128x128.png';
 
 const LoginPage: React.FC<any> = () => { 
     const navigate = useNavigate();
@@ -28,9 +28,9 @@ const LoginPage: React.FC<any> = () => {
                         <Typography color="inherit" variant="h5" component="h1">
                             {label}
                         </Typography>
-                        {/* <img src={loginImage} alt="Logo"/> */}
+                        <img src={loginImage} alt="Logo"/>
                     </Box>
-                    <TextField label="Username or e-mail" placeholder="endereco@dominio.gov.br" />
+                    {/* <TextField label="Username or e-mail" placeholder="endereco@dominio.gov.br" /> */}
                     <Password  onChange={goToMain}/>
                 </Box>
             </Paper>
