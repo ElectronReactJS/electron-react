@@ -8,10 +8,9 @@ interface PaperWrapperProps extends PaperProps {
   children?: React.ReactNode;
 }
 
-const PaperWrapper: React.FC<PaperWrapperProps> = (props: PaperWrapperProps) => {
+const PaperWrapper: React.FC<PaperWrapperProps> = (props: PaperWrapperProps, ...otherProps) => {
   const currentTheme = useTheme();
   const paperWrapperTheme = PaperWrapperTheme(currentTheme);
-  const { children, ...otherProps } = props;
 
   return (
     <Paper sx={{ ...paperWrapperTheme, ...props.sx }} {...otherProps}>
