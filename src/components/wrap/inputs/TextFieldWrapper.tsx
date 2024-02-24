@@ -6,7 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 
-export default function TextFieldWrapper(placeholder: any, label: any) {
+export default function TextFieldWrapper(placeholder: string, label: string) {
 
   return (
         <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
