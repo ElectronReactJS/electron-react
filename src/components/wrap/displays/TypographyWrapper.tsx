@@ -11,8 +11,10 @@ const TypographyWrapper: React.FC<any> = (props: any) => {
   const typographyWrapperTheme = TypographyWrapperTheme(currentTheme);
 
   return (
-    <Typography sx={{ ...typographyWrapperTheme, ...props.sx }} {...props}>
-        {props.children}
+    <Typography sx={{ ...typographyWrapperTheme, ...props?.sx }} {...props}>
+        <>
+            {props?.children}
+        </>
     </Typography>
   );
 };
