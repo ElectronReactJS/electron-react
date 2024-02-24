@@ -9,10 +9,9 @@ import { TypographyWrapperTheme } from './TypographyWrapper.Theme';
 const TypographyWrapper: React.FC<any> = (props: any) => {
   const currentTheme = useTheme();
   const typographyWrapperTheme = TypographyWrapperTheme(currentTheme);
-  const { children, ...otherProps } = props;
 
   return (
-    <Typography sx={{ ...typographyWrapperTheme, ...otherProps.sx }} {...props}>
+    <Typography sx={{ ...typographyWrapperTheme, ...props.sx }} {...props}>
         {props.children}
     </Typography>
   );
