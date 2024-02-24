@@ -7,7 +7,9 @@ const TypographyWrapper = (props: any) => {
   const currentTheme = useTheme();
 
   return (
-    <Typography {...props} />
+    <Typography {...props} >
+        {props.children}
+        </Typography>
   );
 };
 
