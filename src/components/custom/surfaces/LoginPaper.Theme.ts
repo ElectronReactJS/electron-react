@@ -1,12 +1,9 @@
 
 // src/components/custom/surfaces/LoginPaper.Theme.ts
 import { Theme } from '@mui/material/styles';
-import { PaperWrapperTheme } from '../../wrap/surfaces/PaperWrapper.Theme';
 
 export const LoginPaperTheme = (theme: Theme) => {
-  const baseStyles = PaperWrapperTheme(theme);
   return {
-    ...baseStyles,
     // Aqui você pode adicionar ou sobrescrever estilos específicos para o login
     position: 'fixed',
     left: '50%',
