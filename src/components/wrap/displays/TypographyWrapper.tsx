@@ -1,15 +1,13 @@
 
 // src/components/wrap/displays/TypographyWrapper.tsx
-import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
+import Typography from './TypographyExtended';
 
-const TypographyWrapper = (props: any) => {
-  const currentTheme = useTheme();
+const TypographyWrapper: React.FC<any> = (props) => {
 
   return (
     <Typography {...props} >
         {props.children}
-        </Typography>
+    </Typography>
   );
 };
 
