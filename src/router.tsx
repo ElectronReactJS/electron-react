@@ -20,7 +20,7 @@ if (navigationElement) {
             <MemoryRouter initialEntries={['/login']}>
                 <Routes>
                     <Route path="/login" element={<LoginPage />} />
-                    <Route path="/main" element={<MainPage />} />
+                    {/* <Route path="/main" element={<MainPage />} /> */}
                 </Routes>
             </MemoryRouter>
         </ThemeProvider>
