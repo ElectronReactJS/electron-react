@@ -6,7 +6,7 @@ import theme from './theme';
 import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from '@mui/material/styles';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import MainPage from './pages/MainPage';
+import MainFrame from './pages/MainFrame';
 import LoginPage from './pages/login/LoginPage';
 
 // Get the navigation element
@@ -20,7 +20,7 @@ if (navigationElement) {
             <MemoryRouter initialEntries={['/login']}>
                 <Routes>
                     <Route path="/login" element={<LoginPage />} />
-                    {/* <Route path="/main" element={<MainPage />} /> */}
+                    <Route path="/main" element={<MainFrame />} />
                 </Routes>
             </MemoryRouter>
         </ThemeProvider>

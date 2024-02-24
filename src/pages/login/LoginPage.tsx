@@ -1,5 +1,5 @@
 
-// src/pages/LoginPage.tsx
+// src/pages/login/LoginPage.tsx
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import Paper from '../../components/wrap/surfaces/PaperWrapper';

@@ -9,8 +9,23 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-export default function PasswordFieldWrapper(props: any) {
+interface PasswordFieldWrapperProps {
+    validate?: (value: string) => boolean;
+  }
+
+export default function PasswordFieldWrapper({validate}: PasswordFieldWrapperProps) {
   const [showPassword, setShowPassword] = React.useState(false);
+  const [valid, setValid] = React.useState(true);
+  const [value, setValue] = React.useState('');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const newValue = event.target.value;
+      setValue(newValue); 
+      if (validate) {
+          const isValid = validate(value);
+          setValid(isValid);
+      }
+  };
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -23,6 +38,9 @@ export default function PasswordFieldWrapper(props: any) {
             <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
             <Input id="standard-adornment-password"
                     type={showPassword ? 'text' : 'password'}
+                    error={!valid}
+                    value={value}
+                    onChange={handleChange}
                     endAdornment={
                         <InputAdornment position="end">
                             <IconButton
