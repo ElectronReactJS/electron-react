@@ -9,19 +9,20 @@ import FormControl from '@mui/material/FormControl';
 interface InputFieldWrapperProps {
     placeholder: string;
     label: string;
+    value: string;
     validate?: (value: string) => boolean;
     icon?: any;
   }
 
-export default function InputFieldWrapper({ placeholder, label, validate, icon }: InputFieldWrapperProps) {
+export default function InputFieldWrapper({ placeholder, label, value, validate, icon }: InputFieldWrapperProps) {
     const [valid, setValid] = useState(true);
-    const [value, setValue] = useState('');
+    const [currectValue, setCurrectValue] = useState(value);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value;
-        setValue(newValue); 
+        setCurrectValue(newValue); 
         if (validate) {
-            const isValid = validate(value);
+            const isValid = validate(currectValue);
             setValid(isValid);
         }
     };

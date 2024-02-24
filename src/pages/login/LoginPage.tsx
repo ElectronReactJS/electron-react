@@ -2,6 +2,7 @@
 // src/pages/login/LoginPage.tsx
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
+import * as React from 'react';
 import Paper from '../../components/wrap/surfaces/PaperWrapper';
 import TextField from '../../components/wrap/inputs/InputFieldWrapper';
 import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
@@ -15,13 +16,21 @@ const LoginPage: React.FC<any> = () => {
     const currentTheme = useTheme();
     const loginPaperStyles = LoginPaperTheme(currentTheme);
     const label = "Company Name";
+    const [username, setUsername] = React.useState('');
+    const [password, setPassword] = React.useState('');
 
     const goToMain = () => {
-        navigate('/main');
+        if( validateUsername(username) && validatePassword(password) ) {
+            navigate('/main');
+        }
     };
 
-    const handleUsername = (value: string) => {
+    const validateUsername = (value: string) => {
         return true; 
+    }
+
+    const validatePassword = (value: string) => {
+        return value.length > 1; 
     }
 
     return (
@@ -32,9 +41,12 @@ const LoginPage: React.FC<any> = () => {
                 <img src={loginImage} alt="Logo"/>
             <TextField label="Username or e-mail" 
                         placeholder="endereco@dominio.gov.br" 
-                        validate={handleUsername} 
-                        icon={<TextFieldsIcon />}/>
-            <Password onChange={goToMain} />
+                        validate={validateUsername} 
+                        icon={<TextFieldsIcon />}
+                        value={username}/>
+            <Password password={password} 
+                        onChangeHandler={goToMain} 
+                        validate={validatePassword}/>
         </Paper>
     );
   };

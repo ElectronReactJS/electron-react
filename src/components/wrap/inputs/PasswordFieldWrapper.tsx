@@ -10,10 +10,12 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 interface PasswordFieldWrapperProps {
+    password: string;
     validate?: (value: string) => boolean;
+    onChangeHandler?: () => void;
   }
 
-export default function PasswordFieldWrapper({validate}: PasswordFieldWrapperProps) {
+export default function PasswordFieldWrapper({password, validate, onChangeHandler}: PasswordFieldWrapperProps) {
   const [showPassword, setShowPassword] = React.useState(false);
   const [valid, setValid] = React.useState(true);
   const [value, setValue] = React.useState('');
@@ -25,6 +27,7 @@ export default function PasswordFieldWrapper({validate}: PasswordFieldWrapperPro
           const isValid = validate(value);
           setValid(isValid);
       }
+      onChangeHandler;
   };
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
