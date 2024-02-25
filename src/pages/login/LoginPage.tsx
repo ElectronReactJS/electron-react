@@ -25,12 +25,12 @@ const LoginPage: React.FC<any> = () => {
         }
     };
 
-    const validateUsername = (value: string) => {
-        return true; 
+    const validateUsername = (username: string) => {
+        return username?.length > 1; 
     }
 
-    const validatePassword = (value: string) => {
-        return value.length > 1; 
+    const validatePassword = (password: string) => {
+        return password?.length > 1; 
     }
 
     return (
@@ -43,7 +43,7 @@ const LoginPage: React.FC<any> = () => {
                         placeholder="endereco@dominio.gov.br" 
                         validate={validateUsername} 
                         icon={<TextFieldsIcon />}
-                        value={username}/>
+                        input={username}/>
             <Password password={password} 
                         onChangeHandler={goToMain} 
                         validate={validatePassword}/>
