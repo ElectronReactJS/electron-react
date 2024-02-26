@@ -69,9 +69,15 @@ const LoginPage: React.FC<any> = () => {
         validateUsername(trimmedUsername);
     }    
 
-    const validatePassword = (password: string) => {
-        return password?.length > 2; 
-    }
+    const validatePassword = (input: string): boolean => {
+        setPasswordErrorMessage("");
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/;
+        if (!passwordRegex.test(input)) {
+            setPasswordErrorMessage("Password must be 8-16 characters long and include letters, numbers, and special characters.");
+            return false;
+        }
+        return true; 
+    }    
 
     const onChangeHandlerPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newPassword = event.target.value;

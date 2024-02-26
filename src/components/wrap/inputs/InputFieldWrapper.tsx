@@ -1,10 +1,10 @@
 
 // src/components/wrap/inputs/InputFieldWrapper.tsx
-import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import { FormHelperText } from '@mui/material';
+import Input from '../../extends/inputs/InputWrapper';
+import InputLabel from '../../extends/inputs/InputLabelWrapper';
+import InputAdornment from '../../extends/inputs/InputAdornmentWrapper';
+import FormControl from '../../extends/inputs/FormControlWrapper';
+import FormHelperText from '../../extends/inputs/FormHelperTextWrapper';
 
 interface InputFieldWrapperProps {
     placeholder: string;

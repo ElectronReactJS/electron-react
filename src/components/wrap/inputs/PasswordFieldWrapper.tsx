@@ -1,13 +1,15 @@
 
 // src/components/wrap/inputs/PasswordFieldWrapper.tsx
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
-import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
+
+import IconButton from '../../extends/displays/IconButtonWrapper';
+import VisibilityOff from '../../extends/displays/IconVisibilityOffWrapper';
+import Visibility from '../../extends/displays/IconVisibilityWrapper';
+import Input from '../../extends/inputs/InputWrapper';
+import InputLabel from '../../extends/inputs/InputLabelWrapper';
+import InputAdornment from '../../extends/inputs/InputAdornmentWrapper';
+import FormControl from '../../extends/inputs/FormControlWrapper';
+import FormHelperText from '../../extends/inputs/FormHelperTextWrapper';
 
 interface PasswordFieldWrapperProps {
     errorMessage: string;
@@ -49,6 +51,7 @@ export default function PasswordFieldWrapper({ label, value, errorMessage, onCha
                         </InputAdornment>
                     } 
                 />
+                {errorMessage && <FormHelperText error>{errorMessage}</FormHelperText>}
         </FormControl>
   );
 }

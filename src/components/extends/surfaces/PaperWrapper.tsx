@@ -1,5 +1,5 @@
 
-// src/components/wrap/surfaces/PaperWrapper.tsx
-import PaperWrapper from '@mui/material/Paper';
+// src/components/extends/surfaces/PaperWrapper.tsx
+import Module from '@mui/material/Paper';
 
-export default PaperWrapper;
+export default Module;
