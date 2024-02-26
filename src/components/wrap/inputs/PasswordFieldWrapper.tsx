@@ -12,22 +12,18 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 interface PasswordFieldWrapperProps {
     password: string;
     validate?: (value: string) => boolean;
-    onChangeHandler?: () => void;
+    onChangeHandler?: (pevent: React.ChangeEvent<HTMLInputElement>) => void;
   }
 
 export default function PasswordFieldWrapper({password, validate, onChangeHandler}: PasswordFieldWrapperProps) {
   const [showPassword, setShowPassword] = React.useState(false);
   const [valid, setValid] = React.useState(true);
-  const [value, setValue] = React.useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const newValue = event.target.value;
-      setValue(newValue); 
-      if (validate) {
-          const isValid = validate(value);
-          setValid(isValid);
-      }
-      onChangeHandler;
+      const isValid = validate(newValue);
+      setValid(isValid); 
+      onChangeHandler(event);
   };
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -42,7 +38,7 @@ export default function PasswordFieldWrapper({password, validate, onChangeHandle
             <Input id="standard-adornment-password"
                     type={showPassword ? 'text' : 'password'}
                     error={!valid}
-                    value={value}
+                    value={password}
                     onChange={handleChange}
                     endAdornment={
                         <InputAdornment position="end">
