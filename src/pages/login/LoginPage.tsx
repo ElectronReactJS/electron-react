@@ -9,7 +9,7 @@ import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
 import Typography from '../../components/wrap/displays/TypographyWrapper';
 import { LoginPaperTheme } from './LoginPaper.Theme';
 import loginImage from '../../images/logo128x128.png';
-import TextFieldsIcon from '@mui/icons-material/TextFields';
+import TextFields from '../../components/wrap/inputs/TextFieldsWrapper';
 
 const LoginPage: React.FC<any> = () => { 
     const navigate = useNavigate();
@@ -26,33 +26,33 @@ const LoginPage: React.FC<any> = () => {
         }
     };
       
-    const validateUsername = (username: string) => {
+    const validateUsername = (input: string): boolean => {
         setUsernameErrorMessage("");
-        if (username 
-            && username !== null 
-            && username !== '' 
-            && username.length > 0) {
-                if (username.includes('@')) {
+        if (input 
+            && input !== null 
+            && input !== '' 
+            && input.length > 0) {
+                if (input.includes('@')) {
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(username)) {
+                    if (!emailRegex.test(input)) {
                         setUsernameErrorMessage("Invalid e-mail.");
                         return false;
                     }
                     return true;
                 }
-                if (username.length < 5) {
+                if (input.length < 5) {
                     setUsernameErrorMessage("The minimum username length is 5 characters.");
                     return false;
                 } 
-                if (username.length > 15) {
+                if (input.length > 15) {
                     setUsernameErrorMessage("The maximum username length is 15 characters.");
                     return false;
                 } 
-                if (/\s/.test(username)) {
+                if (/\s/.test(input)) {
                     setUsernameErrorMessage("The username cannot contain spaces.");
                     return false;
                 } 
-                if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+                if (!/^[a-zA-Z0-9_]+$/.test(input)) {
                     setUsernameErrorMessage("The username can only contain letters, numbers, and underscores.");
                     return false;
                 }
@@ -63,7 +63,7 @@ const LoginPage: React.FC<any> = () => {
     
     const onChangeHandlerUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newUsername: string = event.target.value;
-        const trimmedUsername = newUsername.trim;
+        const trimmedUsername: string = newUsername.trim(); 
         setUsername(trimmedUsername); 
         validateUsername(trimmedUsername);
     }    
@@ -85,10 +85,10 @@ const LoginPage: React.FC<any> = () => {
                 </Typography>
                 <img src={loginImage} alt="Logo"/>
             <TextField label="Username or e-mail" 
-                        placeholder="endereco@dominio.gov.br"
+                        placeholder="you@domain.com"
                         errorMessage={usernameErrorMessage}
                         onChange={onChangeHandlerUsername}
-                        icon={<TextFieldsIcon />}
+                        icon={<TextFields />}
                         value={username}/>
             <Password password={password} 
                         onChangeHandler={onChangeHandlerPassword} />
