@@ -16,7 +16,7 @@ const LoginPage: React.FC<any> = () => {
     const currentTheme = useTheme();
     const loginPaperStyles = LoginPaperTheme(currentTheme);
     const label = "Company Name";
-    const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('Invalid input!');
+    const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('');
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
 
@@ -28,39 +28,44 @@ const LoginPage: React.FC<any> = () => {
       
     const validateUsername = (username: string) => {
         setUsernameErrorMessage("");
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (username.includes('@')) {
-            if (!emailRegex.test(username)) {
-                setUsernameErrorMessage("Invalid e-mail.");
-                return false;
-            }
-            return true;
-        }
-        if (username.length < 5) {
-            setUsernameErrorMessage("The minimum username length is 5 characters.");
-            return false;
+        if (username 
+            && username !== null 
+            && username !== '' 
+            && username.length > 0) {
+                if (username.includes('@')) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(username)) {
+                        setUsernameErrorMessage("Invalid e-mail.");
+                        return false;
+                    }
+                    return true;
+                }
+                if (username.length < 5) {
+                    setUsernameErrorMessage("The minimum username length is 5 characters.");
+                    return false;
+                } 
+                if (username.length > 15) {
+                    setUsernameErrorMessage("The maximum username length is 15 characters.");
+                    return false;
+                } 
+                if (/\s/.test(username)) {
+                    setUsernameErrorMessage("The username cannot contain spaces.");
+                    return false;
+                } 
+                if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+                    setUsernameErrorMessage("The username can only contain letters, numbers, and underscores.");
+                    return false;
+                }
         } 
-        if (username.length > 15) {
-            setUsernameErrorMessage("The maximum username length is 15 characters.");
-            return false;
-        } 
-        if (/\s/.test(username)) {
-            setUsernameErrorMessage("The username cannot contain spaces.");
-            return false;
-        } 
-        if (!/^[a-zA-Z0-9_]+$/.test(username)) {
-            setUsernameErrorMessage("The username can only contain letters, numbers, and underscores.");
-            return false;
-        }
+        setUsernameErrorMessage("");
         return true; 
     }
     
-
     const onChangeHandlerUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const newValue = event.target.value;
-        setUsername(newValue); 
-        if (validateUsername(newValue)) goToMain();
-    }
+        const newUsername = event.target.value;
+        setUsername(newUsername); 
+        validateUsername(newUsername);
+    }    
 
     const validatePassword = (password: string) => {
         return password?.length > 2; 

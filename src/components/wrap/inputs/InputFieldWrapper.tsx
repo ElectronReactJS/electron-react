@@ -18,17 +18,12 @@ interface InputFieldWrapperProps {
   }
 
 export default function InputFieldWrapper({ placeholder, label, value, validate, errorMessage, onChange, icon }: InputFieldWrapperProps) {
-    const [error, setError] = useState<string | null>(null);
-
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        onChange(event);
-        const newValue = event.target.value;
-        const isValid = validate(newValue);
-        setError(isValid ? null : errorMessage);
+        onChange(event); 
     };
 
   return (
-        <FormControl sx={{ m: 1, width: '100%' }} variant="standard" error={!!error}>
+        <FormControl sx={{ m: 1, width: '100%' }} variant="standard" error={!!errorMessage}>
             <InputLabel htmlFor="standard-adornment-text" >
                 {label}
             </InputLabel>
@@ -38,11 +33,11 @@ export default function InputFieldWrapper({ placeholder, label, value, validate,
                     onChange={handleChange}
                     endAdornment={
                         <InputAdornment position="end">
-                            {icon? icon: null}
+                             {icon || null}
                         </InputAdornment>
                     }
             />
-             {error && <FormHelperText>{error}</FormHelperText>}
+            {errorMessage && <FormHelperText error>{errorMessage}</FormHelperText>}
         </FormControl>
   );
 }
