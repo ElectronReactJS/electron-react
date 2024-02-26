@@ -16,6 +16,7 @@ const LoginPage: React.FC<any> = () => {
     const currentTheme = useTheme();
     const loginPaperStyles = LoginPaperTheme(currentTheme);
     const label = "Company Name";
+    const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('Invalid input!');
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
 
@@ -24,15 +25,40 @@ const LoginPage: React.FC<any> = () => {
             navigate('/main');
         }
     };
-
+      
     const validateUsername = (username: string) => {
-        return username?.length > 2; 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (username.includes('@')) {
+            if (!emailRegex.test(username)) {
+                setUsernameErrorMessage("Invalid e-mail.");
+                return false;
+            }
+            return true;
+        }
+        if (username.length < 5) {
+            setUsernameErrorMessage("The minimum username length is 5 characters.");
+            return false;
+        } 
+        if (username.length > 15) {
+            setUsernameErrorMessage("The maximum username length is 15 characters.");
+            return false;
+        } 
+        if (/\s/.test(username)) {
+            setUsernameErrorMessage("The username cannot contain spaces.");
+            return false;
+        } 
+        if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+            setUsernameErrorMessage("The username can only contain letters, numbers, and underscores.");
+            return false;
+        }
+        return true; 
     }
+    
 
     const onChangeHandlerUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setUsername(event.target.value); 
-        if (validateUsername(username))
-            goToMain();
+        const newValue = event.target.value;
+        setUsername(newValue); 
+        if (validateUsername(newValue)) goToMain();
     }
 
     const validatePassword = (password: string) => {
@@ -40,9 +66,9 @@ const LoginPage: React.FC<any> = () => {
     }
 
     const onChangeHandlerPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPassword(password); 
-        if (validatePassword(password))
-            goToMain();
+        const newPassword = event.target.value;
+        setPassword(newPassword); 
+        if (validatePassword(newPassword)) goToMain();
     }
 
     return (
@@ -54,7 +80,7 @@ const LoginPage: React.FC<any> = () => {
             <InputField label="Username or e-mail" 
                         placeholder="endereco@dominio.gov.br" 
                         validate={validateUsername} 
-                        errorMessage="No space allowed!"
+                        errorMessage={usernameErrorMessage}
                         onChange={onChangeHandlerUsername}
                         icon={<TextFieldsIcon />}
                         value={username}/>
