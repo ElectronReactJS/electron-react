@@ -1,10 +1,10 @@
 
-// src/components/wrap/inputs/TextFieldWrapper.tsx
+// src/components/wrap/inputs/NumberFieldWrapper.tsx
 import React from 'react';
 import InputFieldWrapper from './InputFieldWrapper';
-import IconTextFields from '../displays/IconTextFieldsWrapper';
+import NumbersIcon from '../displays/IconNumbersWrapper'; 
 
-export interface InputFieldWrapperProps {
+export interface NumberFieldWrapperProps {
     placeholder: string;
     errorMessage: string;
     label: string;
@@ -13,13 +13,13 @@ export interface InputFieldWrapperProps {
     icon?: React.ReactNode;
   }
 
-const TextFieldWrapper: React.FC<InputFieldWrapperProps> = (props) => {
+const NumberFieldWrapper: React.FC<NumberFieldWrapperProps> = (props) => {
   return (
     <InputFieldWrapper
       {...props}
-      icon={<IconTextFields />}
+      icon={<NumbersIcon />}
     />
   );
 };
 
-export default TextFieldWrapper;
+export default NumberFieldWrapper;

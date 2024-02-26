@@ -7,7 +7,7 @@ import Paper from '../../components/wrap/surfaces/PaperWrapper';
 import TextField from '../../components/wrap/inputs/TextFieldWrapper';
 import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
 import Typography from '../../components/wrap/displays/TypographyWrapper';
-import TextFields from '../../components/wrap/inputs/TextFieldsWrapper';
+import IconTextFields from '../../components/wrap/displays/IconTextFieldsWrapper';
 import { LoginPaperTheme } from './LoginPaper.Theme';
 import loginImage from '../../images/logo128x128.png';
 
@@ -88,7 +88,7 @@ const LoginPage: React.FC<any> = () => {
                         placeholder="you@domain.com"
                         errorMessage={usernameErrorMessage}
                         onChange={onChangeHandlerUsername}
-                        icon={<TextFields />}
+                        icon={<IconTextFields />}
                         value={username}/>
             <Password password={password} 
                         onChangeHandler={onChangeHandlerPassword} />
