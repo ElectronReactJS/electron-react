@@ -27,6 +27,7 @@ const LoginPage: React.FC<any> = () => {
     };
       
     const validateUsername = (username: string) => {
+        setUsernameErrorMessage("");
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (username.includes('@')) {
             if (!emailRegex.test(username)) {
