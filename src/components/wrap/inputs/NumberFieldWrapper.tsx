@@ -2,7 +2,7 @@
 // src/components/wrap/inputs/NumberFieldWrapper.tsx
 import React from 'react';
 import InputFieldWrapper from './InputFieldWrapper';
-import NumbersIcon from '../displays/IconNumbersWrapper'; 
+import NumbersIcon from '../../extends/displays/IconNumbersWrapper'; 
 
 export interface NumberFieldWrapperProps {
     placeholder: string;

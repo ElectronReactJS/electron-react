@@ -1,5 +1,5 @@
 
-// src/components/wrap/displays/TypographyWrapper.tsx
+// src/components/extends/displays/TypographyWrapper.tsx
 import Module from '@mui/material/Typography';
 
 export default Module;

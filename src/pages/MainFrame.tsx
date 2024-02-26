@@ -1,8 +1,8 @@
 
 // src/pages/MainFrame.tsx
 import { useTheme } from '@mui/material/styles';
-import Paper from '../components/wrap/surfaces/PaperWrapper';
-import Typography from '../components/wrap/displays/TypographyWrapper';
+import Paper from '../components/extends/surfaces/PaperWrapper';
+import Typography from '../components/extends/displays/TypographyWrapper';
 import { MainFrameTheme } from './MainFrame.Theme';
 
 const DocumentsPage: React.FC<any> = () => { 

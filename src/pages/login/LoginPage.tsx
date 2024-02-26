@@ -2,12 +2,12 @@
 // src/pages/login/LoginPage.tsx
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useTheme } from '../../components/wrap/styles/StylesWrapper';
-import Paper from '../../components/wrap/surfaces/PaperWrapper';
+import { useTheme } from '../../components/extends/styles/StylesWrapper';
+import Paper from '../../components/extends/surfaces/PaperWrapper';
 import TextField from '../../components/wrap/inputs/TextFieldWrapper';
 import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper';
-import Typography from '../../components/wrap/displays/TypographyWrapper';
-import IconTextFields from '../../components/wrap/displays/IconTextFieldsWrapper';
+import Typography from '../../components/extends/displays/TypographyWrapper';
+import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper';
 import { LoginPaperTheme } from './LoginPaper.Theme';
 import loginImage from '../../images/logo128x128.png';
 

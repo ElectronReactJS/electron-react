@@ -2,7 +2,7 @@
 // src/pages/common/drawer/PageContent.tsx
 
 import { useTheme } from '@mui/material/styles';
-import Typography from '../../../components/wrap/displays/TypographyWrapper';
+import Typography from '../../../components/extends/displays/TypographyWrapper';
 import Box from '../../../components/wrap/layouts/BoxWrapper';
 import { MainFrameTheme } from '../../MainFrame.Theme';
 

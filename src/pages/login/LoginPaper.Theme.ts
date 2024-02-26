@@ -1,6 +1,6 @@
 
 // src/pages/login/LoginPaper.Theme.ts
-import { Theme } from '../../components/wrap/styles/StylesWrapper';
+import { Theme } from '../../components/extends/styles/StylesWrapper';
 
 export const LoginPaperTheme = (theme: Theme) => {
   return {
