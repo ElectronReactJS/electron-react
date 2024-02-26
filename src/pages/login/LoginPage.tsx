@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import * as React from 'react';
 import Paper from '../../components/wrap/surfaces/PaperWrapper';
-import InputField from '../../components/wrap/inputs/InputFieldWrapper';
+import TextField from '../../components/wrap/inputs/TextFieldWrapper';
 import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
 import Typography from '../../components/wrap/displays/TypographyWrapper';
 import { LoginPaperTheme } from './LoginPaper.Theme';
@@ -62,9 +62,10 @@ const LoginPage: React.FC<any> = () => {
     }
     
     const onChangeHandlerUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const newUsername = event.target.value;
-        setUsername(newUsername); 
-        validateUsername(newUsername);
+        const newUsername: string = event.target.value;
+        const trimmedUsername = newUsername.trim;
+        setUsername(trimmedUsername); 
+        validateUsername(trimmedUsername);
     }    
 
     const validatePassword = (password: string) => {
@@ -83,16 +84,14 @@ const LoginPage: React.FC<any> = () => {
                     {label}
                 </Typography>
                 <img src={loginImage} alt="Logo"/>
-            <InputField label="Username or e-mail" 
-                        placeholder="endereco@dominio.gov.br" 
-                        validate={validateUsername} 
+            <TextField label="Username or e-mail" 
+                        placeholder="endereco@dominio.gov.br"
                         errorMessage={usernameErrorMessage}
                         onChange={onChangeHandlerUsername}
                         icon={<TextFieldsIcon />}
                         value={username}/>
             <Password password={password} 
-                        onChangeHandler={onChangeHandlerPassword} 
-                        validate={validatePassword}/>
+                        onChangeHandler={onChangeHandlerPassword} />
         </Paper>
     );
   };
