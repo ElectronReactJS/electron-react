@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../components/wrap/styles/StylesWrapper';
 import Paper from '../../components/wrap/surfaces/PaperWrapper';
 import TextField from '../../components/wrap/inputs/TextFieldWrapper';
-import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
+import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper';
 import Typography from '../../components/wrap/displays/TypographyWrapper';
 import IconTextFields from '../../components/wrap/displays/IconTextFieldsWrapper';
 import { LoginPaperTheme } from './LoginPaper.Theme';
@@ -17,6 +17,7 @@ const LoginPage: React.FC<any> = () => {
     const loginPaperStyles = LoginPaperTheme(currentTheme);
     const label = "Company Name";
     const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('');
+    const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('');
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
 
@@ -90,8 +91,10 @@ const LoginPage: React.FC<any> = () => {
                         onChange={onChangeHandlerUsername}
                         icon={<IconTextFields />}
                         value={username}/>
-            <Password password={password} 
-                        onChangeHandler={onChangeHandlerPassword} />
+            <PasswordField label="Password" 
+                        errorMessage={passwordErrorMessage}
+                        onChange={onChangeHandlerPassword} 
+                        value={password} />
         </Paper>
     );
   };

@@ -10,35 +10,33 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 interface PasswordFieldWrapperProps {
-    password: string;
-    validate?: (value: string) => boolean;
-    onChangeHandler?: (pevent: React.ChangeEvent<HTMLInputElement>) => void;
+    errorMessage: string;
+    label: string;
+    value: any;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   }
 
-export default function PasswordFieldWrapper({password, validate, onChangeHandler}: PasswordFieldWrapperProps) {
-  const [showPassword, setShowPassword] = React.useState(false);
-  const [valid, setValid] = React.useState(true);
+export default function PasswordFieldWrapper({ label, value, errorMessage, onChange }: PasswordFieldWrapperProps) {
+    const [showPassword, setShowPassword] = React.useState(false);
+    
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        onChange(event); 
+    };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const newValue = event.target.value;
-      const isValid = validate(newValue);
-      setValid(isValid); 
-      onChangeHandler(event);
-  };
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-  };
+    const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+    };
 
   return (
-        <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
-            <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+        <FormControl sx={{ m: 1, width: '100%' }} variant="standard" error={!!errorMessage}>
+            <InputLabel htmlFor="standard-adornment-password" >
+                {label}
+            </InputLabel>
             <Input id="standard-adornment-password"
                     type={showPassword ? 'text' : 'password'}
-                    error={!valid}
-                    value={password}
+                    value={value}
                     onChange={handleChange}
                     endAdornment={
                         <InputAdornment position="end">
