@@ -2,7 +2,7 @@
 // src/pages/login/LoginPage.tsx
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Styles from '../../components/wrap/styles/StylesWrapper';
+import { useTheme } from '../../components/wrap/styles/StylesWrapper';
 import Paper from '../../components/wrap/surfaces/PaperWrapper';
 import TextField from '../../components/wrap/inputs/TextFieldWrapper';
 import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
@@ -13,7 +13,7 @@ import loginImage from '../../images/logo128x128.png';
 
 const LoginPage: React.FC<any> = () => { 
     const navigate = useNavigate();
-    const currentTheme = Styles.useTheme();
+    const currentTheme = useTheme();
     const loginPaperStyles = LoginPaperTheme(currentTheme);
     const label = "Company Name";
     const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('');
