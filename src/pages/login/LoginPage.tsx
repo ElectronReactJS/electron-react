@@ -1,19 +1,19 @@
 
 // src/pages/login/LoginPage.tsx
-import { useNavigate } from 'react-router-dom';
-import { useTheme } from '@mui/material/styles';
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Styles from '../../components/wrap/styles/StylesWrapper';
 import Paper from '../../components/wrap/surfaces/PaperWrapper';
 import TextField from '../../components/wrap/inputs/TextFieldWrapper';
 import Password from '../../components/wrap/inputs/PasswordFieldWrapper';
 import Typography from '../../components/wrap/displays/TypographyWrapper';
+import TextFields from '../../components/wrap/inputs/TextFieldsWrapper';
 import { LoginPaperTheme } from './LoginPaper.Theme';
 import loginImage from '../../images/logo128x128.png';
-import TextFields from '../../components/wrap/inputs/TextFieldsWrapper';
 
 const LoginPage: React.FC<any> = () => { 
     const navigate = useNavigate();
-    const currentTheme = useTheme();
+    const currentTheme = Styles.useTheme();
     const loginPaperStyles = LoginPaperTheme(currentTheme);
     const label = "Company Name";
     const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('');
