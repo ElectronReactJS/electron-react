@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from '@mui/material/styles';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import MainFrame from './pages/MainFrame';
-import LoginPage from './pages/login/LoginPage';
+import LoginPage from './pages/login/LoginPaper';
 
 // Get the navigation element
 const navigationElement = document.getElementById('navigation');

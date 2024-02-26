@@ -1,5 +1,5 @@
 
-// src/pages/login/LoginPage.tsx
+// src/pages/login/LoginPaper.tsx
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../components/extends/styles/StylesWrapper';
@@ -11,7 +11,7 @@ import IconTextFields from '../../components/extends/displays/IconTextFieldsWrap
 import { LoginPaperTheme } from './LoginPaper.Theme';
 import loginImage from '../../images/logo128x128.png';
 
-const LoginPage: React.FC<any> = () => { 
+const LoginPaper: React.FC<any> = () => { 
     const navigate = useNavigate();
     const currentTheme = useTheme();
     const loginPaperStyles = LoginPaperTheme(currentTheme);
@@ -105,4 +105,4 @@ const LoginPage: React.FC<any> = () => {
     );
   };
   
-  export default LoginPage;
+  export default LoginPaper;
