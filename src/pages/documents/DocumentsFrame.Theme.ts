@@ -1,8 +1,8 @@
 
-// src/pages/documents/DocumentsPage.Theme.ts
+// src/pages/documents/DocumentsFrame.Theme.ts
 import { Theme } from '@mui/material/styles';
 
-export const DocumentsPageTheme = (theme: Theme) => {
+export const DocumentsFrameTheme = (theme: Theme) => {
   return {
     // Aqui você pode adicionar ou sobrescrever estilos específicos para o login
     position: 'fixed',
