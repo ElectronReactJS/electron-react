@@ -8,7 +8,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import MainFrame from './pages/MainFrame';
 import LoginPage from './pages/login/LoginPaper';
-import DocumentsPersistentDrawerLeft from './pages/documents/DocumentsFrame';
+import DocumensFrame from './pages/documents/DocumentsFrame';
 
 // Get the navigation element
 const navigationElement = document.getElementById('navigation');
@@ -22,7 +22,7 @@ if (navigationElement) {
                 <Routes>
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/main" element={<MainFrame />} />
-                    <Route path="/documents" element={<DocumentsPersistentDrawerLeft />} />
+                    <Route path="/documents" element={<DocumensFrame />} />
                 </Routes>
             </MemoryRouter>
         </ThemeProvider>

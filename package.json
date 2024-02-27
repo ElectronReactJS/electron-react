@@ -5,13 +5,13 @@
   "description": "My Electron React TypeScript application",
   "main": ".webpack/main",
   "scripts": {
-    "start": "npm run commit; electron-forge start",
+    "start": "electron-forge start && git add . && git commit -m \"path: auto commit after ran.\"",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
     "clean": "npm cache clean --force && rm -rf 'node_modules' '.webpack' && npm install -y",
-    "commit": "git add . && git commit -m \"path: auto commit by npm run commit\""
+    "commit": "git add . && git commit -m \"path: commit by npm run commit\""
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.3.0",

@@ -1,17 +1,13 @@
 
 // src/pages/documents/DocumentsViwer.tsx
-import { useTheme } from '@mui/material/styles';
 import Paper from '../../components/extends/surfaces/PaperWrapper';
 import Typography from '../../components/extends/displays/TypographyWrapper';
-import { DocumentsFrameTheme } from './DocumentsFrame.Theme';
 
 const DocumentsViwer: React.FC<any> = () => { 
-    const currentTheme = useTheme();
-    const documentsStyles = DocumentsFrameTheme(currentTheme);
     const label = "Documents Viwer";
 
     return (
-        <Paper sx={documentsStyles} elevation={3}>
+        <Paper elevation={3}>
                 <Typography color="inherit" variant="h5" component="h1">
                     {label}
                 </Typography>    
