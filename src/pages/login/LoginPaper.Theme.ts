@@ -9,7 +9,7 @@ export const LoginPaperTheme = (theme: Theme) => {
     top: '50%',
     transform: 'translate(-50%, -50%)',
     width: '40%',
-    minHeight: '40%', // Alterado de 'height' para 'minHeight'
+    minHeight: '40%', 
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
