@@ -10,25 +10,34 @@ const DocumentsPageViewer: React.FC<any> = () => {
   const label = 'Documents Viewer'
 
   return (
-    <Paper elevation={3} sx={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100%', // Ajuste a altura conforme necessário
-      padding: '20px' // Adiciona um pouco de padding para evitar que o Card toque as bordas do Paper
-    }}>
-        <BoxWrapper>
-      <Typography color="inherit" variant="h5" component="h1" sx={{ width: '100%', textAlign: 'center' }}>
-      </Typography>
-        </BoxWrapper>        
-      <Card sx={{ maxWidth: 700, margin: 'auto' }}> {/* Adiciona margin auto para centralizar horizontalmente */}
+    <Paper
+      elevation={3}
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%', // Ajuste a altura conforme necessário
+        padding: '20px' // Adiciona um pouco de padding para evitar que o Card toque as bordas do Paper
+      }}
+    >
+      <BoxWrapper>
+        <Typography
+          color='inherit'
+          variant='h5'
+          component='h1'
+          sx={{width: '100%', textAlign: 'center'}}
+        ></Typography>
+      </BoxWrapper>
+      <Card sx={{maxWidth: 700, margin: 'auto'}}>
+        {' '}
+        {/* Adiciona margin auto para centralizar horizontalmente */}
         <CardActionArea>
           <CardContent>
-            <Typography gutterBottom variant="h4" component="div">
-            {label}
+            <Typography gutterBottom variant='h4' component='div'>
+              {label}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <Typography variant='body2' color='text.secondary'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
               elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in
               hendrerit gravida rutrum quisque non tellus. Convallis convallis tellus id interdum
@@ -40,11 +49,11 @@ const DocumentsPageViewer: React.FC<any> = () => {
               ullamcorper morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
             </Typography>
             <br />
-            <Typography variant="h5" sx={{ mb: 1.5 }} color="text.secondary">
-                Second section
+            <Typography variant='h5' sx={{mb: 1.5}} color='text.secondary'>
+              Second section
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <Typography variant='body2' color='text.secondary'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
               elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in
               hendrerit gravida rutrum quisque non tellus. Convallis convallis tellus id interdum
@@ -60,7 +69,7 @@ const DocumentsPageViewer: React.FC<any> = () => {
         </CardActionArea>
       </Card>
     </Paper>
-  );
-};
+  )
+}
 
 export default DocumentsPageViewer
