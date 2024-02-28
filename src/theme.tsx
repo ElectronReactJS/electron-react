@@ -10,14 +10,15 @@ const colorGreen = '#009739'
 const colorBlueLghter = '#63ccff'
 const colorBlueLght = '#4fc3f7'
 const colorBlueDark = '#012169'
+const colorDark = '#1976d2'
 const colorGrayLight = '#f5f5f5'
 
 const baseTheme = createTheme({
   palette: {
     primary: {
-      light: colorBlueDark,
-      main: colorBlueDark,
-      dark: colorBlueDark
+      light: colorGrayLight,
+      main: colorDark,
+      dark: colorDark
     }
   },
   typography: {
@@ -55,8 +56,7 @@ const baseTheme = createTheme({
           backgroundColor: colorGrayLight
         }
       }
-    }
-    // ... your other components
+    },
   },
   mixins: {
     toolbar: {

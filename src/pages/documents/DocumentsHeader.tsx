@@ -45,8 +45,8 @@ const DocumentsHeader: React.FC<DocumentsHeaderProps> = ({
   children
 }) => {
   return (
-    <StyledAppBar position='fixed' open={open} drawerWidth={drawerWidth}>
-      <Toolbar>
+    <StyledAppBar position='fixed' open={open} drawerWidth={drawerWidth} color="primary" enableColorOnDark>
+      <Toolbar color="primary">
         <IconButton
           color='inherit'
           aria-label='open drawer'

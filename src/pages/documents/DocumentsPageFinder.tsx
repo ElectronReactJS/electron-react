@@ -5,6 +5,7 @@ import {styled, alpha} from '@mui/material/styles'
 import {Toolbar} from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 import InputBase from '@mui/material/InputBase'
+import ButtonNew from './ButtonNew'
 
 const Search = styled('div')(({theme}) => ({
   position: 'relative',
@@ -92,6 +93,7 @@ const DocumentsPageFinder: React.FC<any> = () => {
         checkboxSelection
         disableRowSelectionOnClick
       />
+      <ButtonNew />
     </Box>
   )
 }

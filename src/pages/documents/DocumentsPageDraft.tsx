@@ -1,11 +1,13 @@
-// src/pages/documents/DocumentsPageEditor.tsx
+
+// src/pages/documents/DocumentsPageDraft.tsx
 import React, {useState} from 'react'
 import ReactQuill from 'react-quill'
 import Paper from '../../components/extends/surfaces/PaperWrapper'
 import 'react-quill/dist/quill.snow.css'
+import ButtonSave from './ButtonSave'
 
-const DocumentsPageEditor: React.FC<any> = () => {
-  const label = 'Documents Editor'
+const DocumentsPageDraft: React.FC<any> = () => {
+  const label = 'Draft Editor'
   const [editorContent, setEditorContent] = useState('')
 
   return (
@@ -30,8 +32,9 @@ const DocumentsPageEditor: React.FC<any> = () => {
           height: '85%' // Faz o ReactQuill ocupar a altura disponível
         }}
       />
+      <ButtonSave />
     </Paper>
   )
 }
 
-export default DocumentsPageEditor
+export default DocumentsPageDraft

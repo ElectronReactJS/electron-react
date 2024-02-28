@@ -9,10 +9,6 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-import SearchIcon from '@mui/icons-material/Search'
-import EditIcon from '@mui/icons-material/Edit'
-import VisibilityIcon from '@mui/icons-material/Visibility'
-import EditNoteIcon from '@mui/icons-material/EditNote'
 import {styled, useTheme} from '@mui/material/styles'
 
 const DrawerHeader = styled('div')(({theme}) => ({
@@ -23,25 +19,26 @@ const DrawerHeader = styled('div')(({theme}) => ({
   justifyContent: 'flex-end'
 }))
 
-interface DocumentsDrawerProps {
-  handleDrawerClose: () => void
-  onPageChange: (pageId: string) => void
-  open: boolean
-  drawerWidth: number
+export interface DrawerItemsType {
+    id: string; 
+    icon: JSX.Element; 
+    pageId: string
 }
 
-const drawerItems = [
-  {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
-  {id: 'Viewer', icon: <VisibilityIcon />, pageId: 'Viewer'},
-  {id: 'Editor', icon: <EditIcon />, pageId: 'Editor'},
-  {id: 'Draft', icon: <EditNoteIcon />, pageId: 'Draft'}
-]
+interface DocumentsDrawerProps {
+  handleDrawerClose: () => void;
+  onPageChange: (pageId: string) => void;
+  open: boolean;
+  drawerWidth: number;
+  items: DrawerItemsType[];
+}
 
 const DocumentsDrawer: React.FC<DocumentsDrawerProps> = ({
   handleDrawerClose,
   onPageChange,
   open,
-  drawerWidth
+  drawerWidth,
+  items
 }) => {
   const theme = useTheme()
   return (
@@ -65,11 +62,22 @@ const DocumentsDrawer: React.FC<DocumentsDrawerProps> = ({
       </DrawerHeader>
       <Divider />
       <List>
-        {drawerItems.map(item => (
-          <ListItem key={item.id} disablePadding>
-            <ListItemButton onClick={() => onPageChange(item.pageId)}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.id} />
+        {items.map(item => (
+          <ListItem key={item.id} disablePadding sx={{ display: 'block' }}>
+            <ListItemButton sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }} 
+                onClick={() => onPageChange(item.pageId)}>
+              <ListItemIcon sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}>
+                    {item.icon}
+                </ListItemIcon>
+              <ListItemText primary={item.id} sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
         ))}

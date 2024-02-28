@@ -9,6 +9,11 @@ import DocumentsPageFinder from './DocumentsPageFinder'
 import DocumentsDrawer from './DocumentsDrawer'
 import DocumentsPageEditor from './DocumentsPageEditor'
 import DocumentsPageViewer from './DocumentsPageViewer'
+import DocumentsPageDraft from './DocumentsPageDraft'
+import SearchIcon from '@mui/icons-material/Search'
+import EditIcon from '@mui/icons-material/Edit'
+import VisibilityIcon from '@mui/icons-material/Visibility'
+import EditNoteIcon from '@mui/icons-material/EditNote'
 
 const drawerWidth = 240
 
@@ -39,6 +44,19 @@ const DrawerHeader = styled('div')(({theme}) => ({
   justifyContent: 'flex-end'
 }))
 
+export interface DrawerItemsType {
+    id: string; 
+    icon: JSX.Element; 
+    pageId: string
+}
+
+const drawerItems: DrawerItemsType[] = [
+    {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
+    {id: 'Viewer', icon: <VisibilityIcon />, pageId: 'Viewer'},
+    {id: 'Editor', icon: <EditIcon />, pageId: 'Editor'},
+    {id: 'Draft', icon: <EditNoteIcon />, pageId: 'Draft'}
+  ]
+
 export default function DocumensFrame() {
   const [open, setOpen] = React.useState(true)
   const [currentPage, setCurrentPage] = React.useState('Search')
@@ -64,12 +82,14 @@ export default function DocumensFrame() {
         open={open}
         drawerWidth={drawerWidth}
         onPageChange={pageId => setCurrentPage(pageId)}
+        items={drawerItems}
       />
       <Main open={open}>
         <DrawerHeader />
         {currentPage === 'Search' && <DocumentsPageFinder />}
         {currentPage === 'Viewer' && <DocumentsPageViewer />}
         {currentPage === 'Editor' && <DocumentsPageEditor />}
+        {currentPage === 'Draft' && <DocumentsPageDraft />}
       </Main>
     </Box>
   )

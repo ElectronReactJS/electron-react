@@ -3,8 +3,15 @@ import Paper from '../../components/extends/surfaces/PaperWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import {CardActionArea} from '@mui/material'
-import BoxWrapper from '../../components/wrap/layouts/BoxWrapper'
+import {CardActionArea, CardActions} from '@mui/material'
+import Box from '../../components/wrap/layouts/BoxWrapper'
+import ButtonEdit from './ButtonEdit'
+
+const fabStyle = {
+  position: 'absolute',
+  bottom: 16,
+  right: 16
+}
 
 const DocumentsPageViewer: React.FC<any> = () => {
   const label = 'Documents Viewer'
@@ -20,23 +27,23 @@ const DocumentsPageViewer: React.FC<any> = () => {
         padding: '20px' // Adiciona um pouco de padding para evitar que o Card toque as bordas do Paper
       }}
     >
-      <BoxWrapper>
+      <Box>
         <Typography
-          color='inherit'
-          variant='h5'
-          component='h1'
+          color="inherit"
+          variant="h5"
+          component="h1"
           sx={{width: '100%', textAlign: 'center'}}
         ></Typography>
-      </BoxWrapper>
+      </Box>
       <Card sx={{maxWidth: 700, margin: 'auto'}}>
         {' '}
         {/* Adiciona margin auto para centralizar horizontalmente */}
         <CardActionArea>
           <CardContent>
-            <Typography gutterBottom variant='h4' component='div'>
+            <Typography gutterBottom variant="h4" component="div">
               {label}
             </Typography>
-            <Typography variant='body2' color='text.secondary'>
+            <Typography variant="body2" color="text.secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
               elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in
@@ -49,10 +56,10 @@ const DocumentsPageViewer: React.FC<any> = () => {
               ullamcorper morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
             </Typography>
             <br />
-            <Typography variant='h5' sx={{mb: 1.5}} color='text.secondary'>
+            <Typography variant="h5" sx={{mb: 1.5}} color="text.secondary">
               Second section
             </Typography>
-            <Typography variant='body2' color='text.secondary'>
+            <Typography variant="body2" color="text.secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
               elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in
@@ -65,6 +72,9 @@ const DocumentsPageViewer: React.FC<any> = () => {
               ullamcorper morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
             </Typography>
             <br />
+            <CardActions>
+              <ButtonEdit />
+            </CardActions>
           </CardContent>
         </CardActionArea>
       </Card>
