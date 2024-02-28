@@ -1,10 +1,10 @@
 
-// src/pages/documents/DocumentsViwer.tsx
+// src/pages/documents/DocumentsViewer.tsx
 import Paper from '../../components/extends/surfaces/PaperWrapper';
 import Typography from '../../components/extends/displays/TypographyWrapper';
 
-const DocumentsViwer: React.FC<any> = () => { 
-    const label = "Documents Viwer";
+const DocumentsViewer: React.FC<any> = () => { 
+    const label = "Documents Viewer";
 
     return (
         <Paper elevation={3}>
@@ -42,4 +42,4 @@ const DocumentsViwer: React.FC<any> = () => {
     );
   };
   
-  export default DocumentsViwer;
+  export default DocumentsViewer;

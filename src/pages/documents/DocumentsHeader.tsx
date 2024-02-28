@@ -8,16 +8,16 @@ import { styled } from '@mui/material/styles';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 
 import Menu from '../common/menu/Menu';
-
-const drawerWidth = 240;
+import Box from '../../components/extends/layouts/Box';
 
 interface AppBarProps extends MuiAppBarProps {
     open?: boolean;
+    drawerWidth: number;
   }
   
   const StyledAppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
-  })<AppBarProps>(({ theme, open }) => ({
+  })<AppBarProps>(({ theme, open, drawerWidth }) => ({
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -35,13 +35,14 @@ interface AppBarProps extends MuiAppBarProps {
 interface DocumentsHeaderProps {
     handleDrawerOpen: () => void;
     open: boolean; 
+    drawerWidth: number;
     children?: ReactNode;
   }
 
-const DocumentsHeader: React.FC<DocumentsHeaderProps> = ({handleDrawerOpen, open, children}) => {
+const DocumentsHeader: React.FC<DocumentsHeaderProps> = ({handleDrawerOpen, open, drawerWidth, children}) => {
   
     return (
-        <StyledAppBar position="fixed" open={open}>
+        <StyledAppBar position="fixed" open={open} drawerWidth={drawerWidth}>
             <Toolbar>
                 <IconButton
                     color="inherit"
@@ -53,7 +54,8 @@ const DocumentsHeader: React.FC<DocumentsHeaderProps> = ({handleDrawerOpen, open
                     <MenuIcon />
                 </IconButton>
                 {children} 
-                <Menu />
+            <Box flexGrow={1} />
+            <Menu />
             </Toolbar>
         </StyledAppBar>
     );
