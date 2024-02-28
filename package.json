@@ -5,11 +5,11 @@
   "description": "My Electron React TypeScript application",
   "main": ".webpack/main",
   "scripts": {
-    "start": "electron-forge start && prettier --write --jsx-single-quote src/**/*.ts* && git add . && git commit -m \"path: auto commit after ran.\"",
+    "start": "electron-forge start && prettier --write --jsx-single-quote src/**/*.*s* && git add . && git commit -m \"path: auto commit after ran.\"",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "prettier --write --jsx-single-quote src/**/*.ts*",
+    "lint": "prettier --write --jsx-single-quote src/**/*.*s*",
     "clean": "npm cache clean --force && rm -rf 'node_modules' '.webpack' && npm install -y",
     "commit": "git add . && git commit -m \"path: commit by npm run commit\""
   },
