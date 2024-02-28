@@ -1,9 +1,9 @@
 
-// src/pages/documents/DocumentsViewer.tsx
+// src/pages/documents/DocumentsPageViewer.tsx
 import Paper from '../../components/extends/surfaces/PaperWrapper';
 import Typography from '../../components/extends/displays/TypographyWrapper';
 
-const DocumentsViewer: React.FC<any> = () => { 
+const DocumentsPageViewer: React.FC<any> = () => { 
     const label = "Documents Viewer";
 
     return (
@@ -42,4 +42,4 @@ const DocumentsViewer: React.FC<any> = () => {
     );
   };
   
-  export default DocumentsViewer;
+  export default DocumentsPageViewer;
