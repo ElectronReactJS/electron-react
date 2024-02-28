@@ -5,13 +5,15 @@
   "description": "My Electron React TypeScript application",
   "main": ".webpack/main",
   "scripts": {
-    "start": "electron-forge start && prettier --write --jsx-single-quote '**/*.{js,jsx,ts,tsx}' --log-level warn && git add . && git commit -m \"path: auto commit after ran.\"",
+    "start": "electron-forge start && npm run commit:start && npm run format && npm run commit:format",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "format": "prettier --write --jsx-single-quote '**/*.{js,jsx,ts,tsx}' --log-level warn",
     "clean": "npm cache clean --force && rm -rf 'node_modules' '.webpack' && npm install -y",
-    "commit": "git add . && git commit -m \"path: commit by npm run commit\""
+    "commit:auto": "git add . && git commit -m \"path: commit by npm run commit\"",
+    "commit:start": "git add . && git commit -m \"path: auto commit after npm start\"",
+    "commit:format": "git add . && git commit -m \"path: commit by npm run format\""
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.3.0",
