@@ -88,7 +88,7 @@ export default function DocumensFrame() {
         <DrawerHeader />
         {currentPage === 'Search' && <DocumentsPageFinder />}
         {currentPage === 'Viewer' && <DocumentsPageViewer />}
-        {currentPage === 'Editor' && <DocumentsPageEditor />}
+        {currentPage === 'Editor' && <DocumentsPageEditor open={open} drawerWidth={drawerWidth}/>}
         {currentPage === 'Draft' && <DocumentsPageDraft />}
       </Main>
     </Box>
