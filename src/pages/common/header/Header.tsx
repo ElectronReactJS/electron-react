@@ -66,13 +66,7 @@ const Header: React.FC<HeaderProps> = ({onDrawerToggle}) => {
           </Grid>
         </Toolbar>
       </AppBar>
-      <AppBar
-        component='div'
-        color='primary'
-        position='static'
-        elevation={0}
-        sx={{zIndex: 0}}
-      >
+      <AppBar component='div' color='primary' position='static' elevation={0} sx={{zIndex: 0}}>
         <Toolbar>
           <Grid container alignItems='center' spacing={1}>
             <Grid item xs>

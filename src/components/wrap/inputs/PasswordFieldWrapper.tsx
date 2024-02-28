@@ -31,18 +31,12 @@ export default function PasswordFieldWrapper({
 
   const handleClickShowPassword = () => setShowPassword(show => !show)
 
-  const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
+  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
   }
 
   return (
-    <FormControl
-      sx={{m: 1, width: '100%'}}
-      variant='standard'
-      error={!!errorMessage}
-    >
+    <FormControl sx={{m: 1, width: '100%'}} variant='standard' error={!!errorMessage}>
       <InputLabel htmlFor='standard-adornment-password'>{label}</InputLabel>
       <Input
         id='standard-adornment-password'

@@ -54,11 +54,7 @@ export default function DocumensFrame() {
   return (
     <Box sx={{display: 'flex'}}>
       <CssBaseline />
-      <DocumentsHeader
-        handleDrawerOpen={handleDrawerOpen}
-        open={open}
-        drawerWidth={drawerWidth}
-      >
+      <DocumentsHeader handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
         <Typography variant='h6' noWrap component='div'>
           DocumentsFrame Header
         </Typography>

@@ -60,11 +60,7 @@ const DocumentsDrawer: React.FC<DocumentsDrawerProps> = ({
     >
       <DrawerHeader>
         <IconButton onClick={handleDrawerClose}>
-          {theme.direction === 'ltr' ? (
-            <ChevronLeftIcon />
-          ) : (
-            <ChevronRightIcon />
-          )}
+          {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
         </IconButton>
       </DrawerHeader>
       <Divider />

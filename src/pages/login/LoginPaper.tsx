@@ -50,9 +50,7 @@ const LoginPaper: React.FC<any> = () => {
         return false
       }
       if (!/^[a-zA-Z0-9_]+$/.test(input)) {
-        setUsernameErrorMessage(
-          'The username can only contain letters, numbers, and underscores.'
-        )
+        setUsernameErrorMessage('The username can only contain letters, numbers, and underscores.')
         return false
       }
     }
@@ -60,9 +58,7 @@ const LoginPaper: React.FC<any> = () => {
     return true
   }
 
-  const onChangeHandlerUsername = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const onChangeHandlerUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newUsername: string = event.target.value
     const trimmedUsername: string = newUsername.trim()
     setUsername(trimmedUsername)
@@ -71,8 +67,7 @@ const LoginPaper: React.FC<any> = () => {
 
   const validatePassword = (input: string): boolean => {
     setPasswordErrorMessage('')
-    const passwordRegex =
-      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/
     if (!passwordRegex.test(input)) {
       setPasswordErrorMessage(
         'Password must be 8-16 characters long and include letters, numbers, and special characters.'
@@ -82,9 +77,7 @@ const LoginPaper: React.FC<any> = () => {
     return true
   }
 
-  const onChangeHandlerPassword = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const onChangeHandlerPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = event.target.value
     setPassword(newPassword)
     if (validatePassword(newPassword)) goToMain()

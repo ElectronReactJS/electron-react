@@ -27,20 +27,14 @@ export default function InputFieldWrapper({
   }
 
   return (
-    <FormControl
-      sx={{m: 1, width: '100%'}}
-      variant='standard'
-      error={!!errorMessage}
-    >
+    <FormControl sx={{m: 1, width: '100%'}} variant='standard' error={!!errorMessage}>
       <InputLabel htmlFor='standard-adornment-text'>{label}</InputLabel>
       <Input
         id='standard-adornment-text'
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
-        endAdornment={
-          <InputAdornment position='end'>{icon || null}</InputAdornment>
-        }
+        endAdornment={<InputAdornment position='end'>{icon || null}</InputAdornment>}
       />
       {errorMessage && <FormHelperText error>{errorMessage}</FormHelperText>}
     </FormControl>
