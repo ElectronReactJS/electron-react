@@ -1,4 +1,3 @@
-
 // src/router.tsx
 import theme from './theme'
 import {createRoot} from 'react-dom/client'
