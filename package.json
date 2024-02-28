@@ -9,7 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "format": "prettier --write --jsx-single-quote '**/*.{js,jsx,ts,tsx}' --log-level warn",
+    "format": "prettier --write --jsx-single-quote '**/*.{js,jsx,ts,tsx,json,css,html}' --log-level warn",
     "clean": "npm cache clean --force && rm -rf 'node_modules' '.webpack' && npm install -y",
     "commit:auto": "git add . && git commit -m \"path: commit by npm run commit\"",
     "commit:start": "git add . && git commit -m \"path: auto commit after npm start\"",
