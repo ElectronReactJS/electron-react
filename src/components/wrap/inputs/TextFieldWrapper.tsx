@@ -1,25 +1,19 @@
-
 // src/components/wrap/inputs/TextFieldWrapper.tsx
-import React from 'react';
-import InputFieldWrapper from './InputFieldWrapper';
-import IconTextFields from '../../extends/displays/IconTextFieldsWrapper';
+import React from 'react'
+import InputFieldWrapper from './InputFieldWrapper'
+import IconTextFields from '../../extends/displays/IconTextFieldsWrapper'
 
 export interface InputFieldWrapperProps {
-    placeholder: string;
-    errorMessage: string;
-    label: string;
-    value: string;
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    icon?: React.ReactNode;
-  }
+  placeholder: string
+  errorMessage: string
+  label: string
+  value: string
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  icon?: React.ReactNode
+}
 
-const TextFieldWrapper: React.FC<InputFieldWrapperProps> = (props) => {
-  return (
-    <InputFieldWrapper
-      {...props}
-      icon={<IconTextFields />}
-    />
-  );
-};
+const TextFieldWrapper: React.FC<InputFieldWrapperProps> = props => {
+  return <InputFieldWrapper {...props} icon={<IconTextFields />} />
+}
 
-export default TextFieldWrapper;
+export default TextFieldWrapper

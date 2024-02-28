@@ -1,5 +1,4 @@
-
 // src/components/extends/displays/IconButtonWrapper.tsx
-import Module from '@mui/material/IconButton';
+import Module from '@mui/material/IconButton'
 
-export default Module;
+export default Module

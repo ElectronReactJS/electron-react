@@ -68,35 +68,35 @@ const rows = [
 ]
 
 const DocumentsPageFinder: React.FC<any> = () => {
-    return (
-      <Box sx={{ width: '100%' }}>
-        <Toolbar sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-        </Toolbar>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: {
-                pageSize: 5,
-              },
-            },
-          }}
-          pageSizeOptions={[5]}
-          checkboxSelection
-          disableRowSelectionOnClick
-        />
-      </Box>
-    );
+  return (
+    <Box sx={{width: '100%'}}>
+      <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder='Search…'
+            inputProps={{'aria-label': 'search'}}
+          />
+        </Search>
+      </Toolbar>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 5
+            }
+          }
+        }}
+        pageSizeOptions={[5]}
+        checkboxSelection
+        disableRowSelectionOnClick
+      />
+    </Box>
+  )
 }
 
 export default DocumentsPageFinder

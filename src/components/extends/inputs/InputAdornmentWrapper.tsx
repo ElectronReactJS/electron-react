@@ -1,5 +1,4 @@
-
 // src/components/extends/inputs/InputAdornmentWrapper.tsx
-import Module from '@mui/material/InputAdornment';
+import Module from '@mui/material/InputAdornment'
 
-export default Module;
+export default Module

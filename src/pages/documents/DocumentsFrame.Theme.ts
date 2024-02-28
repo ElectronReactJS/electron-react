@@ -1,6 +1,5 @@
-
 // src/pages/documents/DocumentsFrame.Theme.ts
-import { Theme } from '@mui/material/styles';
+import {Theme} from '@mui/material/styles'
 
 export const DocumentsFrameTheme = (theme: Theme) => {
   return {
@@ -15,7 +14,6 @@ export const DocumentsFrameTheme = (theme: Theme) => {
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    padding: theme.spacing(4), // Exemplo de uso do tema para definir o padding
-  };
-};
-
+    padding: theme.spacing(4) // Exemplo de uso do tema para definir o padding
+  }
+}

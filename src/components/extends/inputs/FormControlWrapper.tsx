@@ -1,5 +1,4 @@
-
 // src/components/extends/inputs/FormControlWrapper.tsx
-import Module from '@mui/material/FormControl';
+import Module from '@mui/material/FormControl'
 
-export default Module;
+export default Module

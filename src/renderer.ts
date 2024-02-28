@@ -1,4 +1,3 @@
-
 // src/renderer.ts
 
-import './router'; 
+import './router'

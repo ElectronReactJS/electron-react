@@ -1,5 +1,4 @@
-
 // src/components/extends/displays/IconTextFieldsWrapper.tsx
-import Module from '@mui/icons-material/TextFields';
+import Module from '@mui/icons-material/TextFields'
 
-export default Module;
+export default Module

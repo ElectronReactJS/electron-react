@@ -1,5 +1,4 @@
-
 // src/components/extends/displays/IconVisibilityWrapper.tsx
-import Module from '@mui/icons-material/Visibility';
+import Module from '@mui/icons-material/Visibility'
 
-export default Module;
+export default Module
