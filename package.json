@@ -5,11 +5,11 @@
   "description": "My Electron React TypeScript application",
   "main": ".webpack/main",
   "scripts": {
-    "start": "electron-forge start && prettier --write --jsx-single-quote src/**/*.*s* && git add . && git commit -m \"path: auto commit after ran.\"",
+    "start": "electron-forge start && prettier --write --jsx-single-quote ./**/*.*s* && git add . && git commit -m \"path: auto commit after ran.\"",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "prettier --write --jsx-single-quote src/**/*.*s*",
+    "lint": "prettier --write --jsx-single-quote ./**/*.*s*",
     "clean": "npm cache clean --force && rm -rf 'node_modules' '.webpack' && npm install -y",
     "commit": "git add . && git commit -m \"path: commit by npm run commit\""
   },
@@ -35,6 +35,7 @@
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^7.3.0",
     "node-loader": "^2.0.0",
+    "prettier": "^3.2.5",
     "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
