@@ -56,7 +56,7 @@ const baseTheme = createTheme({
           backgroundColor: colorGrayLight
         }
       }
-    },
+    }
   },
   mixins: {
     toolbar: {

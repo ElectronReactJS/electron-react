@@ -29,9 +29,9 @@ const DocumentsPageViewer: React.FC<any> = () => {
     >
       <Box>
         <Typography
-          color="inherit"
-          variant="h5"
-          component="h1"
+          color='inherit'
+          variant='h5'
+          component='h1'
           sx={{width: '100%', textAlign: 'center'}}
         ></Typography>
       </Box>
@@ -40,10 +40,10 @@ const DocumentsPageViewer: React.FC<any> = () => {
         {/* Adiciona margin auto para centralizar horizontalmente */}
         <CardActionArea>
           <CardContent>
-            <Typography gutterBottom variant="h4" component="div">
+            <Typography gutterBottom variant='h4' component='div'>
               {label}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant='body2' color='text.secondary'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
               elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in
@@ -56,10 +56,10 @@ const DocumentsPageViewer: React.FC<any> = () => {
               ullamcorper morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
             </Typography>
             <br />
-            <Typography variant="h5" sx={{mb: 1.5}} color="text.secondary">
+            <Typography variant='h5' sx={{mb: 1.5}} color='text.secondary'>
               Second section
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant='body2' color='text.secondary'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
               elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in

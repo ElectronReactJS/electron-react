@@ -45,17 +45,17 @@ const DrawerHeader = styled('div')(({theme}) => ({
 }))
 
 export interface DrawerItemsType {
-    id: string; 
-    icon: JSX.Element; 
-    pageId: string
+  id: string
+  icon: JSX.Element
+  pageId: string
 }
 
 const drawerItems: DrawerItemsType[] = [
-    {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
-    {id: 'Viewer', icon: <VisibilityIcon />, pageId: 'Viewer'},
-    {id: 'Editor', icon: <EditIcon />, pageId: 'Editor'},
-    {id: 'Draft', icon: <EditNoteIcon />, pageId: 'Draft'}
-  ]
+  {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
+  {id: 'Viewer', icon: <VisibilityIcon />, pageId: 'Viewer'},
+  {id: 'Editor', icon: <EditIcon />, pageId: 'Editor'},
+  {id: 'Draft', icon: <EditNoteIcon />, pageId: 'Draft'}
+]
 
 export default function DocumensFrame() {
   const [open, setOpen] = React.useState(true)

@@ -20,17 +20,17 @@ const DrawerHeader = styled('div')(({theme}) => ({
 }))
 
 export interface DrawerItemsType {
-    id: string; 
-    icon: JSX.Element; 
-    pageId: string
+  id: string
+  icon: JSX.Element
+  pageId: string
 }
 
 interface DocumentsDrawerProps {
-  handleDrawerClose: () => void;
-  onPageChange: (pageId: string) => void;
-  open: boolean;
-  drawerWidth: number;
-  items: DrawerItemsType[];
+  handleDrawerClose: () => void
+  onPageChange: (pageId: string) => void
+  open: boolean
+  drawerWidth: number
+  items: DrawerItemsType[]
 }
 
 const DocumentsDrawer: React.FC<DocumentsDrawerProps> = ({
@@ -63,21 +63,25 @@ const DocumentsDrawer: React.FC<DocumentsDrawerProps> = ({
       <Divider />
       <List>
         {items.map(item => (
-          <ListItem key={item.id} disablePadding sx={{ display: 'block' }}>
-            <ListItemButton sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }} 
-                onClick={() => onPageChange(item.pageId)}>
-              <ListItemIcon sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                  }}>
-                    {item.icon}
-                </ListItemIcon>
-              <ListItemText primary={item.id} sx={{ opacity: open ? 1 : 0 }} />
+          <ListItem key={item.id} disablePadding sx={{display: 'block'}}>
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5
+              }}
+              onClick={() => onPageChange(item.pageId)}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center'
+                }}
+              >
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText primary={item.id} sx={{opacity: open ? 1 : 0}} />
             </ListItemButton>
           </ListItem>
         ))}
