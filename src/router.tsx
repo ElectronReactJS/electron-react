@@ -1,11 +1,9 @@
-// src/router.tsx
 
-import React from 'react'
+// src/router.tsx
 import theme from './theme'
 import {createRoot} from 'react-dom/client'
 import {ThemeProvider} from '@mui/material/styles'
 import {MemoryRouter, Route, Routes} from 'react-router-dom'
-import MainFrame from './pages/MainFrame'
 import LoginPage from './pages/login/LoginPaper'
 import DocumensFrame from './pages/documents/DocumentsFrame'
 
@@ -20,7 +18,6 @@ if (navigationElement) {
       <MemoryRouter initialEntries={['/documents']}>
         <Routes>
           <Route path='/login' element={<LoginPage />} />
-          <Route path='/main' element={<MainFrame />} />
           <Route path='/documents' element={<DocumensFrame />} />
         </Routes>
       </MemoryRouter>
