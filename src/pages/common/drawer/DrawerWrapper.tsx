@@ -64,7 +64,7 @@ export interface DrawerItemsType {
   pageId: string
 }
 
-interface DocumentsDrawerProps {
+interface DrawerWrapperProps {
   handleDrawerClose: () => void
   onPageChange: (pageId: string) => void
   open: boolean
@@ -72,7 +72,7 @@ interface DocumentsDrawerProps {
   items: DrawerItemsType[]
 }
 
-const DocumentsDrawer: React.FC<DocumentsDrawerProps> = ({
+const DrawerWrapper: React.FC<DrawerWrapperProps> = ({
   handleDrawerClose,
   onPageChange,
   open,
@@ -117,4 +117,4 @@ const DocumentsDrawer: React.FC<DocumentsDrawerProps> = ({
   )
 }
 
-export default DocumentsDrawer
+export default DrawerWrapper

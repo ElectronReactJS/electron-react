@@ -35,14 +35,14 @@ const AppBar = styled(MuiAppBar, {
   })
 }))
 
-interface DocumentsHeaderProps {
+interface HeaderWrapperProps {
   handleDrawerOpen: () => void
   open: boolean
   drawerWidth: number
   children?: ReactNode
 }
 
-const DocumentsHeader: React.FC<DocumentsHeaderProps> = ({
+const HeaderWrapper: React.FC<HeaderWrapperProps> = ({
   handleDrawerOpen,
   open,
   drawerWidth,
@@ -71,4 +71,4 @@ const DocumentsHeader: React.FC<DocumentsHeaderProps> = ({
   )
 }
 
-export default DocumentsHeader
+export default HeaderWrapper

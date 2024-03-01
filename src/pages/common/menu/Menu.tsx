@@ -33,15 +33,15 @@ const Menu: React.FC = () => {
   }
 
   const goToAdmin = () => {
-    navigate('/adminPage')
-  }
-
-  const goToAccount = () => {
     navigate('/users')
   }
 
+  const goToAccount = () => {
+    navigate('/account')
+  }
+
   const goToWorkspace = () => {
-    navigate('/workspace')
+    navigate('/documents')
   }
 
   return (
@@ -103,7 +103,7 @@ const Menu: React.FC = () => {
           <ListItemIcon>
             <HomeRepairServiceIcon fontSize='small' />
           </ListItemIcon>
-          Workspace
+          Documents
         </MenuItem>
         <MenuItem onClick={goToAdmin}>
           <ListItemIcon>

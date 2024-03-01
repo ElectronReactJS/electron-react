@@ -49,7 +49,7 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
 const columns: GridColDef[] = [
   {field: 'id', headerName: 'ID', width: 90},
   {
-    field: 'documentName',
+    field: 'userName',
     headerName: 'Last name',
     width: 150,
     editable: true
@@ -57,18 +57,18 @@ const columns: GridColDef[] = [
 ]
 
 const rows = [
-  {id: 1, documentName: 'Snow'},
-  {id: 2, documentName: 'Lannister'},
-  {id: 3, documentName: 'Lannister'},
-  {id: 4, documentName: 'Stark'},
-  {id: 5, documentName: 'Targaryen'},
-  {id: 6, documentName: 'Melisandre'},
-  {id: 7, documentName: 'Clifford'},
-  {id: 8, documentName: 'Frances'},
-  {id: 9, documentName: 'Roxie'}
+  {id: 1, userName: 'Snow'},
+  {id: 2, userName: 'Lannister'},
+  {id: 3, userName: 'Lannister'},
+  {id: 4, userName: 'Stark'},
+  {id: 5, userName: 'Targaryen'},
+  {id: 6, userName: 'Melisandre'},
+  {id: 7, userName: 'Clifford'},
+  {id: 8, userName: 'Frances'},
+  {id: 9, userName: 'Roxie'}
 ]
 
-const DocumentsPageFinder: React.FC<any> = () => {
+const UserPageFinder: React.FC<any> = () => {
   return (
     <Box sx={{width: '100%'}}>
       <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
@@ -98,4 +98,4 @@ const DocumentsPageFinder: React.FC<any> = () => {
   )
 }
 
-export default DocumentsPageFinder
+export default UserPageFinder

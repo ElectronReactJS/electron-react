@@ -4,9 +4,9 @@ import {styled} from '@mui/material/styles'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
-import DocumentsHeader from '../common/header/HeaderWrapper'
+import UsersHeader from '../common/header/HeaderWrapper'
 import UsersPageFinder from './UsersPageFinder'
-import DocumentsDrawer from '../common/drawer/DrawerWrapper'
+import UsersDrawer from '../common/drawer/DrawerWrapper'
 import UsersPageEditor from './UsersPageEditor'
 import UsersPageViewer from './UsersPageViewer'
 import UsersPageDraft from './UsersPageDraft'
@@ -64,12 +64,12 @@ export default function DocumensFrame() {
   return (
     <Box sx={{display: 'flex'}}>
       <CssBaseline />
-      <DocumentsHeader handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
+      <UsersHeader handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
         <Typography variant='h6' noWrap component='div'>
-          Documents
+          Users
         </Typography>
-      </DocumentsHeader>
-      <DocumentsDrawer
+      </UsersHeader>
+      <UsersDrawer
         handleDrawerClose={handleDrawerClose}
         open={open}
         drawerWidth={drawerWidth}

@@ -6,12 +6,12 @@ import 'react-quill/dist/quill.snow.css'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import Box from '../../components/wrap/layouts/BoxWrapper'
 
-interface DocumentsPageEditorProps {
+interface UsersPageEditorProps {
   title?: string
   content?: string
 }
 
-const DocumentsPageEditor: React.FC<DocumentsPageEditorProps> = ({title, content}) => {
+const UsersPageEditor: React.FC<UsersPageEditorProps> = ({title, content}) => {
   const [currentContent, setCurrentContent] = useState('')
   const [currentTitle, setCurrentTitle] = useState('')
   const [titleErrorMessage, setTitleErrorMessage] = useState('')
@@ -72,4 +72,4 @@ const DocumentsPageEditor: React.FC<DocumentsPageEditorProps> = ({title, content
   )
 }
 
-export default DocumentsPageEditor
+export default UsersPageEditor

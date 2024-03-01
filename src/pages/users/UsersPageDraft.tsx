@@ -7,12 +7,12 @@ import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import Box from '../../components/wrap/layouts/BoxWrapper'
 import ButtonSave from '../common/button/ButtonSave'
 
-interface DocumentsPageDraftProps {
+interface UsersPageDraftProps {
   title?: string
   content?: string
 }
 
-const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content}) => {
+const UsersPageDraft: React.FC<UsersPageDraftProps> = ({title, content}) => {
   const [currentContent, setCurrentContent] = useState('')
   const [currentTitle, setCurrentTitle] = useState('')
   const [titleErrorMessage, setTitleErrorMessage] = useState('')
@@ -74,4 +74,4 @@ const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content})
   )
 }
 
-export default DocumentsPageDraft
+export default UsersPageDraft

@@ -13,8 +13,8 @@ const fabStyle = {
   right: 16
 }
 
-const DocumentsPageViewer: React.FC<any> = () => {
-  const label = 'Documents Viewer'
+const UsersPageViewer: React.FC<any> = () => {
+  const label = 'Users Viewer'
 
   return (
     <Paper
@@ -82,4 +82,4 @@ const DocumentsPageViewer: React.FC<any> = () => {
   )
 }
 
-export default DocumentsPageViewer
+export default UsersPageViewer
