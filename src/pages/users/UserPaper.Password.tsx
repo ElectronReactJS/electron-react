@@ -41,7 +41,7 @@ const UserPaper: React.FC<any> = () => {
 
   return (
     <Paper sx={userPaperStyles} elevation={3}>
-      <IconPasswordWrapper sx={{ fontSize: 120 }} />
+      <IconPasswordWrapper sx={{fontSize: 120}} />
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>

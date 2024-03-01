@@ -9,7 +9,7 @@ import EditNoteIcon from '../../components/extends/displays/IconEditNoteWrapper'
 import VisibilityIcon from '../../components/extends/displays/IconVisibilityWrapper'
 import SearchIcon from '../../components/extends/displays/IconSearchWrapper'
 
-import Box from '../../components/extends/layouts/Box';
+import Box from '../../components/extends/layouts/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import UsersHeader from '../common/header/HeaderWrapper'
 import UsersDrawer from '../common/drawer/DrawerWrapper'
@@ -48,17 +48,17 @@ export interface DrawerItemsType {
 }
 
 export default function DocumensFrame() {
-    const [open, setOpen] = React.useState(true)
-    const [currentPage, setCurrentPage] = React.useState('Search')
-    
-    const drawerItems: DrawerItemsType[] = [
-        {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
-        {id: 'Audit', icon: <VisibilityIcon />, pageId: 'Audit'},
-        {id: 'New', icon: <IconNewUserWrapper />, pageId: 'New'},
-        {id: 'Username', icon: <EditNoteIcon />, pageId: 'Username'},
-        {id: 'Password', icon: <IconPasswordWrapper />, pageId: 'Password'}
-    ];
-    
+  const [open, setOpen] = React.useState(true)
+  const [currentPage, setCurrentPage] = React.useState('Search')
+
+  const drawerItems: DrawerItemsType[] = [
+    {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
+    {id: 'Audit', icon: <VisibilityIcon />, pageId: 'Audit'},
+    {id: 'New', icon: <IconNewUserWrapper />, pageId: 'New'},
+    {id: 'Username', icon: <EditNoteIcon />, pageId: 'Username'},
+    {id: 'Password', icon: <IconPasswordWrapper />, pageId: 'Password'}
+  ]
+
   const handleDrawerOpen = () => {
     setOpen(true)
   }

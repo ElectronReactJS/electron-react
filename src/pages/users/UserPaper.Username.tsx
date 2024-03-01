@@ -58,7 +58,7 @@ const UserPaper: React.FC<any> = () => {
 
   return (
     <Paper sx={userPaperStyles} elevation={3}>
-      <EditNoteIcon sx={{ fontSize: 120 }} />
+      <EditNoteIcon sx={{fontSize: 120}} />
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>
