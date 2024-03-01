@@ -4,7 +4,6 @@ import Fab from '@mui/material/Fab'
 import SaveIcon from '@mui/icons-material/Save'
 
 const fabStyle = {
-  position: 'absolute',
   bottom: 16,
   right: 16
 }
