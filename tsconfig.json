@@ -1,26 +1,28 @@
+
+// tsconfig.json
+
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    "target": "ES6",
+    "allowJs": true,
     "module": "commonjs",
-    "strict": true,
-    "declaration": true,
-    "target": "es6",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
     "sourceMap": true,
-    "noImplicitAny": false,
-    "baseUrl": "./",
+    "baseUrl": ".",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
     "paths": {
-      "@actions/core": [
-        "packages/core"
-      ],
-      "@actions/http-client": [
-        "packages/http-client"
-      ],
-    },
-    "useUnknownInCatchVariables": false
+      "*": ["node_modules/*"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "**/*.test.ts",
-    "**/__mocks__/*"
-  ]
+  "include": ["src/**/*"],
+    "exclude": [
+        "node_modules",
+        "**/*.test.ts",
+        "**/__mocks__/*"
+    ]
 }
