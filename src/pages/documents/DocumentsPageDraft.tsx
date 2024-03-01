@@ -5,7 +5,7 @@ import Paper from '../../components/extends/surfaces/PaperWrapper'
 import 'react-quill/dist/quill.snow.css'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import Box from '../../components/wrap/layouts/BoxWrapper'
-import ButtonSave from './ButtonSave'
+import ButtonSave from '../common/button/ButtonSave'
 
 interface DocumentsPageDraftProps {
   title?: string

@@ -5,8 +5,8 @@ import {IconButton, Toolbar} from '@mui/material'
 
 import {styled} from '@mui/material/styles'
 import MuiAppBar, {AppBarProps as MuiAppBarProps} from '@mui/material/AppBar'
-import Menu from '../common/menu/Menu'
-import Box from '../../components/wrap/layouts/BoxWrapper'
+import Menu from '../menu/Menu'
+import Box from '../../../components/wrap/layouts/BoxWrapper'
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean

@@ -1,5 +1,4 @@
-// src/pages/documents/DocumentsDrawer.tsximport React from 'react';
-// import Drawer from '@mui/material/Drawer'
+// src/pages/documents/DocumentsDrawer.tsx
 import MuiDrawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'

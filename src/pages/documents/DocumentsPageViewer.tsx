@@ -5,7 +5,7 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import {CardActionArea, CardActions} from '@mui/material'
 import Box from '../../components/wrap/layouts/BoxWrapper'
-import ButtonEdit from './ButtonEdit'
+import ButtonEdit from '../common/button/ButtonEdit'
 
 const fabStyle = {
   position: 'absolute',
