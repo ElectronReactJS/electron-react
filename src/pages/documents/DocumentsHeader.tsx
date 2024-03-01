@@ -4,17 +4,17 @@ import MenuIcon from '@mui/icons-material/Menu'
 import {IconButton, Toolbar} from '@mui/material'
 
 import {styled} from '@mui/material/styles'
-import MuiAppBar, {AppBarProps as MuiAppBarProps} from '@mui/material/AppBar';
-import Menu from '../common/menu/Menu';
-import Box from '../../components/wrap/layouts/BoxWrapper';
+import MuiAppBar, {AppBarProps as MuiAppBarProps} from '@mui/material/AppBar'
+import Menu from '../common/menu/Menu'
+import Box from '../../components/wrap/layouts/BoxWrapper'
 
 interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
-  drawerWidth: number;
+  open?: boolean
+  drawerWidth: number
 }
 
 interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
+  open?: boolean
 }
 
 const AppBar = styled(MuiAppBar, {
@@ -64,7 +64,7 @@ const DocumentsHeader: React.FC<DocumentsHeaderProps> = ({
           <MenuIcon />
         </IconButton>
         {children}
-        <Box flexGrow={1} />  {/* Empurra o conteúdo seguinte para a direita */}
+        <Box flexGrow={1} /> {/* Empurra o conteúdo seguinte para a direita */}
         <Menu />
       </Toolbar>
     </AppBar>

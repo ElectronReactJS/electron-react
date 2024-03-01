@@ -15,7 +15,7 @@ import EditIcon from '@mui/icons-material/Edit'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import EditNoteIcon from '@mui/icons-material/EditNote'
 
-const drawerWidth = 150;
+const drawerWidth = 150
 
 const Main = styled('main')(({theme}) => ({
   flexGrow: 1,
