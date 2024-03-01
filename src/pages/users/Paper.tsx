@@ -2,11 +2,11 @@
 import * as React from 'react'
 import {useTheme} from '../../components/extends/styles/StylesWrapper'
 import Paper from '../../components/extends/surfaces/PaperWrapper'
-import TransitionAlert from './TransitionAlert';
+import TransitionAlert from './TransitionAlert'
 import {UserPaperTheme} from './UserPaper.Theme'
 
 interface UserPaperProps {
-    children?: React.ReactNode
+  children?: React.ReactNode
 }
 
 const UserPaper: React.FC<UserPaperProps> = ({children}) => {
@@ -15,7 +15,7 @@ const UserPaper: React.FC<UserPaperProps> = ({children}) => {
 
   return (
     <Paper sx={userPaperStyles} elevation={3}>
-        {children}
+      {children}
     </Paper>
   )
 }

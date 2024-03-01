@@ -92,7 +92,6 @@ const UserPageFinder: React.FC<any> = () => {
         checkboxSelection
         disableRowSelectionOnClick
       />
-      
     </Box>
   )
 }

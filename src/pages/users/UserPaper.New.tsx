@@ -8,7 +8,7 @@ import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
 
 interface UserPaperProps {
-    children?: React.ReactNode
+  children?: React.ReactNode
 }
 const UserPaperNew: React.FC<UserPaperProps> = ({children}) => {
   const navigate = useNavigate()
