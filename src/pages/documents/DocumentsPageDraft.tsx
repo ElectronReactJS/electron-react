@@ -1,39 +1,81 @@
+
 // src/pages/documents/DocumentsPageDraft.tsx
 import React, {useState} from 'react'
 import ReactQuill from 'react-quill'
 import Paper from '../../components/extends/surfaces/PaperWrapper'
 import 'react-quill/dist/quill.snow.css'
+import TextField from '../../components/wrap/inputs/TextFieldWrapper'
+import Box from '../../components/wrap/layouts/BoxWrapper'
 import ButtonSave from './ButtonSave'
 
-const DocumentsPageDraft: React.FC<any> = () => {
-  const label = 'Draft Editor'
-  const [editorContent, setEditorContent] = useState('')
+interface DocumentsPageDraftProps {
+  title?: string;
+  content?: string;
+}
+
+const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content}) => {
+  const [currentContent, setCurrentContent] = useState('')
+  const [currentTitle, setCurrentTitle] = useState('')
+  const [titleErrorMessage, setTitleErrorMessage] = useState('')
+
+  const handleContentChanging = (newContent: string) => {
+    setCurrentContent(newContent)
+    save
+  }
+
+  const validateTitle = (title: string) => {
+    if (title?.length < 4) 
+        setTitleErrorMessage("Invalid document name.")
+    else 
+    setTitleErrorMessage('')
+  }
+
+  const handleTitleChanging = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newTitle: string = event.target.value
+    setCurrentTitle(newTitle)
+    validateTitle(newTitle)
+    save
+  }
+
+  const save = () => {
+    console.log('Saving content');
+    console.log(JSON.stringify({"title": currentTitle, "content": currentContent}));
+    console.log('Saved');
+  }
 
   return (
-    <Paper
-      elevation={3}
-      sx={{
-        display: 'flex',
-        flexDirection: 'column', // Garante que os itens dentro do Paper sejam organizados verticalmente
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 'calc(100vh - 100px)', // Ajusta a altura para ocupar quase toda a altura da tela, ajuste conforme necessário
-        margin: '10px', // Adiciona margem ao redor do Paper para não tocar as bordas da tela
-        padding: '10px' // Adiciona padding dentro do Paper
-      }}
-    >
-      <ReactQuill
-        theme='snow'
-        value={editorContent}
-        onChange={setEditorContent}
-        style={{
-          width: '100%', // Faz o ReactQuill ocupar toda a largura disponível
-          height: '85%' // Faz o ReactQuill ocupar a altura disponível
-        }}
+    <Box>
+      <TextField
+        onChange={handleTitleChanging}
+        label="Document title"
+        value={currentTitle}
+        placeholder="My document"
+        errorMessage={titleErrorMessage}
       />
-      <ButtonSave />
-    </Paper>
+
+      <Paper
+        elevation={3}
+        sx={{
+          marginTop: '32px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          maxHeight: '86%',
+          minHeight: '50%'
+        }}
+      >
+        <ReactQuill
+          theme="snow"
+          value={currentContent}
+          onChange={handleContentChanging}
+          style={{width: '100%'}}
+        />
+        <ButtonSave />
+      </Paper>
+    </Box>
   )
 }
 
 export default DocumentsPageDraft
+
