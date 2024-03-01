@@ -86,15 +86,15 @@ const DrawerWrapper: React.FC<DrawerWrapperProps> = ({
     <Drawer theme={theme} variant='permanent' open={open} drawerWidth={drawerWidth}>
       <DrawerHeader>
         <ListItemIcon>
-                    <Home color="primary" />
-                    <ListItemText
-                    primary="Home"
-                    primaryTypographyProps={{
-                        color: 'primary',
-                        fontWeight: 'medium',
-                        variant: 'body2',
-                    }}
-                    />
+          <Home color='primary' />
+          <ListItemText
+            primary='Home'
+            primaryTypographyProps={{
+              color: 'primary',
+              fontWeight: 'medium',
+              variant: 'body2'
+            }}
+          />
         </ListItemIcon>
         <Box flexGrow={1} />
         <IconButton onClick={handleDrawerClose}>
