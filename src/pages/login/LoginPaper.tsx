@@ -21,7 +21,7 @@ const LoginPaper: React.FC<any> = () => {
   const [password, setPassword] = React.useState('')
 
   const goToMain = () => {
-      navigate('/users')
+    navigate('/users')
   }
 
   const validateUsername = (input: string): boolean => {
