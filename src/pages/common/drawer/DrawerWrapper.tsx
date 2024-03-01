@@ -1,4 +1,4 @@
-// src/pages/documents/DocumentsDrawer.tsx
+// src/pages/common/drawer/DrawerWrapper.tsx
 import MuiDrawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'

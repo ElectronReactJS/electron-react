@@ -1,4 +1,4 @@
-//
+// src/pages/common/menu/Menu.tsx
 import * as React from 'react'
 import {useNavigate} from 'react-router-dom'
 import Box from '@mui/material/Box'
@@ -37,7 +37,7 @@ const Menu: React.FC = () => {
   }
 
   const goToAccount = () => {
-    navigate('/accountPage')
+    navigate('/users')
   }
 
   const goToWorkspace = () => {
@@ -109,7 +109,7 @@ const Menu: React.FC = () => {
           <ListItemIcon>
             <SpaceDashboardIcon fontSize='small' />
           </ListItemIcon>
-          Admin
+          Users
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>

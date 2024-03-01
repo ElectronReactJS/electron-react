@@ -1,4 +1,4 @@
-// src/pages/documents/ButtonEdit.tsx
+// src/pages/common/button/ButtonEdit.tsx
 import Fab from '@mui/material/Fab'
 import EditIcon from '@mui/icons-material/Edit'
 

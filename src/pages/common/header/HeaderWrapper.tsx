@@ -1,4 +1,4 @@
-// src/pages/documents/DocumentsHeader.tsx
+// src/pages/common/header/HeaderWrapper.tsx
 import React, {ReactNode} from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import {IconButton, Toolbar} from '@mui/material'

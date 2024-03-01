@@ -1,4 +1,4 @@
-// src/pages/documents/DocumentsFrame.Theme.ts
+// src/pages/common/theme/Frame.Theme.ts
 import {Theme} from '@mui/material/styles'
 
 export const DocumentsFrameTheme = (theme: Theme) => {

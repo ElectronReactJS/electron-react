@@ -1,4 +1,4 @@
-// src/pages/documents/ButtonSave.tsx
+// src/pages/common/button/ButtonSave.tsx
 import Fab from '@mui/material/Fab'
 import SaveIcon from '@mui/icons-material/Save'
 
