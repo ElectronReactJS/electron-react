@@ -85,7 +85,7 @@ const DrawerWrapper: React.FC<DrawerWrapperProps> = ({
   return (
     <Drawer theme={theme} variant='permanent' open={open} drawerWidth={drawerWidth}>
       <DrawerHeader>
-        <ListItemIcon sx={{ alignItems: 'center', justifyContent: 'center', }}>
+        <ListItemIcon sx={{alignItems: 'center', justifyContent: 'center'}}>
           <Home color='primary' />
           {/* <ListItemText
             primary='Home'
