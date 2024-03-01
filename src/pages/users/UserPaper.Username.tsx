@@ -6,6 +6,7 @@ import Paper from '../../components/extends/surfaces/PaperWrapper'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
+import EditNoteIcon from '../../components/extends/displays/IconEditNoteWrapper'
 import {UserPaperTheme} from './UserPaper.Theme'
 
 const UserPaper: React.FC<any> = () => {
@@ -15,12 +16,6 @@ const UserPaper: React.FC<any> = () => {
   const label = 'Change Username or e-mail'
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
-
-  const goToMain = () => {
-    if (validateUsername(username)) {
-      navigate('/main')
-    }
-  }
 
   const validateUsername = (input: string): boolean => {
     setUsernameErrorMessage('')
@@ -63,6 +58,7 @@ const UserPaper: React.FC<any> = () => {
 
   return (
     <Paper sx={userPaperStyles} elevation={3}>
+      <EditNoteIcon sx={{ fontSize: 120 }} />
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>

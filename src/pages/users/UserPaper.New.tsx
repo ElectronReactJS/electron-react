@@ -7,6 +7,7 @@ import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
+import IconNewUserWrapper from '../../components/extends/displays/IconNewUserWrapper'
 import {UserPaperTheme} from './UserPaper.Theme'
 
 const UserPaper: React.FC<any> = () => {
@@ -84,6 +85,7 @@ const UserPaper: React.FC<any> = () => {
 
   return (
     <Paper sx={userPaperStyles} elevation={3}>
+      <IconNewUserWrapper sx={{ fontSize: 120 }} />
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>

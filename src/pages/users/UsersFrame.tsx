@@ -2,16 +2,18 @@
 import * as React from 'react'
 import {styled} from '@mui/material/styles'
 import Typography from '../../components/extends/displays/TypographyWrapper'
+
 import IconPasswordWrapper from '../../components/extends/displays/IconPasswordWrapper'
 import IconNewUserWrapper from '../../components/extends/displays/IconNewUserWrapper'
-import Box from '@mui/material/Box'
+import EditNoteIcon from '../../components/extends/displays/IconEditNoteWrapper'
+import VisibilityIcon from '../../components/extends/displays/IconVisibilityWrapper'
+import SearchIcon from '../../components/extends/displays/IconSearchWrapper'
+
+import Box from '../../components/extends/layouts/Box';
 import CssBaseline from '@mui/material/CssBaseline'
 import UsersHeader from '../common/header/HeaderWrapper'
 import UsersDrawer from '../common/drawer/DrawerWrapper'
-import SearchIcon from '@mui/icons-material/Search'
 
-import VisibilityIcon from '@mui/icons-material/Visibility'
-import EditNoteIcon from '@mui/icons-material/EditNote'
 import UsersPageFinder from './UsersPage.Finder'
 import UsersPageViewer from './UsersPage.Viewer'
 import UsersPagePassword from './UsersPage.Password'
@@ -44,18 +46,19 @@ export interface DrawerItemsType {
   icon: JSX.Element
   pageId: string
 }
-const drawerItems: DrawerItemsType[] = [
-  {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
-  {id: 'Audit', icon: <VisibilityIcon />, pageId: 'Audit'},
-  {id: 'New', icon: <IconNewUserWrapper />, pageId: 'New'},
-  {id: 'Username', icon: <EditNoteIcon />, pageId: 'Username'},
-  {id: 'Password', icon: <IconPasswordWrapper />, pageId: 'Password'}
-]
 
 export default function DocumensFrame() {
-  const [open, setOpen] = React.useState(true)
-  const [currentPage, setCurrentPage] = React.useState('Search')
-
+    const [open, setOpen] = React.useState(true)
+    const [currentPage, setCurrentPage] = React.useState('Search')
+    
+    const drawerItems: DrawerItemsType[] = [
+        {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
+        {id: 'Audit', icon: <VisibilityIcon />, pageId: 'Audit'},
+        {id: 'New', icon: <IconNewUserWrapper />, pageId: 'New'},
+        {id: 'Username', icon: <EditNoteIcon />, pageId: 'Username'},
+        {id: 'Password', icon: <IconPasswordWrapper />, pageId: 'Password'}
+    ];
+    
   const handleDrawerOpen = () => {
     setOpen(true)
   }

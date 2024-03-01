@@ -5,6 +5,7 @@ import {useTheme} from '../../components/extends/styles/StylesWrapper'
 import Paper from '../../components/extends/surfaces/PaperWrapper'
 import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
+import IconPasswordWrapper from '../../components/extends/displays/IconPasswordWrapper'
 import {UserPaperTheme} from './UserPaper.Theme'
 
 const UserPaper: React.FC<any> = () => {
@@ -40,6 +41,7 @@ const UserPaper: React.FC<any> = () => {
 
   return (
     <Paper sx={userPaperStyles} elevation={3}>
+      <IconPasswordWrapper sx={{ fontSize: 120 }} />
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>
