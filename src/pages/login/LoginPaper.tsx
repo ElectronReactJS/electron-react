@@ -8,7 +8,7 @@ import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
 import {LoginPaperTheme} from './LoginPaper.Theme'
-import loginImage from '../../images/logo128x128.png'
+import biudLogo from '../../images/biud-logo.svg'
 
 const LoginPaper: React.FC<any> = () => {
   const navigate = useNavigate()
@@ -88,7 +88,7 @@ const LoginPaper: React.FC<any> = () => {
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>
-      <img src={loginImage} alt='Logo' />
+      <img src={biudLogo} alt='Logo' />
       <TextField
         label='Username or e-mail'
         placeholder='you@domain.com'
