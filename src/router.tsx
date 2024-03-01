@@ -15,7 +15,7 @@ const root = createRoot(navigationElement)
 if (navigationElement) {
   root.render(
     <ThemeProvider theme={theme}>
-      <MemoryRouter initialEntries={['/users']}>
+      <MemoryRouter initialEntries={['/login']}>
         <Routes>
           <Route path='/login' element={<LoginPage />} />
           <Route path='/documents' element={<DocumensFrame />} />

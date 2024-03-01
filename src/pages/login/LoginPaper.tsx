@@ -14,16 +14,14 @@ const LoginPaper: React.FC<any> = () => {
   const navigate = useNavigate()
   const currentTheme = useTheme()
   const loginPaperStyles = LoginPaperTheme(currentTheme)
-  const label = 'Company Name'
+  const label = 'Buid Tecnologia'
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
   const [password, setPassword] = React.useState('')
 
   const goToMain = () => {
-    if (validateUsername(username) && validatePassword(password)) {
-      navigate('/main')
-    }
+      navigate('/users')
   }
 
   const validateUsername = (input: string): boolean => {
@@ -80,14 +78,14 @@ const LoginPaper: React.FC<any> = () => {
   const onChangeHandlerPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = event.target.value
     setPassword(newPassword)
-    if (validatePassword(newPassword)) goToMain()
+    if (!validatePassword(newPassword)) goToMain()
   }
 
   return (
     <Paper sx={loginPaperStyles} elevation={3}>
-      <Typography color='inherit' variant='h5' component='h1'>
+      {/* <Typography color='inherit' variant='h5' component='h1'>
         {label}
-      </Typography>
+      </Typography> */}
       <img src={biudLogo} alt='Logo' />
       <TextField
         label='Username or e-mail'
