@@ -2,8 +2,8 @@
 import * as React from 'react'
 import {styled} from '@mui/material/styles'
 import Typography from '../../components/extends/displays/TypographyWrapper'
-import IconPasswordWrapper from '../../components/extends/displays/IconPasswordWrapper';
-import IconNewUserWrapper from '../../components/extends/displays/IconNewUserWrapper';
+import IconPasswordWrapper from '../../components/extends/displays/IconPasswordWrapper'
+import IconNewUserWrapper from '../../components/extends/displays/IconNewUserWrapper'
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import UsersHeader from '../common/header/HeaderWrapper'
