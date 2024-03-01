@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider'
 import IconButton from '../../../components/extends/displays/IconButtonWrapper'
 import ChevronLeftIcon from '../../../components/extends/displays/IconChevronLeftWrapper'
 import ChevronRightIcon from '../../../components/extends/displays/IconChevronRightWrapper'
-import Home from '../../../components/extends/displays/IconHomeWrapper'
+import Home from '../../../components/extends/displays/IconAssignmentWrapper'
 import Box from '../../../components/wrap/layouts/BoxWrapper'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
@@ -85,16 +85,17 @@ const DrawerWrapper: React.FC<DrawerWrapperProps> = ({
   return (
     <Drawer theme={theme} variant='permanent' open={open} drawerWidth={drawerWidth}>
       <DrawerHeader>
-        <ListItemIcon>
+        <ListItemIcon sx={{ alignItems: 'center', justifyContent: 'center', }}>
           <Home color='primary' />
-          <ListItemText
+          {/* <ListItemText
             primary='Home'
+            sx={{ marginLeft: '10px' }}
             primaryTypographyProps={{
               color: 'primary',
               fontWeight: 'medium',
               variant: 'body2'
             }}
-          />
+          /> */}
         </ListItemIcon>
         <Box flexGrow={1} />
         <IconButton onClick={handleDrawerClose}>
