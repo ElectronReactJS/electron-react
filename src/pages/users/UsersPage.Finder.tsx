@@ -50,22 +50,22 @@ const columns: GridColDef[] = [
   {field: 'id', headerName: 'ID', width: 90},
   {
     field: 'userName',
-    headerName: 'Last name',
-    width: 150,
-    editable: true
+    headerName: 'Username',
+    width: 350,
+    editable: false
   }
 ]
 
 const rows = [
-  {id: 1, userName: 'Snow'},
-  {id: 2, userName: 'Lannister'},
-  {id: 3, userName: 'Lannister'},
-  {id: 4, userName: 'Stark'},
-  {id: 5, userName: 'Targaryen'},
-  {id: 6, userName: 'Melisandre'},
-  {id: 7, userName: 'Clifford'},
-  {id: 8, userName: 'Frances'},
-  {id: 9, userName: 'Roxie'}
+  {id: 1, userName: 'agros@example.com'},
+  {id: 2, userName: 'antonio@example.com'},
+  {id: 3, userName: 'lucas@example.com'},
+  {id: 4, userName: 'felipe@example.com'},
+  {id: 5, userName: 'thiago@example.com'},
+  {id: 6, userName: 'guilherme@example.com'},
+  {id: 7, userName: 'gabriel@example.com'},
+  {id: 8, userName: 'jp@example.com'},
+  {id: 9, userName: 'fernanda@example.com'}
 ]
 
 const UserPageFinder: React.FC<any> = () => {
