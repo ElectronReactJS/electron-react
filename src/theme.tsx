@@ -12,13 +12,18 @@ const colorBlueLght = '#4fc3f7'
 const colorBlueDark = '#012169'
 const colorDark = '#1976d2'
 const colorGrayLight = '#f5f5f5'
+const colorGray = '#081627'
+const colorPinkLight = '#FFB6C1'
+const colorPinkDark = '#AA336A'
+const colorPink = '#FF69B4'
+const colorPinkBiud = '#DE3163'
 
 const baseTheme = createTheme({
   palette: {
     primary: {
-      light: colorGrayLight,
-      main: colorDark,
-      dark: colorDark
+      light: colorPinkLight,
+      main: colorPinkBiud,
+      dark: colorPinkDark
     }
   },
   typography: {

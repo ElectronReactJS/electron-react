@@ -1,17 +1,24 @@
 // src/pages/common/button/ButtonSave.tsx
-import Fab from '@mui/material/Fab'
-import SaveIcon from '@mui/icons-material/Save'
+import React from 'react'; 
+import Fab from '@mui/material/Fab';
+import SaveIcon from '@mui/icons-material/Save';
 
 const fabStyle = {
   position: 'absolute',
   bottom: 16,
-  right: 16
+  right: 16,
+};
+
+interface ButtonSaveProps {
+  onClick?: () => void; 
 }
 
-export default function ButtonSave() {
+const ButtonSave: React.FC<ButtonSaveProps> = ({ onClick }) => {
   return (
-    <Fab sx={fabStyle} aria-label='Save' color='primary'>
+    <Fab sx={fabStyle} aria-label='Save' color='primary' onClick={onClick}>
       <SaveIcon />
     </Fab>
-  )
-}
+  );
+};
+
+export default ButtonSave;

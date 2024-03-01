@@ -1,19 +1,17 @@
 // src/pages/users/UserPaper.tsx
 import * as React from 'react'
 import {useNavigate} from 'react-router-dom'
-import {useTheme} from '../../components/extends/styles/StylesWrapper'
-import Paper from '../../components/extends/surfaces/PaperWrapper'
+import Paper from './Paper'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
-import IconNewUserWrapper from '../../components/extends/displays/IconNewUserWrapper'
-import {UserPaperTheme} from './UserPaper.Theme'
 
-const UserPaper: React.FC<any> = () => {
+interface UserPaperProps {
+    children?: React.ReactNode
+}
+const UserPaperNew: React.FC<UserPaperProps> = ({children}) => {
   const navigate = useNavigate()
-  const currentTheme = useTheme()
-  const userPaperStyles = UserPaperTheme(currentTheme)
   const label = 'New User'
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
@@ -84,8 +82,7 @@ const UserPaper: React.FC<any> = () => {
   }
 
   return (
-    <Paper sx={userPaperStyles} elevation={3}>
-      <IconNewUserWrapper sx={{fontSize: 120}} />
+    <Paper>
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>
@@ -121,4 +118,4 @@ const UserPaper: React.FC<any> = () => {
   )
 }
 
-export default UserPaper
+export default UserPaperNew

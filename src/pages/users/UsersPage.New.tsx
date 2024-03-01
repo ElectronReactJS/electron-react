@@ -1,35 +1,33 @@
 // src/pages/users/UsersPagePassword.tsx
-import React, {useState} from 'react'
-import 'react-quill/dist/quill.snow.css'
-import UserPaper from './UserPaper.New'
+import React, {useState} from 'react';
+import 'react-quill/dist/quill.snow.css';
+import UserPaper from './UserPaper.New';
+import TransitionAlert from './TransitionAlert';
+import ButtonSave from '../common/button/ButtonSave';
+import Box from '../../components/extends/layouts/Box'
 
-interface UsersPagePasswordProps {
-  title?: string
-  content?: string
-}
-
-const UsersPagePassword: React.FC<UsersPagePasswordProps> = ({title, content}) => {
-  const [currentContent, setCurrentContent] = useState('')
-  const [currentTitle, setCurrentTitle] = useState('')
-
-  const handleContentChanging = (newContent: string) => {
-    setCurrentContent(newContent)
-    save
-  }
-
-  const handleTitleChanging = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newTitle: string = event.target.value
-    setCurrentTitle(newTitle)
-    save
-  }
+const UsersPagePassword: React.FC = () => {
+  const [showTransitionAlert, setShowTransitionAlert] = useState(false);
 
   const save = () => {
-    console.log('Saving content')
-    console.log(JSON.stringify({title: currentTitle, content: currentContent}))
-    console.log('Saved')
-  }
+    console.log('Saving content');
+    setShowTransitionAlert(true); // Mostra o alerta
+  };
 
-  return <UserPaper />
+  return (
+    <Box sx={{width: '100%'}}>
+        <UserPaper>
+        {showTransitionAlert && (
+            <TransitionAlert
+            message="Your custom message here"
+            severity="success"
+            show={showTransitionAlert}
+            />
+        )}
+        <ButtonSave onClick={save} />
+        </UserPaper>
+    </Box>
+  );
 }
 
-export default UsersPagePassword
+export default UsersPagePassword;
