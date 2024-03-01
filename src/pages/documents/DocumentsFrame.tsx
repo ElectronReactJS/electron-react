@@ -80,7 +80,7 @@ export default function DocumensFrame() {
         <DrawerHeader />
         {currentPage === 'Search' && <DocumentsPageFinder />}
         {currentPage === 'Viewer' && <DocumentsPageViewer />}
-        {currentPage === 'Editor' && <DocumentsPageEditor title='New document'/>}
+        {currentPage === 'Editor' && <DocumentsPageEditor title='New document' />}
         {currentPage === 'Draft' && <DocumentsPageDraft />}
       </Main>
     </Box>

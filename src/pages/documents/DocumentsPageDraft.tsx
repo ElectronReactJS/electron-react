@@ -1,4 +1,3 @@
-
 // src/pages/documents/DocumentsPageDraft.tsx
 import React, {useState} from 'react'
 import ReactQuill from 'react-quill'
@@ -9,8 +8,8 @@ import Box from '../../components/wrap/layouts/BoxWrapper'
 import ButtonSave from './ButtonSave'
 
 interface DocumentsPageDraftProps {
-  title?: string;
-  content?: string;
+  title?: string
+  content?: string
 }
 
 const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content}) => {
@@ -24,10 +23,8 @@ const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content})
   }
 
   const validateTitle = (title: string) => {
-    if (title?.length < 4) 
-        setTitleErrorMessage("Invalid document name.")
-    else 
-    setTitleErrorMessage('')
+    if (title?.length < 4) setTitleErrorMessage('Invalid document name.')
+    else setTitleErrorMessage('')
   }
 
   const handleTitleChanging = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,18 +35,18 @@ const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content})
   }
 
   const save = () => {
-    console.log('Saving content');
-    console.log(JSON.stringify({"title": currentTitle, "content": currentContent}));
-    console.log('Saved');
+    console.log('Saving content')
+    console.log(JSON.stringify({title: currentTitle, content: currentContent}))
+    console.log('Saved')
   }
 
   return (
     <Box>
       <TextField
         onChange={handleTitleChanging}
-        label="Document title"
+        label='Document title'
         value={currentTitle}
-        placeholder="My document"
+        placeholder='My document'
         errorMessage={titleErrorMessage}
       />
 
@@ -66,7 +63,7 @@ const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content})
         }}
       >
         <ReactQuill
-          theme="snow"
+          theme='snow'
           value={currentContent}
           onChange={handleContentChanging}
           style={{width: '100%'}}
@@ -78,4 +75,3 @@ const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content})
 }
 
 export default DocumentsPageDraft
-

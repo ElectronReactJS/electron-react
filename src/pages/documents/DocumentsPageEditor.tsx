@@ -7,8 +7,8 @@ import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import Box from '../../components/wrap/layouts/BoxWrapper'
 
 interface DocumentsPageEditorProps {
-  title?: string;
-  content?: string;
+  title?: string
+  content?: string
 }
 
 const DocumentsPageEditor: React.FC<DocumentsPageEditorProps> = ({title, content}) => {
@@ -22,10 +22,8 @@ const DocumentsPageEditor: React.FC<DocumentsPageEditorProps> = ({title, content
   }
 
   const validateTitle = (title: string) => {
-    if (title?.length < 4) 
-        setTitleErrorMessage("Invalid document name.")
-    else 
-    setTitleErrorMessage('')
+    if (title?.length < 4) setTitleErrorMessage('Invalid document name.')
+    else setTitleErrorMessage('')
   }
 
   const handleTitleChanging = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,18 +34,18 @@ const DocumentsPageEditor: React.FC<DocumentsPageEditorProps> = ({title, content
   }
 
   const save = () => {
-    console.log('Saving content');
-    console.log(JSON.stringify({"title": currentTitle, "content": currentContent}));
-    console.log('Saved');
+    console.log('Saving content')
+    console.log(JSON.stringify({title: currentTitle, content: currentContent}))
+    console.log('Saved')
   }
 
   return (
     <Box>
       <TextField
         onChange={handleTitleChanging}
-        label="Document title"
+        label='Document title'
         value={currentTitle}
-        placeholder="My document"
+        placeholder='My document'
         errorMessage={titleErrorMessage}
       />
 
@@ -64,7 +62,7 @@ const DocumentsPageEditor: React.FC<DocumentsPageEditorProps> = ({title, content
         }}
       >
         <ReactQuill
-          theme="snow"
+          theme='snow'
           value={currentContent}
           onChange={handleContentChanging}
           style={{width: '100%'}}
