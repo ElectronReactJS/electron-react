@@ -4,7 +4,7 @@ import {useTheme} from '@mui/material/styles'
 import {BoxWrapperTheme} from './BoxWrapper.Theme'
 
 interface BoxWrapperProps extends BoxProps {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const BoxWrapper: React.FC<BoxWrapperProps> = props => {

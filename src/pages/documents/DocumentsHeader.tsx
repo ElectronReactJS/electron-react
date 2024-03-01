@@ -1,35 +1,20 @@
 // src/pages/documents/DocumentsHeader.tsx
 import React, {ReactNode} from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
-import {IconButton, Toolbar, Typography} from '@mui/material'
+import {IconButton, Toolbar} from '@mui/material'
 
 import {styled} from '@mui/material/styles'
-import MuiAppBar, {AppBarProps as MuiAppBarProps} from '@mui/material/AppBar'
+import MuiAppBar, {AppBarProps as MuiAppBarProps} from '@mui/material/AppBar';
+import Menu from '../common/menu/Menu';
+import Box from '../../components/wrap/layouts/BoxWrapper';
 
 interface AppBarProps extends MuiAppBarProps {
-  open?: boolean
-  drawerWidth: number
+  open?: boolean;
+  drawerWidth: number;
 }
 
-const StyledAppBar = styled(MuiAppBar, {
-  shouldForwardProp: prop => prop !== 'open' && prop !== 'drawerWidth'
-})<AppBarProps>(({theme, open, drawerWidth}) => ({
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen
-  }),
-  ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  })
-}))
-
 interface AppBarProps extends MuiAppBarProps {
-  open?: boolean
+  open?: boolean;
 }
 
 const AppBar = styled(MuiAppBar, {
@@ -79,6 +64,8 @@ const DocumentsHeader: React.FC<DocumentsHeaderProps> = ({
           <MenuIcon />
         </IconButton>
         {children}
+        <Box flexGrow={1} />  {/* Empurra o conteúdo seguinte para a direita */}
+        <Menu />
       </Toolbar>
     </AppBar>
   )

@@ -15,24 +15,16 @@ import EditIcon from '@mui/icons-material/Edit'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import EditNoteIcon from '@mui/icons-material/EditNote'
 
-const drawerWidth = 240
+const drawerWidth = 150;
 
-const Main = styled('main', {shouldForwardProp: prop => prop !== 'open'})<{
-  open?: boolean
-}>(({theme, open}) => ({
+const Main = styled('main')(({theme}) => ({
   flexGrow: 1,
-  padding: theme.spacing(3),
+  padding: '6%',
+  alignItems: 'center',
+  justifyContent: 'center',
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen
-  }),
-  marginLeft: `-${drawerWidth}px`,
-  ...(open && {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
-    }),
-    marginLeft: 0
   })
 }))
 
@@ -74,7 +66,7 @@ export default function DocumensFrame() {
       <CssBaseline />
       <DocumentsHeader handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
         <Typography variant='h6' noWrap component='div'>
-          DocumentsFrame Header
+          Documents
         </Typography>
       </DocumentsHeader>
       <DocumentsDrawer
@@ -84,11 +76,11 @@ export default function DocumensFrame() {
         onPageChange={pageId => setCurrentPage(pageId)}
         items={drawerItems}
       />
-      <Main open={open}>
+      <Main>
         <DrawerHeader />
         {currentPage === 'Search' && <DocumentsPageFinder />}
         {currentPage === 'Viewer' && <DocumentsPageViewer />}
-        {currentPage === 'Editor' && <DocumentsPageEditor open={open} drawerWidth={drawerWidth} />}
+        {currentPage === 'Editor' && <DocumentsPageEditor />}
         {currentPage === 'Draft' && <DocumentsPageDraft />}
       </Main>
     </Box>
