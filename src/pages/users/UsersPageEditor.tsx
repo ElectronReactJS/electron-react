@@ -17,7 +17,6 @@ const UsersPageEditor: React.FC<UsersPageEditorProps> = ({title, content}) => {
     save
   }
 
-
   const handleTitleChanging = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newTitle: string = event.target.value
     setCurrentTitle(newTitle)
@@ -30,9 +29,7 @@ const UsersPageEditor: React.FC<UsersPageEditorProps> = ({title, content}) => {
     console.log('Saved')
   }
 
-  return (
-    <UserPaper />
-  )
+  return <UserPaper />
 }
 
 export default UsersPageEditor
