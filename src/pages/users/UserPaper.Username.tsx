@@ -4,24 +4,20 @@ import {useNavigate} from 'react-router-dom'
 import {useTheme} from '../../components/extends/styles/StylesWrapper'
 import Paper from '../../components/extends/surfaces/PaperWrapper'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
-import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
 import {UserPaperTheme} from './UserPaper.Theme'
-import userImage from '../../images/logo128x128.png'
 
 const UserPaper: React.FC<any> = () => {
   const navigate = useNavigate()
   const currentTheme = useTheme()
   const userPaperStyles = UserPaperTheme(currentTheme)
-  const label = 'Company Name'
+  const label = 'Change Username or e-mail'
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
-  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
-  const [password, setPassword] = React.useState('')
 
   const goToMain = () => {
-    if (validateUsername(username) && validatePassword(password)) {
+    if (validateUsername(username)) {
       navigate('/main')
     }
   }
@@ -65,30 +61,11 @@ const UserPaper: React.FC<any> = () => {
     validateUsername(trimmedUsername)
   }
 
-  const validatePassword = (input: string): boolean => {
-    setPasswordErrorMessage('')
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/
-    if (!passwordRegex.test(input)) {
-      setPasswordErrorMessage(
-        'Password must be 8-16 characters long and include letters, numbers, and special characters.'
-      )
-      return false
-    }
-    return true
-  }
-
-  const onChangeHandlerPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newPassword = event.target.value
-    setPassword(newPassword)
-    if (validatePassword(newPassword)) goToMain()
-  }
-
   return (
     <Paper sx={userPaperStyles} elevation={3}>
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>
-      <img src={userImage} alt='Logo' />
       <TextField
         label='Username or e-mail'
         placeholder='you@domain.com'
@@ -96,18 +73,6 @@ const UserPaper: React.FC<any> = () => {
         onChange={onChangeHandlerUsername}
         icon={<IconTextFields />}
         value={username}
-      />
-      <PasswordField
-        label='Password'
-        errorMessage={passwordErrorMessage}
-        onChange={onChangeHandlerPassword}
-        value={password}
-      />
-      <PasswordField
-        label='Password repeating'
-        errorMessage={passwordErrorMessage}
-        onChange={onChangeHandlerPassword}
-        value={password}
       />
     </Paper>
   )

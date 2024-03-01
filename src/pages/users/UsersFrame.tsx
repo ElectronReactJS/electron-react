@@ -2,18 +2,21 @@
 import * as React from 'react'
 import {styled} from '@mui/material/styles'
 import Typography from '../../components/extends/displays/TypographyWrapper'
+import IconPasswordWrapper from '../../components/extends/displays/IconPasswordWrapper';
+import IconNewUserWrapper from '../../components/extends/displays/IconNewUserWrapper';
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import UsersHeader from '../common/header/HeaderWrapper'
-import UsersPageFinder from './UsersPageFinder'
 import UsersDrawer from '../common/drawer/DrawerWrapper'
-import UsersPageEditor from './UsersPageEditor'
-import UsersPageViewer from './UsersPageViewer'
-import UsersPageDraft from './UsersPageDraft'
 import SearchIcon from '@mui/icons-material/Search'
-import EditIcon from '@mui/icons-material/Edit'
+
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import EditNoteIcon from '@mui/icons-material/EditNote'
+import UsersPageFinder from './UsersPage.Finder'
+import UsersPageViewer from './UsersPage.Viewer'
+import UsersPagePassword from './UsersPage.Password'
+import UsersPageUsername from './UsersPage.Username'
+import UsersPageNew from './UsersPage.New'
 
 const drawerWidth = 150
 
@@ -41,12 +44,12 @@ export interface DrawerItemsType {
   icon: JSX.Element
   pageId: string
 }
-
 const drawerItems: DrawerItemsType[] = [
   {id: 'Search', icon: <SearchIcon />, pageId: 'Search'},
-  {id: 'Viewer', icon: <VisibilityIcon />, pageId: 'Viewer'},
-  {id: 'Editor', icon: <EditIcon />, pageId: 'Editor'},
-  {id: 'Draft', icon: <EditNoteIcon />, pageId: 'Draft'}
+  {id: 'Audit', icon: <VisibilityIcon />, pageId: 'Audit'},
+  {id: 'New', icon: <IconNewUserWrapper />, pageId: 'New'},
+  {id: 'Username', icon: <EditNoteIcon />, pageId: 'Username'},
+  {id: 'Password', icon: <IconPasswordWrapper />, pageId: 'Password'}
 ]
 
 export default function DocumensFrame() {
@@ -79,9 +82,10 @@ export default function DocumensFrame() {
       <Main>
         <DrawerHeader />
         {currentPage === 'Search' && <UsersPageFinder />}
-        {currentPage === 'Viewer' && <UsersPageViewer />}
-        {currentPage === 'Editor' && <UsersPageEditor title='New user' />}
-        {currentPage === 'Draft' && <UsersPageDraft />}
+        {currentPage === 'Audit' && <UsersPageViewer />}
+        {currentPage === 'New' && <UsersPageNew />}
+        {currentPage === 'Username' && <UsersPageUsername />}
+        {currentPage === 'Password' && <UsersPagePassword title='Edit user' />}
       </Main>
     </Box>
   )

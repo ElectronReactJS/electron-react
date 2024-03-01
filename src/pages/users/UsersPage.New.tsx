@@ -1,14 +1,14 @@
-// src/pages/users/UsersPageEditor.tsx
+// src/pages/users/UsersPagePassword.tsx
 import React, {useState} from 'react'
 import 'react-quill/dist/quill.snow.css'
-import UserPaper from './UserPaper'
+import UserPaper from './UserPaper.New'
 
-interface UsersPageEditorProps {
+interface UsersPagePasswordProps {
   title?: string
   content?: string
 }
 
-const UsersPageEditor: React.FC<UsersPageEditorProps> = ({title, content}) => {
+const UsersPagePassword: React.FC<UsersPagePasswordProps> = ({title, content}) => {
   const [currentContent, setCurrentContent] = useState('')
   const [currentTitle, setCurrentTitle] = useState('')
 
@@ -32,4 +32,4 @@ const UsersPageEditor: React.FC<UsersPageEditorProps> = ({title, content}) => {
   return <UserPaper />
 }
 
-export default UsersPageEditor
+export default UsersPagePassword
