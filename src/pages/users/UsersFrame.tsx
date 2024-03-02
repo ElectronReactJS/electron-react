@@ -18,7 +18,7 @@ import UsersPageFinder from './UsersPage.Finder'
 import UsersPageAudit from './UsersPage.Audit'
 import UsersPagePassword from './UsersPage.Password'
 import UsersPageUsername from './UsersPage.Username'
-import UsersPageNew from './UsersPage.New'
+import UsersPageNew from './User.New'
 
 const drawerWidth = 150
 

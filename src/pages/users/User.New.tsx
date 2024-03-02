@@ -1,10 +1,10 @@
-// src/pages/users/UsersPage.New.tsx
+// src/pages/users/UserNew.New.tsx
 import React, {useState} from 'react'
 import UserPaper from './UserPaper.New'
 import TransitionAlert from './TransitionAlert'
 import Box from '../../components/wrap/layouts/BoxWrapper'
 
-const UsersPageNew: React.FC = () => {
+const UserNew: React.FC = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showTransitionAlert, setShowTransitionAlert] = useState(true)
@@ -18,30 +18,6 @@ const UsersPageNew: React.FC = () => {
   }
 
   return (
-    //     <Box sx={{width: '100%'}}>
-    //     <Toolbar sx={{width: '100%'}}>
-    //       <Search>
-    //         <SearchIconWrapper>
-    //           <SearchIcon />
-    //         </SearchIconWrapper>
-    //         <StyledInputBase placeholder='Search…' inputProps={{'aria-label': 'search'}} />
-    //       </Search>
-    //     </Toolbar>
-    //     <DataGrid
-    //       rows={rows}
-    //       columns={columns}
-    //       initialState={{
-    //         pagination: {
-    //           paginationModel: {
-    //             pageSize: 5
-    //           }
-    //         }
-    //       }}
-    //       pageSizeOptions={[5]}
-    //       checkboxSelection
-    //       disableRowSelectionOnClick
-    //     />
-    //   </Box>
     <Box
       sx={{
         display: 'flex',
@@ -71,4 +47,4 @@ const UsersPageNew: React.FC = () => {
   )
 }
 
-export default UsersPageNew
+export default UserNew
