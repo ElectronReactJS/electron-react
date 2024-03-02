@@ -15,7 +15,7 @@ import UsersHeader from '../common/header/HeaderWrapper'
 import UsersDrawer from '../common/drawer/DrawerWrapper'
 
 import UsersPageFinder from './UsersPage.Finder'
-import UsersPageViewer from './UsersPage.Viewer'
+import UsersPageAudit from './UsersPage.Audit'
 import UsersPagePassword from './UsersPage.Password'
 import UsersPageUsername from './UsersPage.Username'
 import UsersPageNew from './UsersPage.New'
@@ -48,7 +48,7 @@ export interface DrawerItemsType {
 }
 
 export default function DocumensFrame() {
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(false)
   const [currentPage, setCurrentPage] = React.useState('Search')
 
   const drawerItems: DrawerItemsType[] = [
@@ -69,27 +69,29 @@ export default function DocumensFrame() {
 
   return (
     <Box sx={{display: 'flex'}}>
-      <CssBaseline />
-      <UsersHeader handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
+        <CssBaseline />
+        <UsersHeader 
+            handleDrawerOpen={handleDrawerOpen} 
+            open={open} 
+            drawerWidth={drawerWidth}>
         <Typography variant='h6' noWrap component='div'>
-          Users
+            Users
         </Typography>
-      </UsersHeader>
-      <UsersDrawer
-        handleDrawerClose={handleDrawerClose}
-        open={open}
-        drawerWidth={drawerWidth}
-        onPageChange={pageId => setCurrentPage(pageId)}
-        items={drawerItems}
-      />
-      <Main>
-        <DrawerHeader />
-        {currentPage === 'Search' && <UsersPageFinder />}
-        {currentPage === 'Audit' && <UsersPageViewer />}
-        {currentPage === 'New' && <UsersPageNew />}
-        {currentPage === 'Username' && <UsersPageUsername />}
-        {currentPage === 'Password' && <UsersPagePassword title='Edit user' />}
-      </Main>
+        </UsersHeader>
+        <UsersDrawer
+            handleDrawerClose={handleDrawerClose}
+            open={open}
+            drawerWidth={drawerWidth}
+            onPageChange={pageId => setCurrentPage(pageId)}
+            items={drawerItems} />
+        <Main>
+            <DrawerHeader />
+            {currentPage === 'Search' && <UsersPageFinder />}
+            {currentPage === 'Audit' && <UsersPageAudit />}
+            {currentPage === 'New' && <UsersPageNew />}
+            {currentPage === 'Username' && <UsersPageUsername />}
+            {currentPage === 'Password' && <UsersPagePassword title='Edit user' />}
+        </Main>
     </Box>
   )
 }

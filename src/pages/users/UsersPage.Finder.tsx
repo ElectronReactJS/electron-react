@@ -70,7 +70,7 @@ const rows = [
 const UserPageFinder: React.FC<any> = () => {
   return (
     <Box sx={{width: '100%'}}>
-      <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
+      <Toolbar sx={{width: '100%'}}>
         <Search>
           <SearchIconWrapper>
             <SearchIcon />

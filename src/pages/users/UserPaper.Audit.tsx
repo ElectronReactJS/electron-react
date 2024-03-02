@@ -1,12 +1,10 @@
 // src/pages/users/UserPaper.List.tsx
 import * as React from 'react'
-import {useTheme} from '../../components/extends/styles/StylesWrapper'
-import Paper from '../../components/extends/surfaces/PaperWrapper'
+import Paper from './Paper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconPrivacyTipWrapper from '../../components/extends/displays/IconPrivacyTipWrapper'
 import IconRemoveModeratorWrapper from '../../components/extends/displays/IconRemoveModeratorWrapper'
 import IconVerifiedUserWrapper from '../../components/extends/displays/IconVerifiedUserWrapper'
-import {UserPaperTheme} from './UserPaper.Theme'
 
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
@@ -15,12 +13,10 @@ import ListItemAvatar from '@mui/material/ListItemAvatar'
 import Avatar from '@mui/material/Avatar'
 
 const UserPaper: React.FC<any> = () => {
-  const currentTheme = useTheme()
-  const userPaperStyles = UserPaperTheme(currentTheme)
   const label = 'Attempts of antonio@example.com'
 
   return (
-    <Paper sx={userPaperStyles} elevation={3}>
+    <Paper>
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>

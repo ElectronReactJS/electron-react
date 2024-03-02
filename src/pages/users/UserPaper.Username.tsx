@@ -1,18 +1,12 @@
 // src/pages/users/UserPaper.tsx
 import * as React from 'react'
-import {useNavigate} from 'react-router-dom'
-import {useTheme} from '../../components/extends/styles/StylesWrapper'
-import Paper from '../../components/extends/surfaces/PaperWrapper'
+import Paper from './Paper'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
 import EditNoteIcon from '../../components/extends/displays/IconEditNoteWrapper'
-import {UserPaperTheme} from './UserPaper.Theme'
 
 const UserPaper: React.FC<any> = () => {
-  const navigate = useNavigate()
-  const currentTheme = useTheme()
-  const userPaperStyles = UserPaperTheme(currentTheme)
   const label = 'Change Username or e-mail'
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
@@ -57,7 +51,7 @@ const UserPaper: React.FC<any> = () => {
   }
 
   return (
-    <Paper sx={userPaperStyles} elevation={3}>
+    <Paper>
       <EditNoteIcon sx={{fontSize: 120}} />
       <Typography color='inherit' variant='h5' component='h1'>
         {label}

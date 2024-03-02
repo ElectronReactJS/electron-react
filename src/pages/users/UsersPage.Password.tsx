@@ -1,7 +1,9 @@
 // src/pages/users/UsersPagePassword.tsx
 import React, {useState} from 'react'
-import 'react-quill/dist/quill.snow.css'
 import UserPaper from './UserPaper.Password'
+import TransitionAlert from './TransitionAlert'
+import ButtonSave from '../common/button/ButtonSave'
+import Box from '../../components/extends/layouts/Box'
 
 interface UsersPagePasswordProps {
   title?: string
@@ -9,6 +11,7 @@ interface UsersPagePasswordProps {
 }
 
 const UsersPagePassword: React.FC<UsersPagePasswordProps> = ({title, content}) => {
+  const [showTransitionAlert, setShowTransitionAlert] = useState(false)
   const [currentContent, setCurrentContent] = useState('')
   const [currentTitle, setCurrentTitle] = useState('')
 
@@ -29,7 +32,20 @@ const UsersPagePassword: React.FC<UsersPagePasswordProps> = ({title, content}) =
     console.log('Saved')
   }
 
-  return <UserPaper />
+  return (
+    <Box sx={{width: '100%', minHeight: '85%'}}>
+      <UserPaper>
+        <TransitionAlert
+          message='Your custom message here'
+          severity='success'
+          show={showTransitionAlert}
+        />
+      </UserPaper>
+      <Box sx={{width: '100%', minHeight: '15%'}}>
+        <ButtonSave onClick={save} />
+      </Box>
+    </Box>
+  );
 }
 
 export default UsersPagePassword

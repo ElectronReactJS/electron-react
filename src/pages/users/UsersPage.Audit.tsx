@@ -1,11 +1,10 @@
-// src/pages/users/UsersPage.New.tsx
-import React, {useState} from 'react'
-import UserPaper from './UserPaper.New'
+// src/pages/users/UsersPageViewer.tsx
+import { useState } from 'react'
+import UserPaper from './UserPaper.Audit'
 import TransitionAlert from './TransitionAlert'
-import ButtonSave from '../common/button/ButtonSave'
 import Box from '../../components/extends/layouts/Box'
 
-const UsersPageNew: React.FC = () => {
+const UsersPageViewer: React.FC<any> = () => {
   const [showTransitionAlert, setShowTransitionAlert] = useState(false)
 
   const save = () => {
@@ -22,11 +21,8 @@ const UsersPageNew: React.FC = () => {
           show={showTransitionAlert}
         />
       </UserPaper>
-      <Box sx={{width: '100%', minHeight: '15%'}}>
-        <ButtonSave onClick={save} />
-      </Box>
     </Box>
-  )
+  );
 }
 
-export default UsersPageNew
+export default UsersPageViewer
