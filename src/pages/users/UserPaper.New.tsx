@@ -1,11 +1,12 @@
 // src/pages/users/UserPaper.tsx
 import * as React from 'react'
-import {useNavigate} from 'react-router-dom'
 import Paper from './Paper'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
+import ButtonSave from '../common/button/ButtonSave';
+import Box from '../../components/wrap/layouts/BoxWrapper'
 
 interface UserPaperNewProps {
   onUsernameChange: (username: string) => void
@@ -13,7 +14,6 @@ interface UserPaperNewProps {
 }
 
 const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPasswordChange}) => {
-  const navigate = useNavigate()
   const label = 'New User'
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
@@ -111,6 +111,10 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
     }
   }
 
+ const handleOnSave = () => {
+    validateFieldsAndNotifyParent
+ }
+
   const onChangeUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newUsername = event.target.value
     validateUsername(newUsername)
@@ -125,6 +129,15 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
 
   return (
     <Paper>
+        <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '50%',
+        }}
+      >
       <Typography color='inherit' variant='h5' component='h1'>
         {label}
       </Typography>
@@ -156,6 +169,16 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
         onChange={onChangeHandlerRepeatPassword}
         value={repeatPassword}
       />
+      </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          width: '100%', 
+        }}
+      >
+        <ButtonSave onClick={handleOnSave} />
+      </Box>
     </Paper>
   )
 }

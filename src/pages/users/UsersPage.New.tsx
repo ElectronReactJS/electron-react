@@ -2,13 +2,12 @@
 import React, {useState} from 'react'
 import UserPaper from './UserPaper.New'
 import TransitionAlert from './TransitionAlert'
-import ButtonSave from '../common/button/ButtonSave'
-import Box from '../../components/extends/layouts/Box'
+import Box from '../../components/wrap/layouts/BoxWrapper'
 
 const UsersPageNew: React.FC = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [showTransitionAlert, setShowTransitionAlert] = useState(false)
+  const [showTransitionAlert, setShowTransitionAlert] = useState(true)
 
   const handleUsernameChange = (newUsername: string) => {
     setUsername(newUsername)
@@ -18,20 +17,30 @@ const UsersPageNew: React.FC = () => {
     setPassword(newPassword)
   }
 
-  const save = () => {
-    console.log('Saving content')
-    setShowTransitionAlert(true)
-  }
-
   return (
-    <Box sx={{width: '100%', minHeight: '85%'}}>
-      <UserPaper onUsernameChange={handleUsernameChange} onPasswordChange={handlePasswordChange} />
-      {showTransitionAlert && (
-        <TransitionAlert message='Your custom message here' severity='success' />
-      )}
-      <Box sx={{position: 'fixed', bottom: 16, right: 16}}>
-        <ButtonSave onClick={save} />
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '50%'
+      }}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          width: '100%',
+          height: '20%',
+          backgroundColor: 'gray'
+        }}
+      >
+        {showTransitionAlert && (
+          <TransitionAlert message="Your custom message here" severity="success" />
+        )}
       </Box>
+      <UserPaper onUsernameChange={handleUsernameChange} onPasswordChange={handlePasswordChange} />
     </Box>
   )
 }
