@@ -24,16 +24,15 @@ const UsersPageNew: React.FC = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '50%'
+        width: '100%'
       }}
     >
       <Box
         sx={{
           display: 'flex',
-          justifyContent: 'flex-end',
+          justifyContent: 'center',
           width: '100%',
-          height: '20%',
-          backgroundColor: 'gray'
+          minHeight: '20%'
         }}
       >
         {showTransitionAlert && (
