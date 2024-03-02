@@ -5,7 +5,7 @@ import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
-import ButtonSave from '../common/button/ButtonSave';
+import ButtonSave from '../common/button/ButtonSave'
 import Box from '../../components/wrap/layouts/BoxWrapper'
 
 interface UserPaperNewProps {
@@ -111,9 +111,9 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
     }
   }
 
- const handleOnSave = () => {
+  const handleOnSave = () => {
     validateFieldsAndNotifyParent
- }
+  }
 
   const onChangeUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newUsername = event.target.value
@@ -129,52 +129,52 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
 
   return (
     <Paper>
-        <Box
+      <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          width: '50%',
+          width: '50%'
         }}
       >
-      <Typography color='inherit' variant='h5' component='h1'>
-        {label}
-      </Typography>
-      <TextField
-        label='Username or e-mail'
-        placeholder='you@domain.com'
-        errorMessage={usernameErrorMessage}
-        onChange={onChangeUsername}
-        icon={<IconTextFields />}
-        value={username}
-      />
-      <TextField
-        label='Repeat Username or e-mail'
-        placeholder='Confirm your e-mail'
-        errorMessage={repeatUsernameErrorMessage}
-        onChange={onChangeHandlerRepeatUsername}
-        icon={<IconTextFields />}
-        value={repeatUsername}
-      />
-      <PasswordField
-        label='Password'
-        errorMessage={passwordErrorMessage}
-        onChange={onChangePassword}
-        value={password}
-      />
-      <PasswordField
-        label='Repeat Password'
-        errorMessage={repeatPasswordErrorMessage}
-        onChange={onChangeHandlerRepeatPassword}
-        value={repeatPassword}
-      />
+        <Typography color='inherit' variant='h5' component='h1'>
+          {label}
+        </Typography>
+        <TextField
+          label='Username or e-mail'
+          placeholder='you@domain.com'
+          errorMessage={usernameErrorMessage}
+          onChange={onChangeUsername}
+          icon={<IconTextFields />}
+          value={username}
+        />
+        <TextField
+          label='Repeat Username or e-mail'
+          placeholder='Confirm your e-mail'
+          errorMessage={repeatUsernameErrorMessage}
+          onChange={onChangeHandlerRepeatUsername}
+          icon={<IconTextFields />}
+          value={repeatUsername}
+        />
+        <PasswordField
+          label='Password'
+          errorMessage={passwordErrorMessage}
+          onChange={onChangePassword}
+          value={password}
+        />
+        <PasswordField
+          label='Repeat Password'
+          errorMessage={repeatPasswordErrorMessage}
+          onChange={onChangeHandlerRepeatPassword}
+          value={repeatPassword}
+        />
       </Box>
       <Box
         sx={{
           display: 'flex',
           justifyContent: 'flex-end',
-          width: '100%', 
+          width: '100%'
         }}
       >
         <ButtonSave onClick={handleOnSave} />

@@ -37,7 +37,7 @@ const UsersPageNew: React.FC = () => {
         }}
       >
         {showTransitionAlert && (
-          <TransitionAlert message="Your custom message here" severity="success" />
+          <TransitionAlert message='Your custom message here' severity='success' />
         )}
       </Box>
       <UserPaper onUsernameChange={handleUsernameChange} onPasswordChange={handlePasswordChange} />
