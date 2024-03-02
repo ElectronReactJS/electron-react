@@ -69,29 +69,27 @@ export default function DocumensFrame() {
 
   return (
     <Box sx={{display: 'flex'}}>
-        <CssBaseline />
-        <UsersHeader 
-            handleDrawerOpen={handleDrawerOpen} 
-            open={open} 
-            drawerWidth={drawerWidth}>
+      <CssBaseline />
+      <UsersHeader handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
         <Typography variant='h6' noWrap component='div'>
-            Users
+          Users
         </Typography>
-        </UsersHeader>
-        <UsersDrawer
-            handleDrawerClose={handleDrawerClose}
-            open={open}
-            drawerWidth={drawerWidth}
-            onPageChange={pageId => setCurrentPage(pageId)}
-            items={drawerItems} />
-        <Main>
-            <DrawerHeader />
-            {currentPage === 'Search' && <UsersPageFinder />}
-            {currentPage === 'Audit' && <UsersPageAudit />}
-            {currentPage === 'New' && <UsersPageNew />}
-            {currentPage === 'Username' && <UsersPageUsername />}
-            {currentPage === 'Password' && <UsersPagePassword title='Edit user' />}
-        </Main>
+      </UsersHeader>
+      <UsersDrawer
+        handleDrawerClose={handleDrawerClose}
+        open={open}
+        drawerWidth={drawerWidth}
+        onPageChange={pageId => setCurrentPage(pageId)}
+        items={drawerItems}
+      />
+      <Main>
+        <DrawerHeader />
+        {currentPage === 'Search' && <UsersPageFinder />}
+        {currentPage === 'Audit' && <UsersPageAudit />}
+        {currentPage === 'New' && <UsersPageNew />}
+        {currentPage === 'Username' && <UsersPageUsername />}
+        {currentPage === 'Password' && <UsersPagePassword title='Edit user' />}
+      </Main>
     </Box>
   )
 }

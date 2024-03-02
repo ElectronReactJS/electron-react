@@ -45,7 +45,7 @@ const UsersPagePassword: React.FC<UsersPagePasswordProps> = ({title, content}) =
         <ButtonSave onClick={save} />
       </Box>
     </Box>
-  );
+  )
 }
 
 export default UsersPagePassword

@@ -13,6 +13,6 @@ export const PaperTheme = (theme: Theme) => {
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    padding: '10%',
+    padding: '10%'
   }
 }

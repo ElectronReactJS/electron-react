@@ -1,5 +1,5 @@
 // src/pages/users/UsersPageViewer.tsx
-import { useState } from 'react'
+import {useState} from 'react'
 import UserPaper from './UserPaper.Audit'
 import TransitionAlert from './TransitionAlert'
 import Box from '../../components/extends/layouts/Box'
@@ -22,7 +22,7 @@ const UsersPageViewer: React.FC<any> = () => {
         />
       </UserPaper>
     </Box>
-  );
+  )
 }
 
 export default UsersPageViewer

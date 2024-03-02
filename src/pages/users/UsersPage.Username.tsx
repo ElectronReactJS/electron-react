@@ -45,7 +45,7 @@ const UsersPageUsername: React.FC<UsersPageUsernameProps> = ({title, content}) =
         <ButtonSave onClick={save} />
       </Box>
     </Box>
-  );
+  )
 }
 
 export default UsersPageUsername
