@@ -7,14 +7,14 @@ import Typography from '../../components/extends/displays/TypographyWrapper'
 import Box from '../../components/wrap/layouts/BoxWrapper'
 
 interface PaperProps {
-    title?: string;
-    children?: React.ReactNode
-    button?: React.ReactNode
+  title?: string
+  children?: React.ReactNode
+  button?: React.ReactNode
 }
 
 const Paper: React.FC<PaperProps> = ({title, children, button}) => {
-    const currentTheme = useTheme()
-    const paperStyles = PaperTheme(currentTheme)
+  const currentTheme = useTheme()
+  const paperStyles = PaperTheme(currentTheme)
   return (
     <PaperWrapper sx={paperStyles} elevation={3}>
       <Box
@@ -39,7 +39,7 @@ const Paper: React.FC<PaperProps> = ({title, children, button}) => {
           width: '100%'
         }}
       >
-        {button? button: <Box sx={{width: '100%', height: '32px'}} />}
+        {button ? button : <Box sx={{width: '100%', height: '32px'}} />}
       </Box>
     </PaperWrapper>
   )

@@ -8,7 +8,7 @@ import ButtonSave from '../common/button/ButtonSave'
 
 interface UserPaperNewProps {
   onUsernameChange: (username: string) => void
-  onPasswordChange: (password: string) => void  
+  onPasswordChange: (password: string) => void
 }
 
 const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPasswordChange}) => {
@@ -126,34 +126,34 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
 
   return (
     <Page title='New User' button={<ButtonSave onClick={handleOnSave} />}>
-        <TextField
-          label='Username or e-mail'
-          placeholder='you@domain.com'
-          errorMessage={usernameErrorMessage}
-          onChange={onChangeUsername}
-          icon={<IconTextFields />}
-          value={username}
-        />
-        <TextField
-          label='Repeat Username or e-mail'
-          placeholder='Confirm your e-mail'
-          errorMessage={repeatUsernameErrorMessage}
-          onChange={onChangeHandlerRepeatUsername}
-          icon={<IconTextFields />}
-          value={repeatUsername}
-        />
-        <PasswordField
-          label='Password'
-          errorMessage={passwordErrorMessage}
-          onChange={onChangePassword}
-          value={password}
-        />
-        <PasswordField
-          label='Repeat Password'
-          errorMessage={repeatPasswordErrorMessage}
-          onChange={onChangeHandlerRepeatPassword}
-          value={repeatPassword}
-        />
+      <TextField
+        label='Username or e-mail'
+        placeholder='you@domain.com'
+        errorMessage={usernameErrorMessage}
+        onChange={onChangeUsername}
+        icon={<IconTextFields />}
+        value={username}
+      />
+      <TextField
+        label='Repeat Username or e-mail'
+        placeholder='Confirm your e-mail'
+        errorMessage={repeatUsernameErrorMessage}
+        onChange={onChangeHandlerRepeatUsername}
+        icon={<IconTextFields />}
+        value={repeatUsername}
+      />
+      <PasswordField
+        label='Password'
+        errorMessage={passwordErrorMessage}
+        onChange={onChangePassword}
+        value={password}
+      />
+      <PasswordField
+        label='Repeat Password'
+        errorMessage={repeatPasswordErrorMessage}
+        onChange={onChangeHandlerRepeatPassword}
+        value={repeatPassword}
+      />
     </Page>
   )
 }
