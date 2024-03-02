@@ -1,5 +1,5 @@
 // src/pages/users/UserPaper.Theme.ts
-import { margin } from '@mui/system'
+import {margin} from '@mui/system'
 import {Theme} from '../../components/extends/styles/StylesWrapper'
 
 export const PaperTheme = (theme: Theme) => {
