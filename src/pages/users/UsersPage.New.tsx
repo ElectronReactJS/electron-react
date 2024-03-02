@@ -6,17 +6,17 @@ import ButtonSave from '../common/button/ButtonSave'
 import Box from '../../components/extends/layouts/Box'
 
 const UsersPageNew: React.FC = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   const [showTransitionAlert, setShowTransitionAlert] = useState(false)
 
   const handleUsernameChange = (newUsername: string) => {
-    setUsername(newUsername);
-  };
+    setUsername(newUsername)
+  }
 
   const handlePasswordChange = (newPassword: string) => {
-    setPassword(newPassword);
-  };
+    setPassword(newPassword)
+  }
 
   const save = () => {
     console.log('Saving content')
@@ -25,19 +25,13 @@ const UsersPageNew: React.FC = () => {
 
   return (
     <Box sx={{width: '100%', minHeight: '85%'}}>
-        <UserPaper
-            onUsernameChange={handleUsernameChange}
-            onPasswordChange={handlePasswordChange}
-            />
-            {showTransitionAlert && (
-            <TransitionAlert
-                message="Your custom message here"
-                severity="success"
-            />
-        )}
-        <Box sx={{position: 'fixed', bottom: 16, right: 16}}>
-            <ButtonSave onClick={save} />
-        </Box>
+      <UserPaper onUsernameChange={handleUsernameChange} onPasswordChange={handlePasswordChange} />
+      {showTransitionAlert && (
+        <TransitionAlert message='Your custom message here' severity='success' />
+      )}
+      <Box sx={{position: 'fixed', bottom: 16, right: 16}}>
+        <ButtonSave onClick={save} />
+      </Box>
     </Box>
   )
 }

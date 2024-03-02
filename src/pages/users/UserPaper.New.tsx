@@ -8,21 +8,21 @@ import Typography from '../../components/extends/displays/TypographyWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
 
 interface UserPaperNewProps {
-    onUsernameChange: (username: string) => void;
-    onPasswordChange: (password: string) => void;
-  }
+  onUsernameChange: (username: string) => void
+  onPasswordChange: (password: string) => void
+}
 
-const UserPaperNew: React.FC<UserPaperNewProps> = ({ onUsernameChange, onPasswordChange }) => {
+const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPasswordChange}) => {
   const navigate = useNavigate()
   const label = 'New User'
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
-  const [repeatUsernameErrorMessage, setRepeatUsernameErrorMessage] = React.useState('');
-  const [repeatPasswordErrorMessage, setRepeatPasswordErrorMessage] = React.useState('');  
+  const [repeatUsernameErrorMessage, setRepeatUsernameErrorMessage] = React.useState('')
+  const [repeatPasswordErrorMessage, setRepeatPasswordErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
   const [password, setPassword] = React.useState('')
-  const [repeatUsername, setRepeatUsername] = React.useState('');
-  const [repeatPassword, setRepeatPassword] = React.useState('');
+  const [repeatUsername, setRepeatUsername] = React.useState('')
+  const [repeatPassword, setRepeatPassword] = React.useState('')
 
   const validateUsername = (input: string): boolean => {
     setUsernameErrorMessage('')
@@ -70,59 +70,59 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({ onUsernameChange, onPasswor
 
   const validateRepeatUsername = (input: string): boolean => {
     if (username !== input) {
-      setRepeatUsernameErrorMessage('Usernames do not match.');
-      return false;
+      setRepeatUsernameErrorMessage('Usernames do not match.')
+      return false
     }
-    setRepeatUsernameErrorMessage('');
-    return true;
-  };
-  
+    setRepeatUsernameErrorMessage('')
+    return true
+  }
+
   const validateRepeatPassword = (input: string): boolean => {
     if (password !== input) {
-      setRepeatPasswordErrorMessage('Passwords do not match.');
-      return false;
+      setRepeatPasswordErrorMessage('Passwords do not match.')
+      return false
     }
-    setRepeatPasswordErrorMessage('');
-    return true;
-  };
+    setRepeatPasswordErrorMessage('')
+    return true
+  }
 
   const onChangeHandlerRepeatUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newRepeatUsername = event.target.value.trim();
-    setRepeatUsername(newRepeatUsername);
+    const newRepeatUsername = event.target.value.trim()
+    setRepeatUsername(newRepeatUsername)
     if (validateRepeatUsername(newRepeatUsername) && validateUsername(newRepeatUsername)) {
-      onUsernameChange(newRepeatUsername);
+      onUsernameChange(newRepeatUsername)
     }
-  };
-  
+  }
+
   const onChangeHandlerRepeatPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newRepeatPassword = event.target.value;
-    setRepeatPassword(newRepeatPassword);
+    const newRepeatPassword = event.target.value
+    setRepeatPassword(newRepeatPassword)
     if (validateRepeatPassword(newRepeatPassword) && validatePassword(newRepeatPassword)) {
-      onPasswordChange(newRepeatPassword);
+      onPasswordChange(newRepeatPassword)
     }
-  };
+  }
   const validateFieldsAndNotifyParent = () => {
-    const isUsernameValid = validateUsername(username) && validateRepeatUsername(repeatUsername);
-    const isPasswordValid = validatePassword(password) && validateRepeatPassword(repeatPassword);
+    const isUsernameValid = validateUsername(username) && validateRepeatUsername(repeatUsername)
+    const isPasswordValid = validatePassword(password) && validateRepeatPassword(repeatPassword)
 
     if (isUsernameValid && isPasswordValid) {
-      onUsernameChange(username);
-      onPasswordChange(password);
+      onUsernameChange(username)
+      onPasswordChange(password)
     }
-  };
+  }
 
   const onChangeUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newUsername = event.target.value;
+    const newUsername = event.target.value
     validateUsername(newUsername)
-    setUsername(newUsername);
-  };
-  
+    setUsername(newUsername)
+  }
+
   const onChangePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newPassword = event.target.value;
+    const newPassword = event.target.value
     validatePassword(newPassword)
-    setPassword(newPassword);
-  };
-  
+    setPassword(newPassword)
+  }
+
   return (
     <Paper>
       <Typography color='inherit' variant='h5' component='h1'>
@@ -143,19 +143,19 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({ onUsernameChange, onPasswor
         onChange={onChangeHandlerRepeatUsername}
         icon={<IconTextFields />}
         value={repeatUsername}
-        />
+      />
       <PasswordField
         label='Password'
         errorMessage={passwordErrorMessage}
         onChange={onChangePassword}
         value={password}
       />
-        <PasswordField
+      <PasswordField
         label='Repeat Password'
         errorMessage={repeatPasswordErrorMessage}
         onChange={onChangeHandlerRepeatPassword}
         value={repeatPassword}
-        />
+      />
     </Paper>
   )
 }
