@@ -41,7 +41,7 @@ const UsersPageUsername: React.FC<UsersPageUsernameProps> = ({title, content}) =
           show={showTransitionAlert}
         />
       </UserPaper>
-      <Box sx={{ position: 'fixed', bottom: 16, right: 16 }}>
+      <Box sx={{position: 'fixed', bottom: 16, right: 16}}>
         <ButtonSave onClick={save} />
       </Box>
     </Box>
