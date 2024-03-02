@@ -25,7 +25,7 @@ const UsersPageNew: React.FC = () => {
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        height: '100%',
+        height: '100%'
       }}
     >
       <Box
