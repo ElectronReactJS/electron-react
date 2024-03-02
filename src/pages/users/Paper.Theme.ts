@@ -7,7 +7,7 @@ export const PaperTheme = (theme: Theme) => {
     left: '50%',
     top: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '84%',
+    width: '82%',
     minHeight: '80%',
     display: 'flex',
     flexDirection: 'column',
