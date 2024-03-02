@@ -24,7 +24,8 @@ const UsersPageNew: React.FC = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100%'
+        width: '100%',
+        height: '100%',
       }}
     >
       <Box
@@ -32,7 +33,7 @@ const UsersPageNew: React.FC = () => {
           display: 'flex',
           justifyContent: 'center',
           width: '100%',
-          minHeight: '20%'
+          minHeight: '35px'
         }}
       >
         {showTransitionAlert && (

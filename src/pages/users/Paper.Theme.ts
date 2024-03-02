@@ -8,11 +8,11 @@ export const PaperTheme = (theme: Theme) => {
     top: '65%',
     transform: 'translate(-50%, -50%)',
     width: '82%',
-    minHeight: '40%',
+    minHeight: '10%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    padding: '10%'
+    padding: '5%'
   }
 }
