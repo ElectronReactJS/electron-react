@@ -18,6 +18,30 @@ const UsersPageNew: React.FC = () => {
   }
 
   return (
+//     <Box sx={{width: '100%'}}>
+//     <Toolbar sx={{width: '100%'}}>
+//       <Search>
+//         <SearchIconWrapper>
+//           <SearchIcon />
+//         </SearchIconWrapper>
+//         <StyledInputBase placeholder='Search…' inputProps={{'aria-label': 'search'}} />
+//       </Search>
+//     </Toolbar>
+//     <DataGrid
+//       rows={rows}
+//       columns={columns}
+//       initialState={{
+//         pagination: {
+//           paginationModel: {
+//             pageSize: 5
+//           }
+//         }
+//       }}
+//       pageSizeOptions={[5]}
+//       checkboxSelection
+//       disableRowSelectionOnClick
+//     />
+//   </Box>
     <Box
       sx={{
         display: 'flex',
@@ -33,7 +57,9 @@ const UsersPageNew: React.FC = () => {
           display: 'flex',
           justifyContent: 'center',
           width: '100%',
-          minHeight: '35px'
+          minHeight: '35px',
+          padding: 1,
+          margin: 1,
         }}
       >
         {showTransitionAlert && (

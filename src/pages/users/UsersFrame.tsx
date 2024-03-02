@@ -24,7 +24,6 @@ const drawerWidth = 150
 
 const Main = styled('main')(({theme}) => ({
   flexGrow: 1,
-  padding: '6%',
   alignItems: 'center',
   justifyContent: 'center',
   transition: theme.transitions.create('margin', {
@@ -36,7 +35,7 @@ const Main = styled('main')(({theme}) => ({
 const DrawerHeader = styled('div')(({theme}) => ({
   display: 'flex',
   alignItems: 'center',
-  padding: theme.spacing(0, 1),
+  padding: 1,
   ...theme.mixins.toolbar,
   justifyContent: 'flex-end'
 }))

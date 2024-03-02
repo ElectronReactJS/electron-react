@@ -1,18 +1,16 @@
 // src/pages/users/UserPaper.Theme.ts
+import { margin } from '@mui/system'
 import {Theme} from '../../components/extends/styles/StylesWrapper'
 
 export const PaperTheme = (theme: Theme) => {
   return {
-    position: 'fixed',
-    left: '50%',
-    top: '65%',
-    transform: 'translate(-50%, -50%)',
     width: '82%',
     minHeight: '10%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    padding: '5%'
+    padding: '1px',
+    margin: '1px'
   }
 }
