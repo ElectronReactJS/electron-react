@@ -2,7 +2,7 @@
 import {useState} from 'react'
 import UserPaper from './UserForm.Audit'
 import TransitionAlert from './TransitionAlert'
-import Box from '../../components/extends/layouts/Box'
+import Box from '../../components/ext/layouts/BoxExt'
 
 const UsersPageViewer: React.FC<any> = () => {
   const [showTransitionAlert, setShowTransitionAlert] = useState(false)

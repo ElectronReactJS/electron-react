@@ -1,5 +1,5 @@
 // src/pages/users/UsersPageFinder.tsx
-import Box from '../../components/extends/layouts/Box'
+import Box from '../../components/ext/layouts/BoxExt'
 import {DataGrid, GridColDef} from '@mui/x-data-grid'
 import {styled, alpha} from '@mui/material/styles'
 import {Toolbar} from '@mui/material'

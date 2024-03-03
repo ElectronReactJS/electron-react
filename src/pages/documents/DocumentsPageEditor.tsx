@@ -1,7 +1,7 @@
 // src/pages/documents/DocumentsPageEditor.tsx
 import React, {useState} from 'react'
 import ReactQuill from 'react-quill'
-import Paper from '../../components/extends/surfaces/PaperWrapper'
+import Paper from '../../components/ext/surfaces/PaperExt'
 import 'react-quill/dist/quill.snow.css'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import Box from '../../components/wrap/layouts/BoxWrapper'

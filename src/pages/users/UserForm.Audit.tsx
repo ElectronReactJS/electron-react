@@ -1,10 +1,10 @@
 // src/pages/users/UserPaper.List.tsx
 import * as React from 'react'
 import Paper from './Paper'
-import Typography from '../../components/extends/displays/TypographyWrapper'
-import IconPrivacyTipWrapper from '../../components/extends/displays/IconPrivacyTipWrapper'
-import IconRemoveModeratorWrapper from '../../components/extends/displays/IconRemoveModeratorWrapper'
-import IconVerifiedUserWrapper from '../../components/extends/displays/IconVerifiedUserWrapper'
+import Typography from '../../components/ext/displays/TypographyExt'
+import IconPrivacyTipWrapper from '../../components/ext/displays/IconPrivacyTipExt'
+import IconRemoveModeratorWrapper from '../../components/ext/displays/IconRemoveModeratorExt'
+import IconVerifiedUserWrapper from '../../components/ext/displays/IconVerifiedUserExt'
 
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'

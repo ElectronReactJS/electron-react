@@ -1,12 +1,12 @@
 // src/pages/login/LoginPaper.tsx
 import * as React from 'react'
 import {useNavigate} from 'react-router-dom'
-import {useTheme} from '../../components/extends/styles/StylesWrapper'
-import Paper from '../../components/extends/surfaces/PaperWrapper'
+import {useTheme} from '../../components/ext/styles/StylesExt'
+import Paper from '../../components/ext/surfaces/PaperExt'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
-import Typography from '../../components/extends/displays/TypographyWrapper'
-import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
+import Typography from '../../components/ext/displays/TypographyExt'
+import IconTextFields from '../../components/ext/displays/IconTextFieldsExt'
 import {LoginPaperTheme} from './LoginPaper.Theme'
 import biudLogo from '../../images/biud-logo.png'
 

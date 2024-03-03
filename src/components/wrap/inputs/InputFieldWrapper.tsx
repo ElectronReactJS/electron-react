@@ -1,9 +1,9 @@
 // src/components/wrap/inputs/InputFieldWrapper.tsx
-import Input from '../../extends/inputs/InputWrapper'
-import InputLabel from '../../extends/inputs/InputLabelWrapper'
-import InputAdornment from '../../extends/inputs/InputAdornmentWrapper'
-import FormControl from '../../extends/inputs/FormControlWrapper'
-import FormHelperText from '../../extends/inputs/FormHelperTextWrapper'
+import Input from '../../ext/inputs/InputExt'
+import InputLabel from '../../ext/inputs/InputLabelExt'
+import InputAdornment from '../../ext/inputs/InputAdornmentExt'
+import FormControl from '../../ext/inputs/FormControlExt'
+import FormHelperText from '../../ext/inputs/FormHelperTextExt'
 
 interface InputFieldWrapperProps {
   placeholder: string

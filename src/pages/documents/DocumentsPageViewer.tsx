@@ -1,6 +1,6 @@
 // src/pages/documents/DocumentsPageViewer.tsx
-import Paper from '../../components/extends/surfaces/PaperWrapper'
-import Typography from '../../components/extends/displays/TypographyWrapper'
+import Paper from '../../components/ext/surfaces/PaperExt'
+import Typography from '../../components/ext/displays/TypographyExt'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import {CardActionArea, CardActions} from '@mui/material'

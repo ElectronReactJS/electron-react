@@ -1,14 +1,14 @@
 // src/components/wrap/inputs/PasswordFieldWrapper.tsx
 import * as React from 'react'
 
-import IconButton from '../../extends/displays/IconButtonWrapper'
-import VisibilityOff from '../../extends/displays/IconVisibilityOffWrapper'
-import Visibility from '../../extends/displays/IconVisibilityWrapper'
-import Input from '../../extends/inputs/InputWrapper'
-import InputLabel from '../../extends/inputs/InputLabelWrapper'
-import InputAdornment from '../../extends/inputs/InputAdornmentWrapper'
-import FormControl from '../../extends/inputs/FormControlWrapper'
-import FormHelperText from '../../extends/inputs/FormHelperTextWrapper'
+import IconButton from '../../ext/displays/IconButtonExt'
+import VisibilityOff from '../../ext/displays/IconVisibilityOffExt'
+import Visibility from '../../ext/displays/IconVisibilityExt'
+import Input from '../../ext/inputs/InputExt'
+import InputLabel from '../../ext/inputs/InputLabelExt'
+import InputAdornment from '../../ext/inputs/InputAdornmentExt'
+import FormControl from '../../ext/inputs/FormControlExt'
+import FormHelperText from '../../ext/inputs/FormHelperTextExt'
 
 interface PasswordFieldWrapperProps {
   errorMessage: string

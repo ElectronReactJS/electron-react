@@ -1,15 +1,15 @@
 // src/pages/users/UsersFrame.tsx
 import * as React from 'react'
 import {styled} from '@mui/material/styles'
-import Typography from '../../components/extends/displays/TypographyWrapper'
+import Typography from '../../components/ext/displays/TypographyExt'
 
-import IconPasswordWrapper from '../../components/extends/displays/IconPasswordWrapper'
-import IconNewUserWrapper from '../../components/extends/displays/IconNewUserWrapper'
-import EditNoteIcon from '../../components/extends/displays/IconEditNoteWrapper'
-import VisibilityIcon from '../../components/extends/displays/IconVisibilityWrapper'
-import SearchIcon from '../../components/extends/displays/IconSearchWrapper'
+import IconPasswordWrapper from '../../components/ext/displays/IconPasswordExt'
+import IconNewUserWrapper from '../../components/ext/displays/IconNewUserExt'
+import EditNoteIcon from '../../components/ext/displays/IconEditNoteExt'
+import VisibilityIcon from '../../components/ext/displays/IconVisibilityExt'
+import SearchIcon from '../../components/ext/displays/IconSearchExt'
 
-import Box from '../../components/extends/layouts/Box'
+import Box from '../../components/ext/layouts/BoxExt'
 import CssBaseline from '@mui/material/CssBaseline'
 import UsersHeader from '../common/header/HeaderWrapper'
 import UsersDrawer from '../common/drawer/DrawerWrapper'

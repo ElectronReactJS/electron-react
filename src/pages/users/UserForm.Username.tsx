@@ -2,7 +2,7 @@
 import * as React from 'react'
 import Paper from './Paper'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
-import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
+import IconTextFields from '../../components/ext/displays/IconTextFieldsExt'
 import ButtonSave from '../common/button/ButtonSave'
 
 interface UserFormUsernameProps {

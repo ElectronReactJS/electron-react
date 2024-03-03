@@ -1,7 +1,7 @@
 // src/pages/documents/DocumentsFrame.tsx
 import * as React from 'react'
 import {styled} from '@mui/material/styles'
-import Typography from '../../components/extends/displays/TypographyWrapper'
+import Typography from '../../components/ext/displays/TypographyExt'
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import DocumentsHeader from '../common/header/HeaderWrapper'
