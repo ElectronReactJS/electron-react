@@ -4,3 +4,10 @@ export interface Attempt {
   attemptedAt: string
   color: '#D4EDDA' | '#FFCCCB' | '#FFF8DC'
 }
+
+export interface User {
+    id: string
+    userName: string
+    createdAt: string
+    updatedAt: string
+  }

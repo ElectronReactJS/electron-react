@@ -1,98 +1,45 @@
-// src/pages/users/UsersPageFinder.tsx
-import Box from '../../components/ext/layouts/BoxExt'
-import {DataGrid, GridColDef} from '@mui/x-data-grid'
-import {styled, alpha} from '@mui/material/styles'
-import {Toolbar} from '@mui/material'
-import SearchIcon from '@mui/icons-material/Search'
-import InputBase from '@mui/material/InputBase'
+// src/pages/users/UserPage.Finder.tsx
+import React, {useState} from 'react'
+import UserGridFinder from './UserGrid.Finder'
+import Page from '../../components/wrap/layouts/Page'
+import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
+import {User} from './User'
 
-const Search = styled('div')(({theme}) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25)
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto'
-  }
-}))
-
-const SearchIconWrapper = styled('div')(({theme}) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center'
-}))
-
-const StyledInputBase = styled(InputBase)(({theme}) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch'
-    }
-  }
-}))
-
-const columns: GridColDef[] = [
-  {field: 'id', headerName: 'ID', width: 90},
-  {
-    field: 'userName',
-    headerName: 'Username',
-    width: 350,
-    editable: false
-  }
-]
-
-const rows = [
-  {id: 1, userName: 'agros@example.com'},
-  {id: 2, userName: 'antonio@example.com'},
-  {id: 3, userName: 'lucas@example.com'},
-  {id: 4, userName: 'felipe@example.com'},
-  {id: 5, userName: 'thiago@example.com'},
-  {id: 6, userName: 'guilherme@example.com'},
-  {id: 7, userName: 'gabriel@example.com'},
-  {id: 8, userName: 'jp@example.com'},
-  {id: 9, userName: 'fernanda@example.com'}
-]
 
 const UserPageFinder: React.FC<any> = () => {
+    const [users, setUsers] = useState([])
+    const [showTransitionAlert, setShowTransitionAlert] = useState(false)
+    const [alertMessage, setAlertMessage] = useState('')
+    const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success')
+
+    const handleMessageOnRefresh = (message: string, severity: 'success' | 'error') => {
+        setAlertMessage(message)
+        setAlertSeverity(severity)
+        setShowTransitionAlert(true)
+      }
+    
+      const handleOnRefresh = () => {
+        // TODO: obtain data from server
+        const fetchedUsers: User [] = [
+            {id: '1', userName: 'agros@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+            {id: '2', userName: 'antonio@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+            {id: '3', userName: 'lucas@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+            {id: '4', userName: 'felipe@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+            {id: '5', userName: 'thiago@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+            {id: '6', userName: 'guilherme@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+            {id: '7', userName: 'gabriel@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+            {id: '8', userName: 'jp@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+            {id: '9', userName: 'fernanda@example.com', createdAt: "2023-01-01T00:00:00Z", updatedAt: "2023-01-01T00:00:00Z"},
+          ]
+          setUsers(fetchedUsers)
+        handleMessageOnRefresh('Refreshed', 'success')
+      }
+
   return (
-    <Box sx={{width: '100%'}}>
-      <Toolbar sx={{width: '100%'}}>
-        <Search>
-          <SearchIconWrapper>
-            <SearchIcon />
-          </SearchIconWrapper>
-          <StyledInputBase placeholder='Search…' inputProps={{'aria-label': 'search'}} />
-        </Search>
-      </Toolbar>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: 5
-            }
-          }
-        }}
-        pageSizeOptions={[5]}
-        checkboxSelection
-        disableRowSelectionOnClick
-      />
-    </Box>
+    <Page>
+      {showTransitionAlert && <TransitionAlert message={alertMessage} severity={alertSeverity} />}
+      <UserGridFinder users={users} handleOnRefresh={handleOnRefresh} />
+    </Page>
   )
 }
 

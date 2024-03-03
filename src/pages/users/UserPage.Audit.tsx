@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import UserViewAudit from './UserView.Audit'
 import Page from '../../components/wrap/layouts/Page'
 import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
-import {Attempt} from './User.types'
+import {Attempt} from './User'
 
 const UserPageAudit: React.FC<any> = () => {
   const [showTransitionAlert, setShowTransitionAlert] = useState(false)

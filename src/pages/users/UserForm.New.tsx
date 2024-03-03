@@ -5,6 +5,7 @@ import TextField from '../../components/wrap/inputs/TextField'
 import PasswordField from '../../components/wrap/inputs/PasswordField'
 import IconTextFields from '../../components/ext/displays/IconTextFieldsExt'
 import ButtonSave from '../../components/wrap/inputs/ButtonSave'
+import Box from '../../components/wrap/layouts/Box'
 
 interface UserFormNewProps {
   onUsernameChange: (username: string) => void
@@ -131,6 +132,16 @@ const UserFormNew: React.FC<UserFormNewProps> = ({
 
   return (
     <Paper title='New User' button={<ButtonSave onClick={handleOnSave} />}>
+        <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '50%',
+          padding: '3px'
+        }}
+      >
       <TextField
         required
         label='Username or e-mail'
@@ -163,6 +174,8 @@ const UserFormNew: React.FC<UserFormNewProps> = ({
         onChange={onChangeHandlerRepeatPassword}
         value={repeatPassword}
       />
+      </Box>
+        
     </Paper>
   )
 }

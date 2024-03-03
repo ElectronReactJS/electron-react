@@ -24,7 +24,7 @@ const Paper: React.FC<PaperProps> = ({title, icon, children, button}) => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          width: '50%',
+          width: '100%',
           padding: '3px'
         }}
       >

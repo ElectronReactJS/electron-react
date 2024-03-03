@@ -4,6 +4,7 @@ import Paper from '../../components/wrap/surfaces/Paper'
 import TextField from '../../components/wrap/inputs/TextField'
 import IconTextFields from '../../components/ext/displays/IconTextFieldsExt'
 import ButtonSave from '../../components/wrap/inputs/ButtonSave'
+import Box from '../../components/wrap/layouts/Box'
 
 interface UserFormUsernameProps {
   onUsernameChange: (username: string) => void
@@ -95,6 +96,18 @@ const UserFormUsername: React.FC<UserFormUsernameProps> = ({
 
   return (
     <Paper title='Change Username' button={<ButtonSave onClick={handleOnSave} />}>
+
+<Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '50%',
+          padding: '3px'
+        }}
+      >
+
       <TextField
         required
         label='Username or e-mail'
@@ -103,7 +116,7 @@ const UserFormUsername: React.FC<UserFormUsernameProps> = ({
         onChange={onChangeUsername}
         icon={<IconTextFields />}
         value={username}
-      />
+        />
       <TextField
         required
         label='Repeat Username or e-mail'
@@ -112,7 +125,8 @@ const UserFormUsername: React.FC<UserFormUsernameProps> = ({
         onChange={onChangeHandlerRepeatUsername}
         icon={<IconTextFields />}
         value={repeatUsername}
-      />
+        />
+        </Box>
     </Paper>
   )
 }
