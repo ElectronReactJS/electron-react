@@ -11,7 +11,7 @@ import SearchIcon from '../../components/ext/displays/IconSearchExt'
 
 import Box from '../../components/ext/layouts/BoxExt'
 import CssBaseline from '@mui/material/CssBaseline'
-import UsersHeader from '../common/header/HeaderWrapper'
+import UsersHeader from '../../components/wrap/navigation/Header'
 import UsersDrawer from '../../components/wrap/navigation/Drawer'
 
 import UserPageFinder from './UserPage.Finder'
