@@ -2,24 +2,18 @@
 import * as React from 'react'
 import Paper from './Paper'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
-import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
 import ButtonSave from '../common/button/ButtonSave'
 
-interface UserPaperNewProps {
+interface UserFormUsernameProps {
   onUsernameChange: (username: string) => void
-  onPasswordChange: (password: string) => void
 }
 
-const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPasswordChange}) => {
+const UserFormUsername: React.FC<UserFormUsernameProps> = ({onUsernameChange}) => {
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
-  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
   const [repeatUsernameErrorMessage, setRepeatUsernameErrorMessage] = React.useState('')
-  const [repeatPasswordErrorMessage, setRepeatPasswordErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
-  const [password, setPassword] = React.useState('')
   const [repeatUsername, setRepeatUsername] = React.useState('')
-  const [repeatPassword, setRepeatPassword] = React.useState('')
 
   const validateUsername = (input: string): boolean => {
     setUsernameErrorMessage('')
@@ -53,33 +47,12 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
     return true
   }
 
-  const validatePassword = (input: string): boolean => {
-    setPasswordErrorMessage('')
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/
-    if (!passwordRegex.test(input)) {
-      setPasswordErrorMessage(
-        'Password must be 8-16 characters long and include letters, numbers, and special characters.'
-      )
-      return false
-    }
-    return true
-  }
-
   const validateRepeatUsername = (input: string): boolean => {
     if (username !== input) {
       setRepeatUsernameErrorMessage('Usernames do not match.')
       return false
     }
     setRepeatUsernameErrorMessage('')
-    return true
-  }
-
-  const validateRepeatPassword = (input: string): boolean => {
-    if (password !== input) {
-      setRepeatPasswordErrorMessage('Passwords do not match.')
-      return false
-    }
-    setRepeatPasswordErrorMessage('')
     return true
   }
 
@@ -90,21 +63,12 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
       onUsernameChange(newRepeatUsername)
     }
   }
-
-  const onChangeHandlerRepeatPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newRepeatPassword = event.target.value
-    setRepeatPassword(newRepeatPassword)
-    if (validateRepeatPassword(newRepeatPassword) && validatePassword(newRepeatPassword)) {
-      onPasswordChange(newRepeatPassword)
-    }
-  }
+  
   const validateFieldsAndNotifyParent = () => {
     const isUsernameValid = validateUsername(username) && validateRepeatUsername(repeatUsername)
-    const isPasswordValid = validatePassword(password) && validateRepeatPassword(repeatPassword)
 
-    if (isUsernameValid && isPasswordValid) {
+    if (isUsernameValid) {
       onUsernameChange(username)
-      onPasswordChange(password)
     }
   }
 
@@ -118,44 +82,28 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
     setUsername(newUsername)
   }
 
-  const onChangePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newPassword = event.target.value
-    validatePassword(newPassword)
-    setPassword(newPassword)
-  }
-
   return (
-    <Paper title='New User' button={<ButtonSave onClick={handleOnSave} />}>
+    <Paper title="Change Username" button={<ButtonSave onClick={handleOnSave} />}>
       <TextField
-        label='Username or e-mail'
-        placeholder='you@domain.com'
+        required
+        label="Username or e-mail"
+        placeholder="you@domain.com"
         errorMessage={usernameErrorMessage}
         onChange={onChangeUsername}
         icon={<IconTextFields />}
         value={username}
       />
       <TextField
-        label='Repeat Username or e-mail'
-        placeholder='Confirm your e-mail'
+        required
+        label="Repeat Username or e-mail"
+        placeholder="Confirm your e-mail"
         errorMessage={repeatUsernameErrorMessage}
         onChange={onChangeHandlerRepeatUsername}
         icon={<IconTextFields />}
         value={repeatUsername}
       />
-      <PasswordField
-        label='Password'
-        errorMessage={passwordErrorMessage}
-        onChange={onChangePassword}
-        value={password}
-      />
-      <PasswordField
-        label='Repeat Password'
-        errorMessage={repeatPasswordErrorMessage}
-        onChange={onChangeHandlerRepeatPassword}
-        value={repeatPassword}
-      />
     </Paper>
   )
 }
 
-export default UserPaperNew
+export default UserFormUsername

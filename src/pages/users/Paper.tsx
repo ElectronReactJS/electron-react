@@ -8,11 +8,12 @@ import Box from '../../components/wrap/layouts/BoxWrapper'
 
 interface PaperProps {
   title?: string
+  icon?: string
   children?: React.ReactNode
   button?: React.ReactNode
 }
 
-const Paper: React.FC<PaperProps> = ({title, children, button}) => {
+const Paper: React.FC<PaperProps> = ({title, icon, children, button}) => {
   const currentTheme = useTheme()
   const paperStyles = PaperTheme(currentTheme)
   return (
@@ -27,6 +28,7 @@ const Paper: React.FC<PaperProps> = ({title, children, button}) => {
           padding: '3px'
         }}
       >
+        {icon}
         <Typography color='inherit' variant='h5' component='h1' margin={5}>
           {title}
         </Typography>

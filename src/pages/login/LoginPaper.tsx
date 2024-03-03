@@ -88,6 +88,7 @@ const LoginPaper: React.FC<any> = () => {
       </Typography> */}
       <img src={biudLogo} alt='Logo' />
       <TextField
+        required
         label='Username or e-mail'
         placeholder='you@domain.com'
         errorMessage={usernameErrorMessage}
@@ -96,6 +97,7 @@ const LoginPaper: React.FC<any> = () => {
         value={username}
       />
       <PasswordField
+        required
         label='Password'
         errorMessage={passwordErrorMessage}
         onChange={onChangeHandlerPassword}

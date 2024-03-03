@@ -10,6 +10,7 @@ export interface InputFieldWrapperProps {
   value: string
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   icon?: React.ReactNode
+  required: boolean
 }
 
 const TextFieldWrapper: React.FC<InputFieldWrapperProps> = props => {

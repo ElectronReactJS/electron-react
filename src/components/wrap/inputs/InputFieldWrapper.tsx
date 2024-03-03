@@ -12,6 +12,7 @@ interface InputFieldWrapperProps {
   value: any
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   icon?: React.ReactNode
+  required: boolean
 }
 
 export default function InputFieldWrapper({
@@ -20,7 +21,8 @@ export default function InputFieldWrapper({
   value,
   errorMessage,
   onChange,
-  icon
+  icon,
+  required
 }: InputFieldWrapperProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange(event)
@@ -34,6 +36,7 @@ export default function InputFieldWrapper({
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
+        required={required}
         endAdornment={<InputAdornment position='end'>{icon || null}</InputAdornment>}
       />
       {errorMessage && <FormHelperText error>{errorMessage}</FormHelperText>}

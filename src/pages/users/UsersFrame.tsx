@@ -14,11 +14,11 @@ import CssBaseline from '@mui/material/CssBaseline'
 import UsersHeader from '../common/header/HeaderWrapper'
 import UsersDrawer from '../common/drawer/DrawerWrapper'
 
-import UsersPageFinder from './UsersPage.Finder'
-import UsersPageAudit from './UsersPage.Audit'
-import UsersPagePassword from './UsersPage.Password'
-import UsersPageUsername from './UsersPage.Username'
-import UsersPageNew from './User.New'
+import UserPageFinder from './UserPage.Finder'
+import UserPageAudit from './UserPage.Audit'
+import UserPagePassword from './UserPage.Password'
+import UserPageUsername from './UserPage.Username'
+import UserPageNew from './UserPage.New'
 
 const drawerWidth = 150
 
@@ -83,11 +83,11 @@ export default function DocumensFrame() {
       />
       <Main>
         <DrawerHeader />
-        {currentPage === 'Search' && <UsersPageFinder />}
-        {currentPage === 'Audit' && <UsersPageAudit />}
-        {currentPage === 'New' && <UsersPageNew />}
-        {currentPage === 'Username' && <UsersPageUsername />}
-        {currentPage === 'Password' && <UsersPagePassword title='Edit user' />}
+        {currentPage === 'Search' && <UserPageFinder />}
+        {currentPage === 'Audit' && <UserPageAudit />}
+        {currentPage === 'New' && <UserPageNew />}
+        {currentPage === 'Username' && <UserPageUsername />}
+        {currentPage === 'Password' && <UserPagePassword />}
       </Main>
     </Box>
   )

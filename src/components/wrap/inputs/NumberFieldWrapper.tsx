@@ -10,6 +10,7 @@ export interface NumberFieldWrapperProps {
   value: string
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   icon?: React.ReactNode
+  required: boolean
 }
 
 const NumberFieldWrapper: React.FC<NumberFieldWrapperProps> = props => {

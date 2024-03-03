@@ -42,6 +42,7 @@ const DocumentsPageEditor: React.FC<DocumentsPageEditorProps> = ({title, content
   return (
     <Box>
       <TextField
+        required
         onChange={handleTitleChanging}
         label='Document title'
         value={currentTitle}

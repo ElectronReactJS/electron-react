@@ -43,6 +43,7 @@ const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content})
   return (
     <Box>
       <TextField
+        required
         onChange={handleTitleChanging}
         label='Document title'
         value={currentTitle}

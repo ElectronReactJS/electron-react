@@ -15,6 +15,7 @@ interface PasswordFieldWrapperProps {
   label: string
   value: any
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  required: boolean
 }
 
 export default function PasswordFieldWrapper({

@@ -1,10 +1,10 @@
-// src/pages/users/UserNew.New.tsx
+// src/pages/users/UserPage.New.tsx
 import React, {useState} from 'react'
-import UserPaperNew from './UserPaper.New'
+import UserFormNew from './UserForm.New'
 import TransitionAlert from './TransitionAlert'
 import Box from '../../components/wrap/layouts/BoxWrapper'
 
-const UserNew: React.FC = () => {
+const UserPageNew: React.FC = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showTransitionAlert, setShowTransitionAlert] = useState(true)
@@ -42,7 +42,7 @@ const UserNew: React.FC = () => {
           <TransitionAlert message='Your custom message here' severity='success' />
         )}
       </Box>
-      <UserPaperNew
+      <UserFormNew
         onUsernameChange={handleUsernameChange}
         onPasswordChange={handlePasswordChange}
       />
@@ -50,4 +50,4 @@ const UserNew: React.FC = () => {
   )
 }
 
-export default UserNew
+export default UserPageNew
