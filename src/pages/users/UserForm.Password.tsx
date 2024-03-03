@@ -9,7 +9,10 @@ interface UserFormPasswordProps {
   onFormStatusChange: (message: string, severity: 'success' | 'error') => void
 }
 
-const UserFormPassword: React.FC<UserFormPasswordProps> = ({onPasswordChange, onFormStatusChange}) => {
+const UserFormPassword: React.FC<UserFormPasswordProps> = ({
+  onPasswordChange,
+  onFormStatusChange
+}) => {
   const [password, setPassword] = React.useState('')
   const [repeatPassword, setRepeatPassword] = React.useState('')
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
@@ -57,7 +60,6 @@ const UserFormPassword: React.FC<UserFormPasswordProps> = ({onPasswordChange, on
       onPasswordChange(password)
     }
   }
-
 
   const handleOnSave = () => {
     const isPasswordValid = validatePassword(password) && validateRepeatPassword(repeatPassword)
