@@ -1,7 +1,7 @@
 // src/pages/users/UserPage.Audit.tsx
 import UserViewAudit from './UserView.Audit'
 import Page from '../../components/wrap/layouts/Page'
-import {Attempt} from './user.types'
+import {Attempt} from './User.types'
 
 const UserPageAudit: React.FC<any> = () => {
   const username = 'JohnDoe'
