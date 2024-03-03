@@ -1,6 +1,6 @@
 // src/pages/users/UserPaper.tsx
 import * as React from 'react'
-import Page from './Paper'
+import Paper from './Paper'
 import TextField from '../../components/wrap/inputs/TextFieldWrapper'
 import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
 import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
@@ -125,7 +125,7 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
   }
 
   return (
-    <Page title='New User' button={<ButtonSave onClick={handleOnSave} />}>
+    <Paper title='New User' button={<ButtonSave onClick={handleOnSave} />}>
       <TextField
         label='Username or e-mail'
         placeholder='you@domain.com'
@@ -154,7 +154,7 @@ const UserPaperNew: React.FC<UserPaperNewProps> = ({onUsernameChange, onPassword
         onChange={onChangeHandlerRepeatPassword}
         value={repeatPassword}
       />
-    </Page>
+    </Paper>
   )
 }
 

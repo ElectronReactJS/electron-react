@@ -1,6 +1,6 @@
 // src/pages/users/UserNew.New.tsx
 import React, {useState} from 'react'
-import UserPaper from './UserPaper.New'
+import UserPaperNew from './UserPaper.New'
 import TransitionAlert from './TransitionAlert'
 import Box from '../../components/wrap/layouts/BoxWrapper'
 
@@ -42,7 +42,7 @@ const UserNew: React.FC = () => {
           <TransitionAlert message='Your custom message here' severity='success' />
         )}
       </Box>
-      <UserPaper onUsernameChange={handleUsernameChange} onPasswordChange={handlePasswordChange} />
+      <UserPaperNew onUsernameChange={handleUsernameChange} onPasswordChange={handlePasswordChange} />
     </Box>
   )
 }
