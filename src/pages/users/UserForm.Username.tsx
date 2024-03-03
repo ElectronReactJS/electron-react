@@ -10,7 +10,10 @@ interface UserFormUsernameProps {
   onFormStatusChange: (message: string, severity: 'success' | 'error') => void
 }
 
-const UserFormUsername: React.FC<UserFormUsernameProps> = ({onUsernameChange, onFormStatusChange}) => {
+const UserFormUsername: React.FC<UserFormUsernameProps> = ({
+  onUsernameChange,
+  onFormStatusChange
+}) => {
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [repeatUsernameErrorMessage, setRepeatUsernameErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
