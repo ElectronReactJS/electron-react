@@ -14,4 +14,5 @@ export const FrameTheme = (theme: Theme) => {
     justifyContent: 'space-around',
     alignItems: 'center',
     padding: theme.spacing(4) 
+  }
 }
