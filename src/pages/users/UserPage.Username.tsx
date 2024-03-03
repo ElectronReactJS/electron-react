@@ -2,49 +2,29 @@
 import React, {useState} from 'react'
 import UserFormUsername from './UserForm.Username'
 import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
-import Box from '../../components/wrap/layouts/Box'
+import Page from '../../components/wrap/layouts/Page'
 
-interface UsersPageUsernameProps {
-  title?: string
-  content?: string
-}
-
-const UsersPageUsername: React.FC = () => {
+const UserPageUsername: React.FC = () => {
   const [username, setUsername] = useState('')
-  const [showTransitionAlert, setShowTransitionAlert] = useState(true)
+  const [showTransitionAlert, setShowTransitionAlert] = useState(false)
+  const [alertMessage, setAlertMessage] = useState('')
+  const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success')
 
-  const handleUsernameChange = (newUsername: string) => {
-    setUsername(newUsername)
+  const handleFormStatusChange = (message: string, severity: 'success' | 'error') => {
+    setAlertMessage(message)
+    setAlertSeverity(severity)
+    setShowTransitionAlert(true)
   }
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        height: '100%'
-      }}
-    >
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '100%',
-          minHeight: '35px',
-          padding: 1,
-          margin: 1
-        }}
-      >
-        {showTransitionAlert && (
-          <TransitionAlert message='Your custom message here' severity='success' />
-        )}
-      </Box>
-      <UserFormUsername onUsernameChange={handleUsernameChange} />
-    </Box>
+    <Page>
+      {showTransitionAlert && <TransitionAlert message={alertMessage} severity={alertSeverity} />}
+      <UserFormUsername
+        onUsernameChange={setUsername}
+        onFormStatusChange={handleFormStatusChange}
+      />
+    </Page>
   )
 }
 
-export default UsersPageUsername
+export default UserPageUsername

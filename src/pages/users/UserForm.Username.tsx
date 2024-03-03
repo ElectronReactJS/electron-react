@@ -7,9 +7,10 @@ import ButtonSave from '../../components/wrap/inputs/ButtonSave'
 
 interface UserFormUsernameProps {
   onUsernameChange: (username: string) => void
+  onFormStatusChange: (message: string, severity: 'success' | 'error') => void
 }
 
-const UserFormUsername: React.FC<UserFormUsernameProps> = ({onUsernameChange}) => {
+const UserFormUsername: React.FC<UserFormUsernameProps> = ({onUsernameChange, onFormStatusChange}) => {
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [repeatUsernameErrorMessage, setRepeatUsernameErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
@@ -73,7 +74,14 @@ const UserFormUsername: React.FC<UserFormUsernameProps> = ({onUsernameChange}) =
   }
 
   const handleOnSave = () => {
-    validateFieldsAndNotifyParent
+    const isUsernameValid = validateUsername(username) && validateRepeatUsername(repeatUsername)
+
+    if (isUsernameValid) {
+      onFormStatusChange('Formulário submetido com sucesso!', 'success')
+      onUsernameChange(username)
+    } else {
+      onFormStatusChange('Erro na submissão do formulário. Verifique os campos.', 'error')
+    }
   }
 
   const onChangeUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
