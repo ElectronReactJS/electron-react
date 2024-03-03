@@ -16,9 +16,10 @@ import ButtonRefresh from '../../components/wrap/inputs/ButtonRefresh'
 interface UserViewAuditProps {
   username: string
   attempts: Attempt[]
+  handleOnRefresh: () => void
 }
 
-const UserViewAudit: React.FC<UserViewAuditProps> = ({username, attempts}) => {
+const UserViewAudit: React.FC<UserViewAuditProps> = ({username, attempts, handleOnRefresh}) => {
   const title = 'Attempts of ' + username
   const getIcon = (label: string) => {
     switch (label) {
@@ -32,13 +33,7 @@ const UserViewAudit: React.FC<UserViewAuditProps> = ({username, attempts}) => {
         return null // ou um ícone padrão
     }
   }
-
-  const reloadData = () => {}
-
-  const handleOnRefresh = () => {
-    reloadData
-  }
-
+  
   return (
     <Paper title={title} button={<ButtonRefresh onClick={handleOnRefresh} />}>
       <List sx={{width: '100%', maxWidth: 360}}>
