@@ -1,28 +1,22 @@
-// src/pages/users/UsersPageViewer.tsx
-import {useState} from 'react'
-import UserPaper from './UserForm.Audit'
-import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
-import Box from '../../components/ext/layouts/BoxExt'
+// src/pages/users/UserPage.Audit.tsx
+import UserViewAudit from './UserView.Audit'
+import Page from '../../components/wrap/layouts/Page'
+import { Attempt } from './user.types';
 
-const UsersPageViewer: React.FC<any> = () => {
-  const [showTransitionAlert, setShowTransitionAlert] = useState(false)
-
-  const save = () => {
-    console.log('Saving content')
-    setShowTransitionAlert(true)
-  }
+const UserPageAudit: React.FC<any> = () => {
+  const username = 'JohnDoe'
+  const attempts: Attempt[] = [
+    {label: 'Expired token', attemptedAt: '10:34:02 9 Jan, 2014', color: '#FFF8DC'},
+    {label: 'Wrong password', attemptedAt: '10:35:12 9 Jan, 2014', color: '#FFCCCB'},
+    {label: 'Wrong password', attemptedAt: '10:35:16 9 Jan, 2014', color: '#FFCCCB'},
+    {label: 'Authenticated', attemptedAt: '10:35:57 9 Jan, 2014', color: '#D4EDDA'}
+  ]
 
   return (
-    <Box sx={{width: '100%', minHeight: '85%'}}>
-      <UserPaper>
-        <TransitionAlert
-          message='Your custom message here'
-          severity='success'
-          show={showTransitionAlert}
-        />
-      </UserPaper>
-    </Box>
+    <Page>
+      <UserViewAudit username={username} attempts={attempts} />
+    </Page>
   )
 }
 
-export default UsersPageViewer
+export default UserPageAudit
