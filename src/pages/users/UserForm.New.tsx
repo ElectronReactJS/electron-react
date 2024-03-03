@@ -132,7 +132,7 @@ const UserFormNew: React.FC<UserFormNewProps> = ({
 
   return (
     <Paper title='New User' button={<ButtonSave onClick={handleOnSave} />}>
-        <Box
+      <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -142,40 +142,39 @@ const UserFormNew: React.FC<UserFormNewProps> = ({
           padding: '3px'
         }}
       >
-      <TextField
-        required
-        label='Username or e-mail'
-        placeholder='you@domain.com'
-        errorMessage={usernameErrorMessage}
-        onChange={onChangeUsername}
-        icon={<IconTextFields />}
-        value={username}
-      />
-      <TextField
-        required
-        label='Repeat Username or e-mail'
-        placeholder='Confirm your e-mail'
-        errorMessage={repeatUsernameErrorMessage}
-        onChange={onChangeHandlerRepeatUsername}
-        icon={<IconTextFields />}
-        value={repeatUsername}
-      />
-      <PasswordField
-        required
-        label='Password'
-        errorMessage={passwordErrorMessage}
-        onChange={onChangePassword}
-        value={password}
-      />
-      <PasswordField
-        required
-        label='Repeat Password'
-        errorMessage={repeatPasswordErrorMessage}
-        onChange={onChangeHandlerRepeatPassword}
-        value={repeatPassword}
-      />
+        <TextField
+          required
+          label='Username or e-mail'
+          placeholder='you@domain.com'
+          errorMessage={usernameErrorMessage}
+          onChange={onChangeUsername}
+          icon={<IconTextFields />}
+          value={username}
+        />
+        <TextField
+          required
+          label='Repeat Username or e-mail'
+          placeholder='Confirm your e-mail'
+          errorMessage={repeatUsernameErrorMessage}
+          onChange={onChangeHandlerRepeatUsername}
+          icon={<IconTextFields />}
+          value={repeatUsername}
+        />
+        <PasswordField
+          required
+          label='Password'
+          errorMessage={passwordErrorMessage}
+          onChange={onChangePassword}
+          value={password}
+        />
+        <PasswordField
+          required
+          label='Repeat Password'
+          errorMessage={repeatPasswordErrorMessage}
+          onChange={onChangeHandlerRepeatPassword}
+          value={repeatPassword}
+        />
       </Box>
-        
     </Paper>
   )
 }

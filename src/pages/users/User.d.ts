@@ -6,8 +6,8 @@ export interface Attempt {
 }
 
 export interface User {
-    id: string
-    userName: string
-    createdAt: string
-    updatedAt: string
-  }
+  id: string
+  userName: string
+  createdAt: string
+  updatedAt: string
+}

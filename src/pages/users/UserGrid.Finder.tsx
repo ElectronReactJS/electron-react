@@ -35,7 +35,7 @@ interface UserGridFinderProps {
 
 const UserGridFinder: React.FC<UserGridFinderProps> = ({users, handleOnRefresh}) => {
   return (
-    <Paper title="Users" button={<ButtonRefresh onClick={handleOnRefresh} />}>
+    <Paper title='Users' button={<ButtonRefresh onClick={handleOnRefresh} />}>
       <Box
         sx={{
           justifyContent: 'center',

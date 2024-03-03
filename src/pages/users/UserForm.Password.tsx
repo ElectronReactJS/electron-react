@@ -75,32 +75,31 @@ const UserFormPassword: React.FC<UserFormPasswordProps> = ({
 
   return (
     <Paper title='Change Password' button={<ButtonSave onClick={handleOnSave} />}>
-    <Box
-    sx={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '50%',
-      padding: '3px'
-    }}
-  >
-  
-      <PasswordField
-        required
-        label='Password'
-        errorMessage={passwordErrorMessage}
-        onChange={onChangePassword}
-        value={password}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '50%',
+          padding: '3px'
+        }}
+      >
+        <PasswordField
+          required
+          label='Password'
+          errorMessage={passwordErrorMessage}
+          onChange={onChangePassword}
+          value={password}
         />
-      <PasswordField
-        required
-        label='Repeat Password'
-        errorMessage={repeatPasswordErrorMessage}
-        onChange={onChangeHandlerRepeatPassword}
-        value={repeatPassword}
+        <PasswordField
+          required
+          label='Repeat Password'
+          errorMessage={repeatPasswordErrorMessage}
+          onChange={onChangeHandlerRepeatPassword}
+          value={repeatPassword}
         />
-        </Box>
+      </Box>
     </Paper>
   )
 }
