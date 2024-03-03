@@ -8,14 +8,14 @@ const fabStyle = {
   right: 16
 }
 interface ButtonProps {
-    onClick?: () => void
-  }
-  const ButtonNew: React.FC<ButtonProps> = ({onClick}) => {
-    return (
-      <Fab sx={fabStyle} aria-label='Save' color='primary' onClick={onClick}>
-        <AddIcon />
-      </Fab>
-    )
-  }
-  
-  export default ButtonNew
+  onClick?: () => void
+}
+const ButtonNew: React.FC<ButtonProps> = ({onClick}) => {
+  return (
+    <Fab sx={fabStyle} aria-label='Save' color='primary' onClick={onClick}>
+      <AddIcon />
+    </Fab>
+  )
+}
+
+export default ButtonNew

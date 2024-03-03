@@ -33,16 +33,14 @@ const UserViewAudit: React.FC<UserViewAuditProps> = ({username, attempts}) => {
     }
   }
 
-  const reloadData = () => {
-    
-  }
+  const reloadData = () => {}
 
   const handleOnRefresh = () => {
     reloadData
   }
 
   return (
-    <Paper title={title} button={<ButtonRefresh onClick={handleOnRefresh} />} >
+    <Paper title={title} button={<ButtonRefresh onClick={handleOnRefresh} />}>
       <List sx={{width: '100%', maxWidth: 360}}>
         {attempts.map((attempt, index) => (
           <ListItem key={index}>
