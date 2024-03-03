@@ -1,6 +1,6 @@
-// src/components/wrap/inputs/ButtonNew.tsx
+// src/components/wrap/inputs/ButtonRefresh.tsx
 import Fab from '@mui/material/Fab'
-import AddIcon from '@mui/icons-material/Add'
+import RefreshIcon from '@mui/icons-material/Refresh'
 
 const fabStyle = {
   position: 'absolute',
@@ -10,12 +10,12 @@ const fabStyle = {
 interface ButtonProps {
     onClick?: () => void
   }
-  const ButtonNew: React.FC<ButtonProps> = ({onClick}) => {
+  const ButtonRefresh: React.FC<ButtonProps> = ({onClick}) => {
     return (
       <Fab sx={fabStyle} aria-label='Save' color='primary' onClick={onClick}>
-        <AddIcon />
+        <RefreshIcon />
       </Fab>
     )
   }
   
-  export default ButtonNew
+  export default ButtonRefresh

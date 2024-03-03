@@ -11,6 +11,7 @@ import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import ListItemAvatar from '@mui/material/ListItemAvatar'
 import Avatar from '@mui/material/Avatar'
+import ButtonRefresh from '../../components/wrap/inputs/ButtonRefresh'
 
 interface UserViewAuditProps {
   username: string
@@ -31,8 +32,17 @@ const UserViewAudit: React.FC<UserViewAuditProps> = ({username, attempts}) => {
         return null // ou um ícone padrão
     }
   }
+
+  const reloadData = () => {
+    
+  }
+
+  const handleOnRefresh = () => {
+    reloadData
+  }
+
   return (
-    <Paper title={title}>
+    <Paper title={title} button={<ButtonRefresh onClick={handleOnRefresh} />} >
       <List sx={{width: '100%', maxWidth: 360}}>
         {attempts.map((attempt, index) => (
           <ListItem key={index}>
