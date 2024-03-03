@@ -6,9 +6,10 @@ import ButtonSave from '../../components/wrap/inputs/ButtonSave'
 
 interface UserFormPasswordProps {
   onPasswordChange: (password: string) => void
+  onFormStatusChange: (message: string, severity: 'success' | 'error') => void
 }
 
-const UserFormPassword: React.FC<UserFormPasswordProps> = ({onPasswordChange}) => {
+const UserFormPassword: React.FC<UserFormPasswordProps> = ({onPasswordChange, onFormStatusChange}) => {
   const [password, setPassword] = React.useState('')
   const [repeatPassword, setRepeatPassword] = React.useState('')
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
@@ -57,8 +58,16 @@ const UserFormPassword: React.FC<UserFormPasswordProps> = ({onPasswordChange}) =
     }
   }
 
+
   const handleOnSave = () => {
-    validateFieldsAndNotifyParent
+    const isPasswordValid = validatePassword(password) && validateRepeatPassword(repeatPassword)
+
+    if (isPasswordValid) {
+      onFormStatusChange('Formulário submetido com sucesso!', 'success')
+      onPasswordChange(password)
+    } else {
+      onFormStatusChange('Erro na submissão do formulário. Verifique os campos.', 'error')
+    }
   }
 
   return (
