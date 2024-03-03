@@ -4,7 +4,7 @@ import Paper from '../../components/wrap/surfaces/Paper'
 import IconPrivacyTipWrapper from '../../components/ext/displays/IconPrivacyTipExt'
 import IconRemoveModeratorWrapper from '../../components/ext/displays/IconRemoveModeratorExt'
 import IconVerifiedUserWrapper from '../../components/ext/displays/IconVerifiedUserExt'
-import { Attempt } from './user.types';
+import {Attempt} from './user.types'
 
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
