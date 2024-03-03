@@ -13,6 +13,6 @@ export const FrameTheme = (theme: Theme) => {
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    padding: theme.spacing(4) 
+    padding: theme.spacing(4)
   }
 }
