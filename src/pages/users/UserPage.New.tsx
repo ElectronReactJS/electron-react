@@ -8,24 +8,22 @@ const UserPageNew: React.FC = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showTransitionAlert, setShowTransitionAlert] = useState(false)
-  const [alertMessage, setAlertMessage] = useState('');
-  const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success');
+  const [alertMessage, setAlertMessage] = useState('')
+  const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success')
 
   const handleFormStatusChange = (message: string, severity: 'success' | 'error') => {
-    setAlertMessage(message);
-    setAlertSeverity(severity);
-    setShowTransitionAlert(true); 
-  };
+    setAlertMessage(message)
+    setAlertSeverity(severity)
+    setShowTransitionAlert(true)
+  }
 
   return (
     <Page>
-      {showTransitionAlert && (
-        <TransitionAlert message={alertMessage} severity={alertSeverity} />
-      )}
+      {showTransitionAlert && <TransitionAlert message={alertMessage} severity={alertSeverity} />}
       <UserFormNew
         onUsernameChange={setUsername}
         onPasswordChange={setPassword}
-        onFormStatusChange={handleFormStatusChange} 
+        onFormStatusChange={handleFormStatusChange}
       />
     </Page>
   )

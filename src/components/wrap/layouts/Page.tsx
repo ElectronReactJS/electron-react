@@ -3,12 +3,11 @@ import React, {ReactNode} from 'react'
 import Box from './Box'
 
 interface PageProps {
-    transitionAlert?: ReactNode
-    children?: ReactNode
-  }
+  transitionAlert?: ReactNode
+  children?: ReactNode
+}
 
 const Page: React.FC<PageProps> = ({transitionAlert, children}) => {
-
   return (
     <Box
       sx={{
