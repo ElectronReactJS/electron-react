@@ -2,11 +2,11 @@
 import MuiDrawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
-import IconButton from '../../../components/ext/displays/IconButtonExt'
-import ChevronLeftIcon from '../../../components/ext/displays/IconChevronLeftExt'
-import ChevronRightIcon from '../../../components/ext/displays/IconChevronRightExt'
-import Home from '../../../components/ext/displays/IconAssignmentExt'
-import Box from '../../../components/wrap/layouts/BoxWrapper'
+import IconButton from '../../ext/displays/IconButtonExt'
+import ChevronLeftIcon from '../../ext/displays/IconChevronLeftExt'
+import ChevronRightIcon from '../../ext/displays/IconChevronRightExt'
+import Home from '../../ext/displays/IconAssignmentExt'
+import Box from '../layouts/Box'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
@@ -87,15 +87,6 @@ const DrawerWrapper: React.FC<DrawerWrapperProps> = ({
       <DrawerHeader>
         <ListItemIcon sx={{alignItems: 'center', justifyContent: 'center'}}>
           <Home color='primary' />
-          {/* <ListItemText
-            primary='Home'
-            sx={{ marginLeft: '10px' }}
-            primaryTypographyProps={{
-              color: 'primary',
-              fontWeight: 'medium',
-              variant: 'body2'
-            }}
-          /> */}
         </ListItemIcon>
         <Box flexGrow={1} />
         <IconButton onClick={handleDrawerClose}>

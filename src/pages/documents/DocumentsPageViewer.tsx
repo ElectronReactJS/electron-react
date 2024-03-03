@@ -4,8 +4,8 @@ import Typography from '../../components/ext/displays/TypographyExt'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import {CardActionArea, CardActions} from '@mui/material'
-import Box from '../../components/wrap/layouts/BoxWrapper'
-import ButtonEdit from '../common/button/ButtonEdit'
+import Box from '../../components/wrap/layouts/Box'
+import ButtonEdit from '../../components/wrap/inputs/ButtonEdit'
 
 const fabStyle = {
   position: 'absolute',

@@ -3,8 +3,8 @@ import React, {useState} from 'react'
 import ReactQuill from 'react-quill'
 import Paper from '../../components/ext/surfaces/PaperExt'
 import 'react-quill/dist/quill.snow.css'
-import TextField from '../../components/wrap/inputs/TextFieldWrapper'
-import Box from '../../components/wrap/layouts/BoxWrapper'
+import TextField from '../../components/wrap/inputs/TextField'
+import Box from '../../components/wrap/layouts/Box'
 
 interface DocumentsPageEditorProps {
   title?: string

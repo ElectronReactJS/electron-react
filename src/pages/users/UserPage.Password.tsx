@@ -1,8 +1,8 @@
 // src/pages/users/UsersPagePassword.tsx
 import React, {useState} from 'react'
 import UserFormPassword from './UserForm.Password'
-import TransitionAlert from './TransitionAlert'
-import Box from '../../components/wrap/layouts/BoxWrapper'
+import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
+import Box from '../../components/wrap/layouts/Box'
 
 const UserPagePassword: React.FC = () => {
   const [password, setPassword] = useState('')

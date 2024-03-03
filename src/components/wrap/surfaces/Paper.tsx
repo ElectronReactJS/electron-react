@@ -1,10 +1,10 @@
 // src/pages/users/Page.tsx
 import * as React from 'react'
-import {useTheme} from '../../components/ext/styles/StylesExt'
-import PaperWrapper from '../../components/ext/surfaces/PaperExt'
+import {useTheme} from '../../ext/styles/StylesExt'
+import PaperWrapper from '../../ext/surfaces/PaperExt'
 import {PaperTheme} from './Paper.Theme'
-import Typography from '../../components/ext/displays/TypographyExt'
-import Box from '../../components/wrap/layouts/BoxWrapper'
+import Typography from '../../ext/displays/TypographyExt'
+import Box from '../layouts/Box'
 
 interface PaperProps {
   title?: string

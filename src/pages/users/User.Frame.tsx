@@ -12,7 +12,7 @@ import SearchIcon from '../../components/ext/displays/IconSearchExt'
 import Box from '../../components/ext/layouts/BoxExt'
 import CssBaseline from '@mui/material/CssBaseline'
 import UsersHeader from '../common/header/HeaderWrapper'
-import UsersDrawer from '../common/drawer/DrawerWrapper'
+import UsersDrawer from '../../components/wrap/navigation/Drawer'
 
 import UserPageFinder from './UserPage.Finder'
 import UserPageAudit from './UserPage.Audit'

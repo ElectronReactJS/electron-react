@@ -1,8 +1,8 @@
 // src/pages/users/UsersPage.Username.tsx
 import React, {useState} from 'react'
 import UserFormUsername from './UserForm.Username'
-import TransitionAlert from './TransitionAlert'
-import Box from '../../components/wrap/layouts/BoxWrapper'
+import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
+import Box from '../../components/wrap/layouts/Box'
 
 interface UsersPageUsernameProps {
   title?: string

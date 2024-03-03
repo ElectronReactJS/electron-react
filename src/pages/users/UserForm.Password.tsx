@@ -1,8 +1,8 @@
 // src/pages/users/UserPaper.tsx
 import * as React from 'react'
-import Paper from './Paper'
-import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
-import ButtonSave from '../common/button/ButtonSave'
+import Paper from '../../components/wrap/surfaces/Paper'
+import PasswordField from '../../components/wrap/inputs/PasswordField'
+import ButtonSave from '../../components/wrap/inputs/ButtonSave'
 
 interface UserFormPasswordProps {
   onPasswordChange: (password: string) => void

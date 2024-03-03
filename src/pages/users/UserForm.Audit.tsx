@@ -1,6 +1,6 @@
 // src/pages/users/UserPaper.List.tsx
 import * as React from 'react'
-import Paper from './Paper'
+import Paper from '../../components/wrap/surfaces/Paper'
 import Typography from '../../components/ext/displays/TypographyExt'
 import IconPrivacyTipWrapper from '../../components/ext/displays/IconPrivacyTipExt'
 import IconRemoveModeratorWrapper from '../../components/ext/displays/IconRemoveModeratorExt'

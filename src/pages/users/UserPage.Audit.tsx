@@ -1,7 +1,7 @@
 // src/pages/users/UsersPageViewer.tsx
 import {useState} from 'react'
 import UserPaper from './UserForm.Audit'
-import TransitionAlert from './TransitionAlert'
+import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
 import Box from '../../components/ext/layouts/BoxExt'
 
 const UsersPageViewer: React.FC<any> = () => {

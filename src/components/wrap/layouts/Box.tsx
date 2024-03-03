@@ -1,7 +1,7 @@
 // src/components/wrap/layouts/BoxWrapper.tsx
 import Box, {BoxProps} from '@mui/material/Box'
 import {useTheme} from '@mui/material/styles'
-import {BoxWrapperTheme} from './BoxWrapper.Theme'
+import {BoxWrapperTheme} from './Box.Theme'
 
 interface BoxWrapperProps extends BoxProps {
   children?: React.ReactNode

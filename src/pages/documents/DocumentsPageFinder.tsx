@@ -5,7 +5,7 @@ import {styled, alpha} from '@mui/material/styles'
 import {Toolbar} from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 import InputBase from '@mui/material/InputBase'
-import ButtonNew from '../common/button/ButtonNew'
+import ButtonNew from '../../components/wrap/inputs/ButtonNew'
 
 const Search = styled('div')(({theme}) => ({
   position: 'relative',

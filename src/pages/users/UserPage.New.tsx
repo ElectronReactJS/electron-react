@@ -1,8 +1,8 @@
 // src/pages/users/UserPage.New.tsx
 import React, {useState} from 'react'
 import UserFormNew from './UserForm.New'
-import TransitionAlert from './TransitionAlert'
-import Box from '../../components/wrap/layouts/BoxWrapper'
+import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
+import Box from '../../components/wrap/layouts/Box'
 
 const UserPageNew: React.FC = () => {
   const [username, setUsername] = useState('')

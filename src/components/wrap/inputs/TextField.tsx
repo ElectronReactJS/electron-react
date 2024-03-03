@@ -1,6 +1,6 @@
 // src/components/wrap/inputs/TextFieldWrapper.tsx
 import React from 'react'
-import InputFieldWrapper from './InputFieldWrapper'
+import InputFieldWrapper from './InputField'
 import IconTextFields from '../../ext/displays/IconTextFieldsExt'
 
 export interface InputFieldWrapperProps {

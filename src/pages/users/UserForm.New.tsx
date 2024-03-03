@@ -1,10 +1,10 @@
 // src/pages/users/UserPaper.tsx
 import * as React from 'react'
-import Paper from './Paper'
-import TextField from '../../components/wrap/inputs/TextFieldWrapper'
-import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
+import Paper from '../../components/wrap/surfaces/Paper'
+import TextField from '../../components/wrap/inputs/TextField'
+import PasswordField from '../../components/wrap/inputs/PasswordField'
 import IconTextFields from '../../components/ext/displays/IconTextFieldsExt'
-import ButtonSave from '../common/button/ButtonSave'
+import ButtonSave from '../../components/wrap/inputs/ButtonSave'
 
 interface UserFormNewProps {
   onUsernameChange: (username: string) => void

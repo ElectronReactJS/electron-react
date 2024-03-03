@@ -5,7 +5,7 @@ import {ThemeProvider} from '@mui/material/styles'
 import {MemoryRouter, Route, Routes} from 'react-router-dom'
 import LoginPage from './pages/login/LoginPaper'
 import DocumensFrame from './pages/documents/DocumentsFrame'
-import UsersFrame from './pages/users/UsersFrame'
+import UsersFrame from './pages/users/User.Frame'
 
 // Get the navigation element
 const navigationElement = document.getElementById('navigation')
