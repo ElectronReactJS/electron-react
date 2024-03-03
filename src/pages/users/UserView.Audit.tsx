@@ -33,7 +33,7 @@ const UserViewAudit: React.FC<UserViewAuditProps> = ({username, attempts, handle
         return null // ou um ícone padrão
     }
   }
-  
+
   return (
     <Paper title={title} button={<ButtonRefresh onClick={handleOnRefresh} />}>
       <List sx={{width: '100%', maxWidth: 360}}>
