@@ -63,7 +63,7 @@ const UserFormUsername: React.FC<UserFormUsernameProps> = ({onUsernameChange}) =
       onUsernameChange(newRepeatUsername)
     }
   }
-  
+
   const validateFieldsAndNotifyParent = () => {
     const isUsernameValid = validateUsername(username) && validateRepeatUsername(repeatUsername)
 
@@ -83,11 +83,11 @@ const UserFormUsername: React.FC<UserFormUsernameProps> = ({onUsernameChange}) =
   }
 
   return (
-    <Paper title="Change Username" button={<ButtonSave onClick={handleOnSave} />}>
+    <Paper title='Change Username' button={<ButtonSave onClick={handleOnSave} />}>
       <TextField
         required
-        label="Username or e-mail"
-        placeholder="you@domain.com"
+        label='Username or e-mail'
+        placeholder='you@domain.com'
         errorMessage={usernameErrorMessage}
         onChange={onChangeUsername}
         icon={<IconTextFields />}
@@ -95,8 +95,8 @@ const UserFormUsername: React.FC<UserFormUsernameProps> = ({onUsernameChange}) =
       />
       <TextField
         required
-        label="Repeat Username or e-mail"
-        placeholder="Confirm your e-mail"
+        label='Repeat Username or e-mail'
+        placeholder='Confirm your e-mail'
         errorMessage={repeatUsernameErrorMessage}
         onChange={onChangeHandlerRepeatUsername}
         icon={<IconTextFields />}

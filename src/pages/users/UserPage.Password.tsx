@@ -37,9 +37,7 @@ const UserPagePassword: React.FC = () => {
           <TransitionAlert message='Your custom message here' severity='success' />
         )}
       </Box>
-      <UserFormPassword
-        onPasswordChange={handlePasswordChange}
-      />
+      <UserFormPassword onPasswordChange={handlePasswordChange} />
     </Box>
   )
 }

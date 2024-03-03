@@ -103,7 +103,7 @@ const UserFormNew: React.FC<UserFormNewProps> = ({onUsernameChange, onPasswordCh
     validatePassword(newPassword)
     setPassword(newPassword)
   }
-  
+
   const validateFieldsAndNotifyParent = () => {
     const isUsernameValid = validateUsername(username) && validateRepeatUsername(repeatUsername)
     const isPasswordValid = validatePassword(password) && validateRepeatPassword(repeatPassword)
@@ -125,11 +125,11 @@ const UserFormNew: React.FC<UserFormNewProps> = ({onUsernameChange, onPasswordCh
   }
 
   return (
-    <Paper title="New User" button={<ButtonSave onClick={handleOnSave} />}>
+    <Paper title='New User' button={<ButtonSave onClick={handleOnSave} />}>
       <TextField
         required
-        label="Username or e-mail"
-        placeholder="you@domain.com"
+        label='Username or e-mail'
+        placeholder='you@domain.com'
         errorMessage={usernameErrorMessage}
         onChange={onChangeUsername}
         icon={<IconTextFields />}
@@ -137,8 +137,8 @@ const UserFormNew: React.FC<UserFormNewProps> = ({onUsernameChange, onPasswordCh
       />
       <TextField
         required
-        label="Repeat Username or e-mail"
-        placeholder="Confirm your e-mail"
+        label='Repeat Username or e-mail'
+        placeholder='Confirm your e-mail'
         errorMessage={repeatUsernameErrorMessage}
         onChange={onChangeHandlerRepeatUsername}
         icon={<IconTextFields />}
@@ -146,14 +146,14 @@ const UserFormNew: React.FC<UserFormNewProps> = ({onUsernameChange, onPasswordCh
       />
       <PasswordField
         required
-        label="Password"
+        label='Password'
         errorMessage={passwordErrorMessage}
         onChange={onChangePassword}
         value={password}
       />
       <PasswordField
         required
-        label="Repeat Password"
+        label='Repeat Password'
         errorMessage={repeatPasswordErrorMessage}
         onChange={onChangeHandlerRepeatPassword}
         value={repeatPassword}

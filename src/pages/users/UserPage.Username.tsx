@@ -10,12 +10,12 @@ interface UsersPageUsernameProps {
 }
 
 const UsersPageUsername: React.FC = () => {
-    const [username, setUsername] = useState('')
-    const [showTransitionAlert, setShowTransitionAlert] = useState(true)
-  
-    const handleUsernameChange = (newUsername: string) => {
-      setUsername(newUsername)
-    }
+  const [username, setUsername] = useState('')
+  const [showTransitionAlert, setShowTransitionAlert] = useState(true)
+
+  const handleUsernameChange = (newUsername: string) => {
+    setUsername(newUsername)
+  }
 
   return (
     <Box
@@ -42,9 +42,7 @@ const UsersPageUsername: React.FC = () => {
           <TransitionAlert message='Your custom message here' severity='success' />
         )}
       </Box>
-      <UserFormUsername
-        onUsernameChange={handleUsernameChange}
-      />
+      <UserFormUsername onUsernameChange={handleUsernameChange} />
     </Box>
   )
 }

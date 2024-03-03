@@ -48,7 +48,7 @@ const UserFormPassword: React.FC<UserFormPasswordProps> = ({onPasswordChange}) =
     validatePassword(newPassword)
     setPassword(newPassword)
   }
-  
+
   const validateFieldsAndNotifyParent = () => {
     const isPasswordValid = validatePassword(password) && validateRepeatPassword(repeatPassword)
 
@@ -62,17 +62,17 @@ const UserFormPassword: React.FC<UserFormPasswordProps> = ({onPasswordChange}) =
   }
 
   return (
-    <Paper title="Change Password" button={<ButtonSave onClick={handleOnSave} />}>
+    <Paper title='Change Password' button={<ButtonSave onClick={handleOnSave} />}>
       <PasswordField
         required
-        label="Password"
+        label='Password'
         errorMessage={passwordErrorMessage}
         onChange={onChangePassword}
         value={password}
       />
       <PasswordField
         required
-        label="Repeat Password"
+        label='Repeat Password'
         errorMessage={repeatPasswordErrorMessage}
         onChange={onChangeHandlerRepeatPassword}
         value={repeatPassword}
