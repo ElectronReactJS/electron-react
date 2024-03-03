@@ -20,7 +20,7 @@ const TransitionAlert: React.FC<TransitionAlertProps> = ({message, severity, sho
   }, [show])
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{width: '95%'}}>
       <Collapse in={open}>
         <Alert
           action={

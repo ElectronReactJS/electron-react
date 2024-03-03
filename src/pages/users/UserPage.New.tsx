@@ -2,51 +2,32 @@
 import React, {useState} from 'react'
 import UserFormNew from './UserForm.New'
 import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
-import Box from '../../components/wrap/layouts/Box'
+import Page from '../../components/wrap/layouts/Page'
 
 const UserPageNew: React.FC = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [showTransitionAlert, setShowTransitionAlert] = useState(true)
+  const [showTransitionAlert, setShowTransitionAlert] = useState(false)
+  const [alertMessage, setAlertMessage] = useState('');
+  const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success');
 
-  const handleUsernameChange = (newUsername: string) => {
-    setUsername(newUsername)
-  }
-
-  const handlePasswordChange = (newPassword: string) => {
-    setPassword(newPassword)
-  }
+  const handleFormStatusChange = (message: string, severity: 'success' | 'error') => {
+    setAlertMessage(message);
+    setAlertSeverity(severity);
+    setShowTransitionAlert(true); 
+  };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        height: '100%'
-      }}
-    >
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '100%',
-          minHeight: '35px',
-          padding: 1,
-          margin: 1
-        }}
-      >
-        {showTransitionAlert && (
-          <TransitionAlert message='Your custom message here' severity='success' />
-        )}
-      </Box>
+    <Page>
+      {showTransitionAlert && (
+        <TransitionAlert message={alertMessage} severity={alertSeverity} />
+      )}
       <UserFormNew
-        onUsernameChange={handleUsernameChange}
-        onPasswordChange={handlePasswordChange}
+        onUsernameChange={setUsername}
+        onPasswordChange={setPassword}
+        onFormStatusChange={handleFormStatusChange} 
       />
-    </Box>
+    </Page>
   )
 }
 
