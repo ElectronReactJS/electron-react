@@ -5,6 +5,8 @@ import {User} from './User'
 import {DataGrid, GridColDef} from '@mui/x-data-grid'
 import ButtonRefresh from '../../components/wrap/inputs/ButtonRefresh'
 import Box from '../../components/wrap/layouts/Box'
+import SearchIcon from '@mui/icons-material/Search'
+import TextFieldWrapper from '../../components/wrap/inputs/TextField'
 
 const columns: GridColDef[] = [
   {field: 'id', headerName: 'External ID', width: 150},
@@ -33,9 +35,34 @@ interface UserGridFinderProps {
   handleOnRefresh: () => void
 }
 
-const UserGridFinder: React.FC<UserGridFinderProps> = ({users, handleOnRefresh}) => {
+const UserGridFinder: React.FC<UserGridFinderProps> = ({users, handleOnRefresh}) => {const [value, setValue] = React.useState('')
+const [errorMessage, setErrorMessage] = React.useState('')
+
+const onChangeHandler = (e: { target: { value: React.SetStateAction<string> } }) => {
+    setValue(e.target.value)
+    setErrorMessage('')
+}
+
   return (
     <Paper title='Users' button={<ButtonRefresh onClick={handleOnRefresh} />}>
+    <Box
+        sx={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '85%',
+          padding: '3px'
+        }}
+      >
+      <TextFieldWrapper
+      required
+      label="Search by typing..."
+      placeholder="Search by typing..."
+      errorMessage={errorMessage}
+      onChange={onChangeHandler}
+      icon={<SearchIcon />}
+      value={value}
+    />
+      </Box>
       <Box
         sx={{
           justifyContent: 'center',
