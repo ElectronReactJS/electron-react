@@ -7,7 +7,7 @@ import TextField from '../../components/wrap/inputs/TextField'
 import PasswordField from '../../components/wrap/inputs/PasswordField'
 import IconTextFields from '../../components/ext/displays/IconTextFieldsExt'
 import {LoginPaperTheme} from './LoginPaper.Theme'
-import biudLogo from '../../images/biud-logo.png'
+import biudLogo from '../../images/logo128x128.png'
 
 const LoginPaper: React.FC<any> = () => {
   const navigate = useNavigate()
