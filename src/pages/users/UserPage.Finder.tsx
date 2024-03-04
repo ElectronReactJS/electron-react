@@ -6,7 +6,13 @@ import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
 import {User} from './User'
 
 const UserPageFinder: React.FC<any> = () => {
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([
+    {
+      id: '1',
+      userName: 'john@example.com',
+      createdAt: '2023-01-01T00:00:00Z',
+      updatedAt: '2023-01-01T00:00:00Z'
+    }])
   const [showTransitionAlert, setShowTransitionAlert] = useState(false)
   const [alertMessage, setAlertMessage] = useState('')
   const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success')
