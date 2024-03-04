@@ -17,18 +17,18 @@ interface DocumentsFormDraftProps {
 }
 
 const DocumentsFormDraft: React.FC<DocumentsFormDraftProps> = ({
-    title,
-    content,
-    onTitleChange,
-    onContentChange,
-    onFormStatusChange
+  title,
+  content,
+  onTitleChange,
+  onContentChange,
+  onFormStatusChange
 }) => {
   const [titleErrorMessage, setTitleErrorMessage] = React.useState('')
   const [currentTitle, setCurrentTitle] = React.useState(title)
   const [currentContent, setCurrentContent] = React.useState(content)
 
   const handleOnSave = () => {
-      onFormStatusChange('Formulário submetido com sucesso!', 'success')
+    onFormStatusChange('Formulário submetido com sucesso!', 'success')
   }
 
   const onChangeTitle = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,7 +38,7 @@ const DocumentsFormDraft: React.FC<DocumentsFormDraftProps> = ({
   }
 
   return (
-    <Paper title="New Document" button={<ButtonSave onClick={handleOnSave} />}>
+    <Paper title='New Document' button={<ButtonSave onClick={handleOnSave} />}>
       <Box
         sx={{
           display: 'flex',
@@ -51,17 +51,20 @@ const DocumentsFormDraft: React.FC<DocumentsFormDraftProps> = ({
       >
         <TextField
           required
-          label="Title"
-          placeholder="My document"
+          label='Title'
+          placeholder='My document'
           errorMessage={titleErrorMessage}
           onChange={onChangeTitle}
           icon={<IconTextFields />}
           value={currentTitle}
         />
         <ReactQuill
-          theme="snow"
+          theme='snow'
           value={currentContent}
-          onChange={(v) => {setCurrentContent(v); onContentChange(currentContent)}}
+          onChange={v => {
+            setCurrentContent(v)
+            onContentChange(currentContent)
+          }}
           style={{width: '100%'}}
         />
       </Box>

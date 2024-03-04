@@ -10,9 +10,9 @@ interface DocumentsPageDraftProps {
 }
 
 const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content}) => {
-    const [showTransitionAlert, setShowTransitionAlert] = useState(false)
-    const [alertMessage, setAlertMessage] = useState('')
-    const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success')
+  const [showTransitionAlert, setShowTransitionAlert] = useState(false)
+  const [alertMessage, setAlertMessage] = useState('')
+  const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success')
   const [currentContent, setCurrentContent] = useState('')
   const [currentTitle, setCurrentTitle] = useState('')
 
@@ -31,13 +31,16 @@ const DocumentsPageDraft: React.FC<DocumentsPageDraftProps> = ({title, content})
   }
 
   return (
-        <Page>
-            {showTransitionAlert && <TransitionAlert message={alertMessage} severity={alertSeverity} />}
-            <DocumentsFormDraft title={currentTitle} content={currentContent} 
-                                onTitleChange={onChangeTitle}
-                                onContentChange={onChangeContent}
-                                onFormStatusChange={handleFormStatusChange} />
-        </Page>
+    <Page>
+      {showTransitionAlert && <TransitionAlert message={alertMessage} severity={alertSeverity} />}
+      <DocumentsFormDraft
+        title={currentTitle}
+        content={currentContent}
+        onTitleChange={onChangeTitle}
+        onContentChange={onChangeContent}
+        onFormStatusChange={handleFormStatusChange}
+      />
+    </Page>
   )
 }
 
