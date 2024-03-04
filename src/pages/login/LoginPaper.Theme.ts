@@ -1,5 +1,5 @@
 // src/pages/login/LoginPaper.Theme.ts
-import {Theme} from '../../components/extends/styles/StylesWrapper'
+import {Theme} from '../../components/ext/styles/StylesExt'
 
 export const LoginPaperTheme = (theme: Theme) => {
   return {

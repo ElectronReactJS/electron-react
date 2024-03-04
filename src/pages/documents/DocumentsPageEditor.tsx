@@ -1,10 +1,8 @@
 // src/pages/documents/DocumentsPageEditor.tsx
 import React, {useState} from 'react'
-import ReactQuill from 'react-quill'
-import Paper from '../../components/extends/surfaces/PaperWrapper'
-import 'react-quill/dist/quill.snow.css'
-import TextField from '../../components/wrap/inputs/TextFieldWrapper'
-import Box from '../../components/wrap/layouts/BoxWrapper'
+import Page from '../../components/wrap/layouts/Page'
+import TransitionAlert from '../../components/wrap/feedback/TransitionAlert'
+import DocumentsFormEditor from './DocumentsForm.Editor'
 
 interface DocumentsPageEditorProps {
   title?: string
@@ -12,63 +10,37 @@ interface DocumentsPageEditorProps {
 }
 
 const DocumentsPageEditor: React.FC<DocumentsPageEditorProps> = ({title, content}) => {
+  const [showTransitionAlert, setShowTransitionAlert] = useState(false)
+  const [alertMessage, setAlertMessage] = useState('')
+  const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success')
   const [currentContent, setCurrentContent] = useState('')
   const [currentTitle, setCurrentTitle] = useState('')
-  const [titleErrorMessage, setTitleErrorMessage] = useState('')
 
-  const handleContentChanging = (newContent: string) => {
-    setCurrentContent(newContent)
-    save
-  }
-
-  const validateTitle = (title: string) => {
-    if (title?.length < 4) setTitleErrorMessage('Invalid document name.')
-    else setTitleErrorMessage('')
-  }
-
-  const handleTitleChanging = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newTitle: string = event.target.value
+  const onChangeTitle = (newTitle: string) => {
     setCurrentTitle(newTitle)
-    validateTitle(newTitle)
-    save
   }
 
-  const save = () => {
-    console.log('Saving content')
-    console.log(JSON.stringify({title: currentTitle, content: currentContent}))
-    console.log('Saved')
+  const onChangeContent = (newContet: string) => {
+    setCurrentContent(newContet)
+  }
+
+  const handleFormStatusChange = (message: string, severity: 'success' | 'error') => {
+    setAlertMessage(message)
+    setAlertSeverity(severity)
+    setShowTransitionAlert(true)
   }
 
   return (
-    <Box>
-      <TextField
-        onChange={handleTitleChanging}
-        label='Document title'
-        value={currentTitle}
-        placeholder='My document'
-        errorMessage={titleErrorMessage}
+    <Page>
+      {showTransitionAlert && <TransitionAlert message={alertMessage} severity={alertSeverity} />}
+      <DocumentsFormEditor
+        title={currentTitle}
+        content={currentContent}
+        onTitleChange={onChangeTitle}
+        onContentChange={onChangeContent}
+        onFormStatusChange={handleFormStatusChange}
       />
-
-      <Paper
-        elevation={3}
-        sx={{
-          marginTop: '32px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100%',
-          maxHeight: '86%',
-          minHeight: '50%'
-        }}
-      >
-        <ReactQuill
-          theme='snow'
-          value={currentContent}
-          onChange={handleContentChanging}
-          style={{width: '100%'}}
-        />
-      </Paper>
-    </Box>
+    </Page>
   )
 }
 

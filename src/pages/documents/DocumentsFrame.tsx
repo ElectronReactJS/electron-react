@@ -1,19 +1,20 @@
 // src/pages/documents/DocumentsFrame.tsx
 import * as React from 'react'
-import {styled} from '@mui/material/styles'
-import Typography from '../../components/extends/displays/TypographyWrapper'
-import Box from '@mui/material/Box'
-import CssBaseline from '@mui/material/CssBaseline'
-import DocumentsHeader from '../common/header/HeaderWrapper'
+import {styled} from '../../components/ext/styles/StylesExt'
+import Box from '../../components/ext/layouts/BoxExt'
+import CssBaseline from '../../components/ext/utils/CssBaselineExt'
+import Typography from '../../components/ext/displays/TypographyExt'
+import DocumentsHeader from '../../components/wrap/navigation/Header'
 import DocumentsPageFinder from './DocumentsPageFinder'
-import DocumentsDrawer from '../common/drawer/DrawerWrapper'
+import DocumentsDrawer from '../../components/wrap/navigation/Drawer'
 import DocumentsPageEditor from './DocumentsPageEditor'
 import DocumentsPageViewer from './DocumentsPageViewer'
 import DocumentsPageDraft from './DocumentsPageDraft'
-import SearchIcon from '@mui/icons-material/Search'
-import EditIcon from '@mui/icons-material/Edit'
-import VisibilityIcon from '@mui/icons-material/Visibility'
-import EditNoteIcon from '@mui/icons-material/EditNote'
+
+import SearchIcon from '../../components/ext/displays/IconSearchExt'
+import EditIcon from '../../components/ext/displays/IconEditExt'
+import VisibilityIcon from '../../components/ext/displays/IconVisibilityExt'
+import EditNoteIcon from '../../components/ext/displays/IconEditNoteExt'
 
 const drawerWidth = 150
 

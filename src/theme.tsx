@@ -1,6 +1,6 @@
 // src/theme.tsx
 
-import {createTheme, Theme} from '@mui/material/styles'
+import {createTheme, Theme} from './components/ext/styles/StylesExt'
 
 interface ThemeProps {
   theme: Theme
@@ -11,14 +11,20 @@ const colorBlueLghter = '#63ccff'
 const colorBlueLght = '#4fc3f7'
 const colorBlueDark = '#012169'
 const colorDark = '#1976d2'
+const colorGray = '#777777'
 const colorGrayLight = '#f5f5f5'
+const colorGrayDark = '#111111'
+const colorPinkLight = '#FFB6C1'
+const colorPinkDark = '#AA336A'
+const colorPink = '#FF69B4'
+const colorPinkBiud = '#DE3163'
 
 const baseTheme = createTheme({
   palette: {
     primary: {
       light: colorGrayLight,
-      main: colorDark,
-      dark: colorDark
+      main: colorGray,
+      dark: colorGrayDark
     }
   },
   typography: {

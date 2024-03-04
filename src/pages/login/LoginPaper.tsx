@@ -1,29 +1,26 @@
 // src/pages/login/LoginPaper.tsx
 import * as React from 'react'
 import {useNavigate} from 'react-router-dom'
-import {useTheme} from '../../components/extends/styles/StylesWrapper'
-import Paper from '../../components/extends/surfaces/PaperWrapper'
-import TextField from '../../components/wrap/inputs/TextFieldWrapper'
-import PasswordField from '../../components/wrap/inputs/PasswordFieldWrapper'
-import Typography from '../../components/extends/displays/TypographyWrapper'
-import IconTextFields from '../../components/extends/displays/IconTextFieldsWrapper'
+import {useTheme} from '../../components/ext/styles/StylesExt'
+import Paper from '../../components/ext/surfaces/PaperExt'
+import TextField from '../../components/wrap/inputs/TextField'
+import PasswordField from '../../components/wrap/inputs/PasswordField'
+import IconTextFields from '../../components/ext/displays/IconTextFieldsExt'
 import {LoginPaperTheme} from './LoginPaper.Theme'
-import loginImage from '../../images/logo128x128.png'
+import biudLogo from '../../images/logo128x128.png'
 
 const LoginPaper: React.FC<any> = () => {
   const navigate = useNavigate()
   const currentTheme = useTheme()
   const loginPaperStyles = LoginPaperTheme(currentTheme)
-  const label = 'Company Name'
+  const label = 'Buid Tecnologia'
   const [usernameErrorMessage, setUsernameErrorMessage] = React.useState('')
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('')
   const [username, setUsername] = React.useState('')
   const [password, setPassword] = React.useState('')
 
   const goToMain = () => {
-    if (validateUsername(username) && validatePassword(password)) {
-      navigate('/main')
-    }
+    navigate('/users')
   }
 
   const validateUsername = (input: string): boolean => {
@@ -80,16 +77,17 @@ const LoginPaper: React.FC<any> = () => {
   const onChangeHandlerPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = event.target.value
     setPassword(newPassword)
-    if (validatePassword(newPassword)) goToMain()
+    if (!validatePassword(newPassword)) goToMain()
   }
 
   return (
     <Paper sx={loginPaperStyles} elevation={3}>
-      <Typography color='inherit' variant='h5' component='h1'>
+      {/* <Typography color='inherit' variant='h5' component='h1'>
         {label}
-      </Typography>
-      <img src={loginImage} alt='Logo' />
+      </Typography> */}
+      <img src={biudLogo} alt='Logo' />
       <TextField
+        required
         label='Username or e-mail'
         placeholder='you@domain.com'
         errorMessage={usernameErrorMessage}
@@ -98,6 +96,7 @@ const LoginPaper: React.FC<any> = () => {
         value={username}
       />
       <PasswordField
+        required
         label='Password'
         errorMessage={passwordErrorMessage}
         onChange={onChangeHandlerPassword}
