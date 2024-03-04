@@ -1,23 +1,17 @@
 // src/pages/common/menu/Menu.tsx
 import * as React from 'react'
 import {useNavigate} from 'react-router-dom'
-import Box from '@mui/material/Box'
-import Avatar from '@mui/material/Avatar'
-import MaterialMenu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import Divider from '@mui/material/Divider'
-import IconButton from '@mui/material/IconButton'
-import Tooltip from '@mui/material/Tooltip'
-import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard'
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings'
-import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService'
-import PersonAdd from '@mui/icons-material/PersonAdd'
-import Settings from '@mui/icons-material/Settings'
-import Logout from '@mui/icons-material/Logout'
-
-// Se AccountMenu receber props, defina uma interface para elas aqui
-// interface AccountMenuProps {}
+import Box from '../../../components/ext/layouts/BoxExt'
+import Avatar from '../../../components/ext/displays/AvatarExt'
+import MaterialMenu from '../../../components/ext/navigation/MenuExt'
+import MenuItem from '../../../components/ext/navigation/MenuItemExt'
+import Divider from '../../../components/ext/displays/DividerExt'
+import Tooltip from '../../../components/ext/displays/TooltipExt'
+import SpaceDashboardIcon from '../../../components/ext/displays/IconSpaceDashboardExt'
+import HomeRepairServiceIcon from '../../../components/ext/displays/IconHomeRepairServiceExt'
+import ListItemIcon from '../../../components/ext/displays/IconListItemExt'
+import IconButton from '../../../components/ext/displays/IconButtonExt'
+import Logout from '../../../components/ext/displays/IconLogoutExt'
 
 const Menu: React.FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
@@ -98,7 +92,6 @@ const Menu: React.FC = () => {
           <Avatar /> Account
         </MenuItem>
         <Divider />
-        {/* Aqui você pode passar children como um prop se necessário */}
         <MenuItem onClick={goToWorkspace}>
           <ListItemIcon>
             <HomeRepairServiceIcon fontSize='small' />
