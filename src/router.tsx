@@ -1,7 +1,7 @@
 // src/router.tsx
 import theme from './theme'
 import {createRoot} from 'react-dom/client'
-import {ThemeProvider} from '@mui/material/styles'
+import {ThemeProvider} from './components/ext/styles/StylesExt'
 import {MemoryRouter, Route, Routes} from 'react-router-dom'
 import LoginPage from './pages/login/LoginPaper'
 import DocumensFrame from './pages/documents/DocumentsFrame'

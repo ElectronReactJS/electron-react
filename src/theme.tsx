@@ -1,6 +1,6 @@
 // src/theme.tsx
 
-import {createTheme, Theme} from '@mui/material/styles'
+import {createTheme, Theme} from './components/ext/styles/StylesExt'
 
 interface ThemeProps {
   theme: Theme
