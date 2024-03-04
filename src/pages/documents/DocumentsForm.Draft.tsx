@@ -38,7 +38,7 @@ const DocumentsFormDraft: React.FC<DocumentsFormDraftProps> = ({
   }
 
   return (
-    <Paper title='New Document' button={<ButtonSave onClick={handleOnSave} />}>
+    <Paper title='Draft Document' button={<ButtonSave onClick={handleOnSave} />}>
       <Box
         sx={{
           display: 'flex',
