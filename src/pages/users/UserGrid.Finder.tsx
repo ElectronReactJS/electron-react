@@ -35,17 +35,18 @@ interface UserGridFinderProps {
   handleOnRefresh: () => void
 }
 
-const UserGridFinder: React.FC<UserGridFinderProps> = ({users, handleOnRefresh}) => {const [value, setValue] = React.useState('')
-const [errorMessage, setErrorMessage] = React.useState('')
+const UserGridFinder: React.FC<UserGridFinderProps> = ({users, handleOnRefresh}) => {
+  const [value, setValue] = React.useState('')
+  const [errorMessage, setErrorMessage] = React.useState('')
 
-const onChangeHandler = (e: { target: { value: React.SetStateAction<string> } }) => {
+  const onChangeHandler = (e: {target: {value: React.SetStateAction<string>}}) => {
     setValue(e.target.value)
     setErrorMessage('')
-}
+  }
 
   return (
     <Paper title='Users' button={<ButtonRefresh onClick={handleOnRefresh} />}>
-    <Box
+      <Box
         sx={{
           justifyContent: 'center',
           alignItems: 'center',
@@ -53,15 +54,15 @@ const onChangeHandler = (e: { target: { value: React.SetStateAction<string> } })
           padding: '3px'
         }}
       >
-      <TextFieldWrapper
-      required
-      label="Search by typing..."
-      placeholder="Search by typing..."
-      errorMessage={errorMessage}
-      onChange={onChangeHandler}
-      icon={<SearchIcon />}
-      value={value}
-    />
+        <TextFieldWrapper
+          required
+          label='Search by typing...'
+          placeholder='Search by typing...'
+          errorMessage={errorMessage}
+          onChange={onChangeHandler}
+          icon={<SearchIcon />}
+          value={value}
+        />
       </Box>
       <Box
         sx={{

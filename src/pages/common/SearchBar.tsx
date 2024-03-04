@@ -7,7 +7,5 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import DirectionsIcon from '@mui/icons-material/Directions'
 
-const SearchBar = () => {
-  
-}
+const SearchBar = () => {}
 export default SearchBar
