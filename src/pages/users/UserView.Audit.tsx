@@ -4,15 +4,13 @@ import Paper from '../../components/wrap/surfaces/Paper'
 import IconPrivacyTipWrapper from '../../components/ext/displays/IconPrivacyTipExt'
 import IconRemoveModeratorWrapper from '../../components/ext/displays/IconRemoveModeratorExt'
 import IconVerifiedUserWrapper from '../../components/ext/displays/IconVerifiedUserExt'
-import {Attempt} from './User'
-import Box from '../../components/wrap/layouts/Box'
-
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemText from '@mui/material/ListItemText'
-import ListItemAvatar from '@mui/material/ListItemAvatar'
-import Avatar from '@mui/material/Avatar'
 import ButtonRefresh from '../../components/wrap/inputs/ButtonRefresh'
+import Avatar from '../../components/ext/displays/AvatarExt'
+import ListItemAvatar from '../../components/ext/displays/ListItemAvatarExt'
+import ListItemText from '../../components/ext/displays/ListItemTextExt'
+import ListItem from '../../components/ext/displays/ListItemExt'
+import List from '../../components/ext/displays/ListExt'
+import {Attempt} from './User'
 
 interface UserViewAuditProps {
   username: string

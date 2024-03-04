@@ -1,11 +1,12 @@
 // src/pages/documents/DocumentsPageViewer.tsx
 import Paper from '../../components/ext/surfaces/PaperExt'
 import Typography from '../../components/ext/displays/TypographyExt'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import {CardActionArea, CardActions} from '@mui/material'
 import Box from '../../components/wrap/layouts/Box'
 import ButtonEdit from '../../components/wrap/inputs/ButtonEdit'
+import Card from '../../components/ext/surfaces/CardExt'
+import CardContent from '../../components/ext/surfaces/CardExt'
+import CardActionArea from '../../components/ext/surfaces/CardActionAreaExt'
+import CardActions from '../../components/ext/surfaces/CardActionsExt'
 
 const fabStyle = {
   position: 'absolute',

@@ -1,12 +1,13 @@
 // src/pages/users/UserGrid.Finder.tsx
 import * as React from 'react'
 import Paper from '../../components/wrap/surfaces/Paper'
-import {User} from './User'
-import {DataGrid, GridColDef} from '@mui/x-data-grid'
 import ButtonRefresh from '../../components/wrap/inputs/ButtonRefresh'
-import Box from '../../components/wrap/layouts/Box'
-import SearchIcon from '@mui/icons-material/Search'
 import TextFieldWrapper from '../../components/wrap/inputs/TextField'
+import SearchIcon from '../../components/ext/displays/IconSearchExt'
+import Box from '../../components/wrap/layouts/Box'
+import DataGrid from '../../components/ext/displays/DataGridExt'
+import GridColDef from '../../components/ext/displays/GridColDefExt'
+import {User} from './User'
 
 const columns: GridColDef[] = [
   {field: 'id', headerName: 'External ID', width: 150},

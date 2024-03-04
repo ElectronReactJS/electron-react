@@ -1,11 +1,12 @@
 // src/pages/documents/DocumentsPageFinder.tsx
 import Box from '../../components/ext/layouts/BoxExt'
-import {DataGrid, GridColDef} from '@mui/x-data-grid'
-import {styled, alpha} from '@mui/material/styles'
-import {Toolbar} from '@mui/material'
-import SearchIcon from '@mui/icons-material/Search'
-import InputBase from '@mui/material/InputBase'
 import ButtonNew from '../../components/wrap/inputs/ButtonNew'
+import DataGrid from '../../components/ext/displays/DataGridExt'
+import GridColDef from '../../components/ext/displays/GridColDefExt'
+import {styled, alpha} from '../../components/ext/styles/StylesExt'
+import Toolbar from '../../components/ext/surfaces/ToolbarExt'
+import SearchIcon from '../../components/ext/displays/IconSearchExt'
+import InputBase from '../../components/ext/inputs/InputBaseExt'
 
 const Search = styled('div')(({theme}) => ({
   position: 'relative',

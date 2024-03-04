@@ -1,11 +1,11 @@
 // src/pages/documents/DocumentsPageDraft.tsx
 import React, {useState} from 'react'
-import ReactQuill from 'react-quill'
-import Paper from '../../components/ext/surfaces/PaperExt'
-import 'react-quill/dist/quill.snow.css'
+import '../../components/ext/quill/QuillSnowCssExt'
+import ReactQuill from '../../components/ext/quill/ReactQuillExt'
 import TextField from '../../components/wrap/inputs/TextField'
-import Box from '../../components/wrap/layouts/Box'
 import ButtonSave from '../../components/wrap/inputs/ButtonSave'
+import Paper from '../../components/ext/surfaces/PaperExt'
+import Box from '../../components/wrap/layouts/Box'
 
 interface DocumentsPageDraftProps {
   title?: string
