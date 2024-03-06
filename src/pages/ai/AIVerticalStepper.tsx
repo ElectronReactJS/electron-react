@@ -20,21 +20,21 @@ const AIVerticalStepper: React.FC<AIVerticalStepperProps> = ({
   renderStepActions
 }) => {
   return (
-    <Box sx={{maxWidth: 400}}>
+    <Box sx={{width: '90%'}}>
       <Stepper activeStep={activeStep} orientation='vertical'>
         {steps.map((step, index) => (
           <Step key={step.subject}>
             <StepLabel
               optional={
-                index === steps.length - 1 ? <Typography variant='caption'>Label</Typography> : null
+                index === steps.length - 1 ? <Typography variant='caption'>Title</Typography> : null
               }
             >
-              {step.subject}
             </StepLabel>
             <StepContent>
+              {step.subjectInput}
               <Stack direction='row' spacing={2} alignItems='center'>
-                {step.avatar}
                 <Typography>{step.description}</Typography>
+                {step.avatar}{step.descriptionInput}
               </Stack>
               {renderStepActions(index)}
             </StepContent>
