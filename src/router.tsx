@@ -6,6 +6,7 @@ import {MemoryRouter, Route, Routes} from 'react-router-dom'
 import LoginPage from './pages/login/LoginPaper'
 import DocumensFrame from './pages/documents/DocumentsFrame'
 import UsersFrame from './pages/users/User.Frame'
+import AIDocumentFrame from './pages/ai/document/AI.Document.Frame'
 
 // Get the navigation element
 const navigationElement = document.getElementById('navigation')
@@ -15,11 +16,12 @@ const root = createRoot(navigationElement)
 if (navigationElement) {
   root.render(
     <ThemeProvider theme={theme}>
-      <MemoryRouter initialEntries={['/login']}>
+      <MemoryRouter initialEntries={['/aidocument']}>
         <Routes>
           <Route path='/login' element={<LoginPage />} />
           <Route path='/documents' element={<DocumensFrame />} />
-          <Route path='/users' element={<UsersFrame />} />
+          <Route path='/users' element={<AIDocumentFrame />} />
+          <Route path='/aidocument' element={<UsersFrame />} />
         </Routes>
       </MemoryRouter>
     </ThemeProvider>
