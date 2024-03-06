@@ -63,6 +63,7 @@ const AIDocumentChatPage: React.FC = () => {
       )
     }
     setSteps([...steps, newStep])
+    handleNext()
   }
 
   const addUserStep = () => {
@@ -92,6 +93,7 @@ const AIDocumentChatPage: React.FC = () => {
       )
     }
     setSteps([...steps, newStep])
+    handleNext()
   }
 
   const renderStepActions = (stepIndex: number) => (
