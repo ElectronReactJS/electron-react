@@ -28,13 +28,13 @@ const AIVerticalStepper: React.FC<AIVerticalStepperProps> = ({
               optional={
                 index === steps.length - 1 ? <Typography variant='caption'>Title</Typography> : null
               }
-            >
-            </StepLabel>
+            ></StepLabel>
             <StepContent>
               {step.subjectInput}
               <Stack direction='row' spacing={2} alignItems='center'>
                 <Typography>{step.description}</Typography>
-                {step.avatar}{step.descriptionInput}
+                {step.avatar}
+                {step.descriptionInput}
               </Stack>
               {renderStepActions(index)}
             </StepContent>
