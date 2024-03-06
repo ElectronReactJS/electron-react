@@ -59,9 +59,7 @@ const AIDocumentChatPage: React.FC = () => {
         Back
       </Button>
       <Box sx={{flex: '1 1 auto'}} />
-      <Button onClick={stepIndex === steps.length - 1 ? handleReset : handleNext}>
-        {'Next'}
-      </Button>
+      <Button onClick={stepIndex === steps.length - 1 ? handleReset : handleNext}>{'Next'}</Button>
     </Box>
   )
 
