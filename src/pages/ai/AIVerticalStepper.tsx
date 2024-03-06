@@ -6,15 +6,15 @@ import StepLabel from '@mui/material/StepLabel'
 import StepContent from '@mui/material/StepContent'
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
-import {VerticalStepperType} from './VerticalStepperType'
+import {AIVerticalStepperType} from './AIVerticalStepperType'
 
-interface VerticalStepperProps {
-  steps: VerticalStepperType[]
+interface AIVerticalStepperProps {
+  steps: AIVerticalStepperType[]
   activeStep: number
   renderStepActions: (stepIndex: number) => React.ReactNode
 }
 
-const VerticalStepper: React.FC<VerticalStepperProps> = ({
+const AIVerticalStepper: React.FC<AIVerticalStepperProps> = ({
   steps,
   activeStep,
   renderStepActions
@@ -47,4 +47,4 @@ const VerticalStepper: React.FC<VerticalStepperProps> = ({
   )
 }
 
-export default VerticalStepper
+export default AIVerticalStepper

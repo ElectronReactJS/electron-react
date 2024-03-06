@@ -1,9 +1,9 @@
 // src/pages/ai/document/AIDocumentChatPage.tsx
 import React, {useState} from 'react'
 import Page from '../../../components/wrap/layouts/Page'
-import VerticalStepper from '../../common/VerticalStepper'
+import AIVerticalStepper from '../AIVerticalStepper'
 import {Box, Button, Avatar, Paper, BottomNavigation, BottomNavigationAction} from '@mui/material'
-import {VerticalStepperType} from '../../common/VerticalStepperType'
+import {AIVerticalStepperType} from '../AIVerticalStepperType'
 
 import RobotIcon from '@mui/icons-material/Android'
 import UserIcon from '@mui/icons-material/Person'
@@ -11,28 +11,10 @@ import ArchiveIcon from '@mui/icons-material/Archive'
 
 const AIDocumentChatPage: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0)
-  const [steps, setSteps] = useState<VerticalStepperType[]>([
+  const [steps, setSteps] = useState<AIVerticalStepperType[]>([
     {
       label: 'Initial',
       description: 'Olá, em que posso ajudar?',
-      avatar: (
-        <Avatar>
-          <RobotIcon />
-        </Avatar>
-      )
-    },
-    {
-      label: 'Introdução',
-      description: 'Introdução do assunto.',
-      avatar: (
-        <Avatar>
-          <UserIcon />
-        </Avatar>
-      )
-    },
-    {
-      label: 'Objeto',
-      description: 'Considerando a introdução, o que você precisa resolver?',
       avatar: (
         <Avatar>
           <RobotIcon />
@@ -46,7 +28,7 @@ const AIDocumentChatPage: React.FC = () => {
   const handleReset = () => setActiveStep(0)
 
   const addAIStep = () => {
-    const newStep: VerticalStepperType = {
+    const newStep: AIVerticalStepperType = {
       label: `Custom Step ${steps.length + 1}`,
       description: `Descrição do Custom Step ${steps.length + 1}.`,
       avatar: (
@@ -59,7 +41,7 @@ const AIDocumentChatPage: React.FC = () => {
   }
 
   const addUserStep = () => {
-    const newStep: VerticalStepperType = {
+    const newStep: AIVerticalStepperType = {
       label: `Custom Step ${steps.length + 1}`,
       description: `Descrição do Custom Step ${steps.length + 1}.`,
       avatar: (
@@ -78,14 +60,14 @@ const AIDocumentChatPage: React.FC = () => {
       </Button>
       <Box sx={{flex: '1 1 auto'}} />
       <Button onClick={stepIndex === steps.length - 1 ? handleReset : handleNext}>
-        {stepIndex === steps.length - 1 ? 'Reset' : 'Next'}
+        {'Next'}
       </Button>
     </Box>
   )
 
   return (
     <Page>
-      <VerticalStepper
+      <AIVerticalStepper
         steps={steps}
         activeStep={activeStep}
         renderStepActions={renderStepActions}
