@@ -9,6 +9,8 @@ import RobotIcon from '@mui/icons-material/Android'
 import UserIcon from '@mui/icons-material/Person'
 import ArchiveIcon from '@mui/icons-material/Archive'
 
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import IconTextFields from '../../../components/ext/displays/IconTextFieldsExt'
 import TextField from '../../../components/wrap/inputs/TextField'
 
@@ -89,11 +91,9 @@ const AIDocumentChatPage: React.FC = () => {
 
   const renderStepActions = (stepIndex: number) => (
     <Box sx={{display: 'flex', flexDirection: 'row', pt: 2}}>
-      <Button disabled={stepIndex === 0} onClick={handleBack}>
-        Back
-      </Button>
+      <ArrowBackIosIcon onClick={handleBack} />
       <Box sx={{flex: '1 1 auto'}} />
-      <Button onClick={stepIndex === steps.length - 1 ? handleReset : handleNext}>{'Next'}</Button>
+      <ArrowForwardIosIcon onClick={stepIndex === steps.length - 1 ? handleReset : handleNext} />
     </Box>
   )
 
