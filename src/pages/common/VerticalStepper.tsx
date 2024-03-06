@@ -1,40 +1,40 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
-import StepContent from '@mui/material/StepContent';
-import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
-import { VerticalStepperType } from './VerticalStepperType';
+import React from 'react'
+import Box from '@mui/material/Box'
+import Stepper from '@mui/material/Stepper'
+import Step from '@mui/material/Step'
+import StepLabel from '@mui/material/StepLabel'
+import StepContent from '@mui/material/StepContent'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
+import {VerticalStepperType} from './VerticalStepperType'
 
 interface VerticalStepperProps {
-  steps: VerticalStepperType[];
-  activeStep: number;
-  renderStepActions: (stepIndex: number) => React.ReactNode;
+  steps: VerticalStepperType[]
+  activeStep: number
+  renderStepActions: (stepIndex: number) => React.ReactNode
 }
 
 const VerticalStepper: React.FC<VerticalStepperProps> = ({
   steps,
   activeStep,
-  renderStepActions,
+  renderStepActions
 }) => {
   return (
-    <Box sx={{ maxWidth: 400 }}>
-      <Stepper activeStep={activeStep} orientation="vertical">
+    <Box sx={{maxWidth: 400}}>
+      <Stepper activeStep={activeStep} orientation='vertical'>
         {steps.map((step, index) => (
           <Step key={step.label}>
             <StepLabel
               optional={
                 index === steps.length - 1 ? (
-                  <Typography variant="caption">Last step</Typography>
+                  <Typography variant='caption'>Last step</Typography>
                 ) : null
               }
             >
               {step.label}
             </StepLabel>
             <StepContent>
-              <Stack direction="row" spacing={2} alignItems="center">
+              <Stack direction='row' spacing={2} alignItems='center'>
                 {step.avatar}
                 <Typography>{step.description}</Typography>
               </Stack>
@@ -44,7 +44,7 @@ const VerticalStepper: React.FC<VerticalStepperProps> = ({
         ))}
       </Stepper>
     </Box>
-  );
-};
+  )
+}
 
-export default VerticalStepper;
+export default VerticalStepper
