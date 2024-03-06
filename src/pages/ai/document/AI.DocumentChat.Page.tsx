@@ -11,6 +11,8 @@ import ArchiveIcon from '@mui/icons-material/Archive'
 
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
+import ArrowUpward from '@mui/icons-material/ArrowUpward'
+import ArrowDownward from '@mui/icons-material/ArrowDownward'
 import IconTextFields from '../../../components/ext/displays/IconTextFieldsExt'
 import TextField from '../../../components/wrap/inputs/TextField'
 
@@ -91,9 +93,9 @@ const AIDocumentChatPage: React.FC = () => {
 
   const renderStepActions = (stepIndex: number) => (
     <Box sx={{display: 'flex', flexDirection: 'row', pt: 2}}>
-      <ArrowBackIosIcon onClick={handleBack} />
       <Box sx={{flex: '1 1 auto'}} />
-      <ArrowForwardIosIcon onClick={stepIndex === steps.length - 1 ? handleReset : handleNext} />
+      {stepIndex === 0 && <ArrowUpward onClick={handleBack} />}
+      <ArrowDownward onClick={stepIndex === steps.length - 1 ? handleReset : handleNext} />
     </Box>
   )
 
