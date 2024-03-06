@@ -9,8 +9,8 @@ import RobotIcon from '@mui/icons-material/Android'
 import UserIcon from '@mui/icons-material/Person'
 import ArchiveIcon from '@mui/icons-material/Archive'
 
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import IconTextFields from '../../../components/ext/displays/IconTextFieldsExt'
 import TextField from '../../../components/wrap/inputs/TextField'
 
