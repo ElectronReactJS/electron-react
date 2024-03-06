@@ -23,15 +23,15 @@ const AIVerticalStepper: React.FC<AIVerticalStepperProps> = ({
     <Box sx={{maxWidth: 400}}>
       <Stepper activeStep={activeStep} orientation='vertical'>
         {steps.map((step, index) => (
-          <Step key={step.label}>
+          <Step key={step.subject}>
             <StepLabel
               optional={
                 index === steps.length - 1 ? (
-                  <Typography variant='caption'>Last step</Typography>
+                  <Typography variant='caption'>Label</Typography>
                 ) : null
               }
             >
-              {step.label}
+              {step.subject}
             </StepLabel>
             <StepContent>
               <Stack direction='row' spacing={2} alignItems='center'>

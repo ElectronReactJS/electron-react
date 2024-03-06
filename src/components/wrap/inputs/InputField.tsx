@@ -6,9 +6,9 @@ import FormControl from '../../ext/inputs/FormControlExt'
 import FormHelperText from '../../ext/inputs/FormHelperTextExt'
 
 interface InputFieldWrapperProps {
-  placeholder: string
-  errorMessage: string
-  label: string
+  placeholder?: string
+  errorMessage?: string
+  label?: string
   value: any
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   icon?: React.ReactNode

@@ -4,9 +4,9 @@ import InputFieldWrapper from './InputField'
 import IconTextFields from '../../ext/displays/IconTextFieldsExt'
 
 export interface InputFieldWrapperProps {
-  placeholder: string
-  errorMessage: string
-  label: string
+  placeholder?: string
+  errorMessage?: string
+  label?: string
   value: string
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   icon?: React.ReactNode
