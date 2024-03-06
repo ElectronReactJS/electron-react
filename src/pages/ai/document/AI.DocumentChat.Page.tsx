@@ -15,15 +15,17 @@ import TextField from '../../../components/wrap/inputs/TextField'
 
 const AIDocumentChatPage: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0)
-  const [steps, setSteps] = useState<AIVerticalStepperType[]>([{
-    subject: 'Init',
-    description: 'Hello, how can I help you, now?',
-    avatar: (
-      <Avatar>
-        <RobotIcon />
-      </Avatar>
-    )
-  }])
+  const [steps, setSteps] = useState<AIVerticalStepperType[]>([
+    {
+      subject: 'Init',
+      description: 'Hello, how can I help you, now?',
+      avatar: (
+        <Avatar>
+          <RobotIcon />
+        </Avatar>
+      )
+    }
+  ])
 
   const handleInputChange = (index: number, field: 'subject' | 'description', value: string) => {
     const newSteps = [...steps]
@@ -39,8 +41,8 @@ const AIDocumentChatPage: React.FC = () => {
       subjectInput: (
         <TextField
           required
-          label="Title"
-          placeholder="Add the title here."
+          label='Title'
+          placeholder='Add the title here.'
           onChange={e => handleInputChange(steps.length, 'subject', e.target.value)}
           value={steps[steps.length]?.subject || ''}
         />
@@ -48,8 +50,8 @@ const AIDocumentChatPage: React.FC = () => {
       descriptionInput: (
         <TextField
           required
-          label="Description"
-          placeholder="Add the description here."
+          label='Description'
+          placeholder='Add the description here.'
           onChange={e => handleInputChange(steps.length, 'description', e.target.value)}
           value={steps[steps.length]?.description || ''}
         />
@@ -68,8 +70,8 @@ const AIDocumentChatPage: React.FC = () => {
       subjectInput: (
         <TextField
           required
-          label="Title"
-          placeholder="Add the title here."
+          label='Title'
+          placeholder='Add the title here.'
           onChange={e => handleInputChange(steps.length, 'subject', e.target.value)}
           value={steps[steps.length]?.subject || ''}
         />
@@ -77,8 +79,8 @@ const AIDocumentChatPage: React.FC = () => {
       descriptionInput: (
         <TextField
           required
-          label="Description"
-          placeholder="Add the description here."
+          label='Description'
+          placeholder='Add the description here.'
           onChange={e => handleInputChange(steps.length, 'description', e.target.value)}
           value={steps[steps.length]?.description || ''}
         />
@@ -109,9 +111,9 @@ const AIDocumentChatPage: React.FC = () => {
       />
       <Paper sx={{position: 'fixed', bottom: 0, left: 0, right: 0}} elevation={3}>
         <BottomNavigation showLabels>
-          <BottomNavigationAction label="AI" icon={<RobotIcon />} onClick={addAIStep} />
-          <BottomNavigationAction label="User" icon={<UserIcon />} onClick={addUserStep} />
-          <BottomNavigationAction label="Finish" icon={<ArchiveIcon />} />
+          <BottomNavigationAction label='AI' icon={<RobotIcon />} onClick={addAIStep} />
+          <BottomNavigationAction label='User' icon={<UserIcon />} onClick={addUserStep} />
+          <BottomNavigationAction label='Finish' icon={<ArchiveIcon />} />
         </BottomNavigation>
       </Paper>
     </Page>
