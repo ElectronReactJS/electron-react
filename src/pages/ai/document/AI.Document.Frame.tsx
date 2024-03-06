@@ -7,8 +7,8 @@ import SmartToyIcon from '@mui/icons-material/SmartToy'
 
 import Box from '../../../components/ext/layouts/BoxExt'
 import CssBaseline from '../../../components/ext/utils/CssBaselineExt'
-import UsersHeader from '../../../components/wrap/navigation/Header'
-import UsersDrawer from '../../../components/wrap/navigation/Drawer'
+import Header from '../../../components/wrap/navigation/Header'
+import Drawer from '../../../components/wrap/navigation/Drawer'
 
 import AIDocumentChatPage from './AI.DocumentChat.Page'
 
@@ -55,12 +55,12 @@ export default function DocumensFrame() {
   return (
     <Box sx={{display: 'flex'}}>
       <CssBaseline />
-      <UsersHeader handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
+      <Header handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
         <Typography variant='h6' noWrap component='div'>
           Users
         </Typography>
-      </UsersHeader>
-      <UsersDrawer
+      </Header>
+      <Drawer
         handleDrawerClose={handleDrawerClose}
         open={open}
         drawerWidth={drawerWidth}

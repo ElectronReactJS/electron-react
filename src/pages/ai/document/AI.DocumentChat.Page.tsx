@@ -1,72 +1,48 @@
-// src/pages/ai/document/AI.DocumentChat.Page.tsx
-import React, {useState} from 'react'
-import AIDocumentChatForm from './AI.DocumentChat.Form'
-import TransitionAlert from '../../../components/wrap/feedback/TransitionAlert'
-import Page from '../../../components/wrap/layouts/Page'
-import HorizontalStepper from '../../common/HorizontalStepper'
+// src/pages/ai/document/AIDocumentChatPage.tsx
+import React, { useState } from 'react';
+import Page from '../../../components/wrap/layouts/Page';
+import VerticalStepper from '../../common/VerticalStepper';
+import Button from '@mui/material/Button';
+import { Box } from '@mui/material';
+import ButtonSave from '../../../components/wrap/inputs/ButtonSave'
+import IconAddCircle from '../../../components/wrap/inputs/IconAddCircleExt'
+
+const steps = [
+  { label: 'Setup', description: 'Descrição do passo Setup.' },
+  { label: 'Execution', description: 'Descrição do passo Execution.' },
+  { label: 'Report', description: 'Descrição do passo Report.' },
+];
 
 const AIDocumentChatPage: React.FC = () => {
-  const [activeStep, setActiveStep] = useState(0)
-  const [completed, setCompleted] = useState<{[k: number]: boolean}>({})
-  const [showTransitionAlert, setShowTransitionAlert] = useState(false)
-  const [alertMessage, setAlertMessage] = useState('')
-  const [alertSeverity, setAlertSeverity] = useState<'success' | 'error'>('success')
+  const [activeStep, setActiveStep] = useState(0);
 
-  // Adicionando estados para username e password
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const handleNext = () => setActiveStep((prev) => prev + 1);
+  const handleBack = () => setActiveStep((prev) => prev - 1);
+  const handleReset = () => setActiveStep(0);
 
-  const steps = ['Setup', 'Execution', 'Report']
-
-  const handleStep = (step: number) => () => {
-    setActiveStep(step)
-  }
-
-  const handleNext = () => {
-    const newActiveStep = activeStep + 1
-    setActiveStep(newActiveStep)
-  }
-
-  const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1)
-  }
-
-  const handleComplete = () => {
-    const newCompleted = completed
-    newCompleted[activeStep] = true
-    setCompleted(newCompleted)
-    handleNext()
-  }
-
-  const handleReset = () => {
-    setActiveStep(0)
-    setCompleted({})
-  }
+  const renderStepActions = (stepIndex: number) => {
+    return (
+      <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+        <Button disabled={stepIndex === 0} onClick={handleBack}>Back</Button>
+        <Box sx={{ flex: '1 1 auto' }} />
+        <Button onClick={stepIndex === steps.length - 1 ? handleReset : handleNext}>
+          {stepIndex === steps.length - 1 ? 'Reset' : 'Next'}
+        </Button>
+      </Box>
+    );
+  };
 
   return (
     <Page>
-      {showTransitionAlert && <TransitionAlert message={alertMessage} severity={alertSeverity} />}
-      <HorizontalStepper
+      <VerticalStepper
         steps={steps}
         activeStep={activeStep}
-        completed={completed}
-        handleNext={handleNext}
-        handleBack={handleBack}
-        handleStep={handleStep}
-        handleComplete={handleComplete}
-        handleReset={handleReset}
+        renderStepActions={renderStepActions}
       />
-      <AIDocumentChatForm
-        onUsernameChange={setUsername} // Passando a função para atualizar o username
-        onPasswordChange={setPassword} // Passando a função para atualizar o password
-        onFormStatusChange={(message, severity) => {
-          setAlertMessage(message)
-          setAlertSeverity(severity)
-          setShowTransitionAlert(true)
-        }}
-      />
+      <IconAddCircle />
+      <ButtonSave />
     </Page>
-  )
-}
+  );
+};
 
-export default AIDocumentChatPage
+export default AIDocumentChatPage;

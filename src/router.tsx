@@ -20,8 +20,8 @@ if (navigationElement) {
         <Routes>
           <Route path='/login' element={<LoginPage />} />
           <Route path='/documents' element={<DocumensFrame />} />
-          <Route path='/users' element={<AIDocumentFrame />} />
-          <Route path='/aidocument' element={<UsersFrame />} />
+          <Route path='/aidocument' element={<AIDocumentFrame />} />
+          <Route path='/users' element={<UsersFrame />} />
         </Routes>
       </MemoryRouter>
     </ThemeProvider>
