@@ -3,7 +3,7 @@ import * as React from 'react'
 import {styled} from '../../../components/ext/styles/StylesExt'
 import Typography from '../../../components/ext/displays/TypographyExt'
 
-import SmartToyIcon from '@mui/icons-material/SmartToy';
+import SmartToyIcon from '@mui/icons-material/SmartToy'
 
 import Box from '../../../components/ext/layouts/BoxExt'
 import CssBaseline from '../../../components/ext/utils/CssBaselineExt'
@@ -42,9 +42,7 @@ export default function DocumensFrame() {
   const [open, setOpen] = React.useState(false)
   const [currentPage, setCurrentPage] = React.useState('Search')
 
-  const drawerItems: DrawerItemsType[] = [
-    {id: 'AI', icon: <SmartToyIcon />, pageId: 'AI'},
-  ]
+  const drawerItems: DrawerItemsType[] = [{id: 'AI', icon: <SmartToyIcon />, pageId: 'AI'}]
 
   const handleDrawerOpen = () => {
     setOpen(true)
