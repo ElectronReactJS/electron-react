@@ -5,7 +5,7 @@ import AIVerticalStepper from '../AIVerticalStepper'
 import {Box, Paper, BottomNavigation, BottomNavigationAction} from '@mui/material'
 import {AIVerticalStepperType} from '../AIVerticalStepperType'
 
-import RobotIcon from '@mui/icons-material/Android'
+import IconAndroidExt from '../../../components/ext/displays/IconAndroidExt'
 import UserIcon from '@mui/icons-material/Person'
 import ArchiveIcon from '@mui/icons-material/Archive'
 
@@ -20,7 +20,7 @@ const AIDocumentChatPage: React.FC = () => {
       index: 0,
       role: 'system',
       content: 'Hello, how can I help you, now?',
-      icon: RobotIcon
+      icon: IconAndroidExt
     }
   ])
 
@@ -49,10 +49,10 @@ const AIDocumentChatPage: React.FC = () => {
           placeholder='Add the prompt here.'
           onChange={e => handleInputChange(steps.length, 'content', e.target.value)}
           value={steps[steps.length]?.content || ''}
-          icon={<RobotIcon />}
+          icon={<IconAndroidExt />}
         />
       ),
-      icon: RobotIcon
+      icon: IconAndroidExt
     }
     setSteps([...steps, newStep])
     handleNext()
@@ -95,7 +95,7 @@ const AIDocumentChatPage: React.FC = () => {
       />
       <Paper sx={{position: 'fixed', bottom: 0, left: 0, right: 0}} elevation={3}>
         <BottomNavigation showLabels>
-          <BottomNavigationAction label='AI' icon={<RobotIcon />} onClick={addAIStep} />
+          <BottomNavigationAction label='AI' icon={<IconAndroidExt />} onClick={addAIStep} />
           <BottomNavigationAction label='User' icon={<UserIcon />} onClick={addUserStep} />
           <BottomNavigationAction label='Finish' icon={<ArchiveIcon />} />
         </BottomNavigation>

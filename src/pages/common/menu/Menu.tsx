@@ -12,6 +12,7 @@ import HomeRepairServiceIcon from '../../../components/ext/displays/IconHomeRepa
 import ListItemIcon from '../../../components/ext/displays/IconListItemExt'
 import IconButton from '../../../components/ext/displays/IconButtonExt'
 import Logout from '../../../components/ext/displays/IconLogoutExt'
+import IconAndroidExt from '../../../components/ext/displays/IconAndroidExt'
 
 const Menu: React.FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
@@ -36,6 +37,10 @@ const Menu: React.FC = () => {
 
   const goToWorkspace = () => {
     navigate('/documents')
+  }
+
+  const goToAIDocument = () => {
+    navigate('/aidocument')
   }
 
   return (
@@ -103,6 +108,12 @@ const Menu: React.FC = () => {
             <SpaceDashboardIcon fontSize='small' />
           </ListItemIcon>
           Users
+        </MenuItem>
+        <MenuItem onClick={goToAIDocument}>
+          <ListItemIcon>
+            <IconAndroidExt fontSize='small' />
+          </ListItemIcon>
+          AI
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>

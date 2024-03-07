@@ -4,5 +4,5 @@ export interface AIVerticalStepperType {
   role: 'system' | 'user'
   content?: string
   contentInput?: React.ReactNode
-  icon: typeof RobotIcon | typeof UserIcon
+  icon: typeof IconAndroidExt | typeof UserIcon
 }
