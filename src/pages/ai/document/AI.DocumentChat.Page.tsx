@@ -2,7 +2,7 @@
 import React, {useState} from 'react'
 import Page from '../../../components/wrap/layouts/Page'
 import AIVerticalStepper from '../AIVerticalStepper'
-import {Box, Avatar, Paper, BottomNavigation, BottomNavigationAction} from '@mui/material'
+import {Box, Paper, BottomNavigation, BottomNavigationAction} from '@mui/material'
 import {AIVerticalStepperType} from '../AIVerticalStepperType'
 
 import RobotIcon from '@mui/icons-material/Android'
@@ -17,68 +17,63 @@ const AIDocumentChatPage: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0)
   const [steps, setSteps] = useState<AIVerticalStepperType[]>([
     {
-      subject: 'Init',
-      description: 'Hello, how can I help you, now?',
-      avatar: RobotIcon
+      index: 0,
+      role: 'system',
+      content: 'Hello, how can I help you, now?',
+      icon: RobotIcon
     }
   ])
 
-  const handleInputChange = (index: number, field: 'subject' | 'description', value: string) => {
-    const newSteps = [...steps]
-    newSteps[index][field] = value
-    setSteps(newSteps)
-  }
+  const handleInputChange = (index: number, field: keyof AIVerticalStepperType, value: string) => {
+    const newSteps = [...steps];
+    const step = newSteps[index];
+  
+    if (field === "content") {
+      step[field] = value;
+    }
+  
+    setSteps(newSteps);
+  };
+  
 
   const handleNext = () => setActiveStep(prev => prev + 1)
   const handleBack = () => setActiveStep(prev => prev - 1)
 
   const addAIStep = () => {
     const newStep: AIVerticalStepperType = {
-      subjectInput: (
+        index: activeStep+1,
+        role: 'system',
+        contentInput: (
         <TextField
           required
-          label='Title'
-          placeholder='Add the title here.'
-          onChange={e => handleInputChange(steps.length, 'subject', e.target.value)}
-          value={steps[steps.length]?.subject || ''}
-        />
-      ),
-      descriptionInput: (
-        <TextField
-          required
-          label='Description'
-          placeholder='Add the description here.'
-          onChange={e => handleInputChange(steps.length, 'description', e.target.value)}
-          value={steps[steps.length]?.description || ''}
-        />
-      ),
-      avatar: RobotIcon
+          label='Prompt'
+          placeholder='Add the prompt here.'
+          onChange={e => handleInputChange(steps.length, 'content', e.target.value)}
+          value={steps[steps.length]?.content || ''}
+          icon={<RobotIcon/>}
+          />
+          ),
+          icon: RobotIcon
+        }
+        setSteps([...steps, newStep])
+        handleNext()
     }
-    setSteps([...steps, newStep])
-    handleNext()
-  }
-
-  const addUserStep = () => {
-    const newStep: AIVerticalStepperType = {
-      subjectInput: (
-        <TextField
-          required
-          label='Title'
-          placeholder='Add the title here.'
-          onChange={e => handleInputChange(steps.length, 'subject', e.target.value)}
-          value={steps[steps.length]?.subject || ''}
+    
+    const addUserStep = () => {
+        const newStep: AIVerticalStepperType = {
+            index: activeStep+1,
+            role: 'user',
+            contentInput: (
+                <TextField
+                required
+                label='Prompt'
+                placeholder='Add the prompt here.'
+                onChange={e => handleInputChange(steps.length, 'content', e.target.value)}
+                value={steps[steps.length]?.content || ''}
+                icon={<UserIcon/>}
         />
       ),
-      descriptionInput: (
-        <TextField
-          required
-          label='Description'
-          placeholder='Add the description here.'
-          onChange={e => handleInputChange(steps.length, 'description', e.target.value)}
-          value={steps[steps.length]?.description || ''}
-        />
-      ),
-      avatar: UserIcon
+      icon: UserIcon
     }
     setSteps([...steps, newStep])
     handleNext()

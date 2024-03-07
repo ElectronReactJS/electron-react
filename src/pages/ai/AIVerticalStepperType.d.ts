@@ -1,8 +1,8 @@
 // src/pages/ai/AIAIVerticalStepperType.d.ts
 export interface AIVerticalStepperType {
-  subject?: string
-  subjectInput?: React.ReactNode
-  description?: string
-  descriptionInput?: React.ReactNode
-  avatar?: React.ElementType
+  index: number
+  role: 'system' | 'user'
+  content?: string
+  contentInput?: React.ReactNode
+  icon: typeof RobotIcon | typeof UserIcon
 }

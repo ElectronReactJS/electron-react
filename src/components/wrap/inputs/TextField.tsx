@@ -15,7 +15,7 @@ export interface InputFieldWrapperProps {
 
 const TextFieldWrapper: React.FC<InputFieldWrapperProps> = props => {
   const stringValue: string = props.value
-  return <InputFieldWrapper {...props} icon={<IconTextFields />} value={stringValue} />
+  return <InputFieldWrapper {...props} icon={props.icon?props.icon:<IconTextFields />} value={stringValue} />
 }
 
 export default TextFieldWrapper
