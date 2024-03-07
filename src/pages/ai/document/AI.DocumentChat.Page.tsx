@@ -19,11 +19,7 @@ const AIDocumentChatPage: React.FC = () => {
     {
       subject: 'Init',
       description: 'Hello, how can I help you, now?',
-      avatar: (
-        <Avatar>
-          <RobotIcon />
-        </Avatar>
-      )
+      avatar: RobotIcon
     }
   ])
 
@@ -56,11 +52,7 @@ const AIDocumentChatPage: React.FC = () => {
           value={steps[steps.length]?.description || ''}
         />
       ),
-      avatar: (
-        <Avatar>
-          <RobotIcon />
-        </Avatar>
-      )
+      avatar: RobotIcon
     }
     setSteps([...steps, newStep])
     handleNext()
@@ -86,11 +78,7 @@ const AIDocumentChatPage: React.FC = () => {
           value={steps[steps.length]?.description || ''}
         />
       ),
-      avatar: (
-        <Avatar>
-          <UserIcon />
-        </Avatar>
-      )
+      avatar: UserIcon
     }
     setSteps([...steps, newStep])
     handleNext()

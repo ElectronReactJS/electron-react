@@ -4,5 +4,5 @@ export interface AIVerticalStepperType {
   subjectInput?: React.ReactNode
   description?: string
   descriptionInput?: React.ReactNode
-  avatar?: React.ReactNode
+  avatar?: React.ElementType
 }
