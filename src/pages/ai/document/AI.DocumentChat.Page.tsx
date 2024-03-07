@@ -25,52 +25,51 @@ const AIDocumentChatPage: React.FC = () => {
   ])
 
   const handleInputChange = (index: number, field: keyof AIVerticalStepperType, value: string) => {
-    const newSteps = [...steps];
-    const step = newSteps[index];
-  
-    if (field === "content") {
-      step[field] = value;
+    const newSteps = [...steps]
+    const step = newSteps[index]
+
+    if (field === 'content') {
+      step[field] = value
     }
-  
-    setSteps(newSteps);
-  };
-  
+
+    setSteps(newSteps)
+  }
 
   const handleNext = () => setActiveStep(prev => prev + 1)
   const handleBack = () => setActiveStep(prev => prev - 1)
 
   const addAIStep = () => {
     const newStep: AIVerticalStepperType = {
-        index: activeStep+1,
-        role: 'system',
-        contentInput: (
+      index: activeStep + 1,
+      role: 'system',
+      contentInput: (
         <TextField
           required
           label='Prompt'
           placeholder='Add the prompt here.'
           onChange={e => handleInputChange(steps.length, 'content', e.target.value)}
           value={steps[steps.length]?.content || ''}
-          icon={<RobotIcon/>}
-          />
-          ),
-          icon: RobotIcon
-        }
-        setSteps([...steps, newStep])
-        handleNext()
+          icon={<RobotIcon />}
+        />
+      ),
+      icon: RobotIcon
     }
-    
-    const addUserStep = () => {
-        const newStep: AIVerticalStepperType = {
-            index: activeStep+1,
-            role: 'user',
-            contentInput: (
-                <TextField
-                required
-                label='Prompt'
-                placeholder='Add the prompt here.'
-                onChange={e => handleInputChange(steps.length, 'content', e.target.value)}
-                value={steps[steps.length]?.content || ''}
-                icon={<UserIcon/>}
+    setSteps([...steps, newStep])
+    handleNext()
+  }
+
+  const addUserStep = () => {
+    const newStep: AIVerticalStepperType = {
+      index: activeStep + 1,
+      role: 'user',
+      contentInput: (
+        <TextField
+          required
+          label='Prompt'
+          placeholder='Add the prompt here.'
+          onChange={e => handleInputChange(steps.length, 'content', e.target.value)}
+          value={steps[steps.length]?.content || ''}
+          icon={<UserIcon />}
         />
       ),
       icon: UserIcon
