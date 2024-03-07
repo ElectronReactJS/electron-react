@@ -57,7 +57,7 @@ export default function DocumensFrame() {
       <CssBaseline />
       <Header handleDrawerOpen={handleDrawerOpen} open={open} drawerWidth={drawerWidth}>
         <Typography variant='h6' noWrap component='div'>
-          Users
+          AI
         </Typography>
       </Header>
       <Drawer
