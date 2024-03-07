@@ -24,9 +24,7 @@ const AIVerticalStepper: React.FC<AIVerticalStepperProps> = ({
       <Stepper activeStep={activeStep} orientation='vertical'>
         {steps.map((step, index) => (
           <Step key={index}>
-            <StepLabel
-              optional={index === 2 ? <Typography variant='caption'>{step.role}</Typography> : null}
-            >
+            <StepLabel optional={<Typography variant='caption'>{step.role}</Typography>}>
               {step.content}
             </StepLabel>
             <StepContent>
